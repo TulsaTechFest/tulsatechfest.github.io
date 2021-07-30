@@ -32,7 +32,7 @@
     </ul>
     <ul class="header-social-list">
         {% for item in collections.links %}
-            <li><a href="{{item.data.url}}" target="_blank"><i class="{{item.data.icon}}"></i></a></li>
+            <li><a href="{{item.data.url}}" target="_blank" rel="noopener"><i class="{{item.data.icon}}"></i></a></li>
         {% endfor %}
     </ul>
     {# {{ component('socialLinks', {

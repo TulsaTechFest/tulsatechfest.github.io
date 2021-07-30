@@ -114,3 +114,39 @@
    border: 0;
    padding: 0;
  }
+ 
+/* ------------------------------------------------------------------- 
+* responsive:
+* buttons 
+* ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+button.stroke, .button.stroke {
+    line-height: 4.8rem;
+}
+}
+@media only screen and (max-width: 900px) {
+button.stroke, .button.stroke {
+    line-height: 3.8rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+button.stroke, .button.stroke {
+    line-height: 2.8rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+button.stroke, .button.stroke {
+    line-height: 1.8rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+button.stroke, .button.stroke {
+    line-height: 1.4rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+button.stroke, .button.stroke {
+    line-height: 1rem;
+    }
+}
+  

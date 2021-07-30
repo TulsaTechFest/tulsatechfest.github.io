@@ -5,9 +5,9 @@
 		<div class="home-content-tablecell">
 		   	<div class="row">
 		   		<div class="col-twelve">
-					<h3 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h3>				  			
-					<h1 class="animate-intro">Tulsa Tech Fest 2021</h1>
-					<h3>The regions largest *FREE Technical Training Conference</h3>
+					<h3 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h3>
+					<h2 class="animate-intro">The regions largest *FREE Technical Training Conference</h2>
+					<h1>Tulsa Tech Fest 2021</h1>
 					<div class="more animate-intro">
 						{% if (collections.alerts) %}
 							{% for item in collections.alerts %}
@@ -19,17 +19,17 @@
 							<a class="smoothscroll button stroke" href="{{item.url}}">{{item.title}}</a> 
 						{% endfor %}
 					</div>
-					<h3><a href="/#audience">SAVE THE DATE! YOU DON'T WANT TO MISS IT! THERE'S SOMETHING FOR EVERYONE!</a></h3>
+					<h1><a href="/#audience">SAVE THE DATE! YOU DON'T WANT TO MISS IT! THERE'S SOMETHING FOR EVERYONE!</a></h1>
 				</div>
 		   	</div>
-			<div class="sideway-list fa-lg animate-intro">
+			<div class="sideway-list font-lg animate-intro">
 				{# {{ component('socialLinks', {
 					primary: 'list-links',
 					secondary: 'table-item',
 					data: collections.links
 				}) }} #}
 				{% for item in collections.links %}
-					<a href="{{item.data.url}}" target="_blank"><i class="{{item.data.icon}}"></i></a>
+					<a href="{{item.data.url}}" target="_blank" rel="noopener"><i class="{{item.data.icon}}"></i></a>
 				{% endfor %}
     		</div>
 		</div>	   
@@ -53,7 +53,7 @@
 
 		{# <ul class="home-social-list">
 			{% for item in collections.links %}
-				<li class="animate-intro fadeInUp animated"><a href="{{item.url}}" target="_blank"><i class="{{item.data.icon}}"></a></li>
+				<li class="animate-intro fadeInUp animated"><a href="{{item.url}}" target="_blank" rel="noopener"><i class="{{item.data.icon}}"></a></li>
 			{% endfor %}
 		</ul>  #}
 

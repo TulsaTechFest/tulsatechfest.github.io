@@ -11,7 +11,7 @@ module.exports = {
         for (item in items) {
             results += `<li class="${itemClass}">`
             if (options.includes('link')) {
-                results += `<a href="${item.url}" target="_blank">`;
+                results += `<a href="${item.url}" target="_blank" rel="noopener">`;
             }
             if (options.includes('icon')) {
                 results += `<i class="${item.icon}"></i>`;
@@ -40,7 +40,7 @@ module.exports = {
             results += `${itemData}`;
             if (options.includes('link')) {
                 let href = item.data && item.data.url ? item.data.url : ``;
-                let target = href.startsWith('http') ? ` target="_blank"` : ``;
+                let target = href.startsWith('http') ? ` target="_blank" rel="noopener"` : ``;
                 results += `<a href="${href}"${target}>`;
             }
             if (options.includes('icon')) {
