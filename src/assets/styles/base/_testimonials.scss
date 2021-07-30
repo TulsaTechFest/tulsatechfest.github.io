@@ -1,0 +1,169 @@
+
+/* ===================================================================
+ *  14. testimonials - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #testimonials {
+    background: #e9eaea;
+    padding: 12rem 0 7.8rem;
+    text-align: center;
+  }
+  #testimonials h2 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.667;
+    color: #FFFFFF; /* #07617d;*/
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: relative;
+    margin-bottom: 4.2rem;
+  }
+  
+  #testimonials .flex-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  #testimonial-slider {
+    margin: 0 0 3rem 0;
+    position: relative;
+  }
+  #testimonial-slider .slides {
+    padding-bottom: 3rem;
+  }
+  #testimonial-slider p {
+    font-family: "librebaskerville-bold", serif;
+    font-size: 3rem;
+    line-height: 1.8;
+    color: #151515;
+  }
+  #testimonial-slider p::before, #testimonial-slider p::after {
+    display: inline-block;
+    font-family: "librebaskerville-bold", serif;
+    font-size: 3.6rem;
+    line-height: 1;
+  }
+  #testimonial-slider p::before {
+    content: '\201C';
+  }
+  #testimonial-slider p::after {
+    content: '\201D';
+  }
+  #testimonial-slider .testimonial-author {
+    margin-top: 4.2rem;
+  }
+  #testimonial-slider .testimonial-author img {
+    width: 7.4rem;
+    height: 7.4rem;
+    margin: 0 auto 1.2rem auto;
+    display: block;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  #testimonial-slider .testimonial-author .author-info {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "librebaskerville-bold", sans-serif;
+    font-size: 2rem;
+    margin-top: .9rem;
+    margin-bottom: 3rem;
+    color: #151515;
+  }
+  #testimonial-slider .testimonial-author .author-info span {
+    display: block;
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.313;
+    letter-spacing: 0;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: .3rem;
+  }
+  
+  /* control nav */
+  #testimonials .flex-control-nav {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: -1.5rem;
+  }
+  #testimonials .flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+  }
+  
+  #testimonials .flex-control-paging li a {
+    width: 9px;
+    height: 9px;
+    background-color: #e9eaea;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+  }
+  #testimonials .flex-control-paging li a:hover {
+    background-color: #555555;
+  }
+  #testimonials .flex-control-paging li a.flex-active {
+    background-color: #000000;
+  }
+  
+  /* ------------------------------------------------------------------- 
+   * responsive:
+   * testimonials
+   * ------------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) {
+    #testimonial-slider p {
+      font-size: 2.8rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #testimonials h2 {
+      font-size: 1.7rem;
+    }
+  
+    #testimonial-slider p {
+      font-size: 2.5rem;
+    }
+    #testimonial-slider .testimonial-author img {
+      width: 6.6rem;
+      height: 6.6rem;
+    }
+    #testimonial-slider .testimonial-author .author-info {
+      font-size: 1.8rem;
+    }
+    #testimonial-slider .testimonial-author .author-info span {
+      font-size: 1.5rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #testimonials .flex-container {
+      width: 90%;
+    }
+  
+    #testimonial-slider p {
+      font-size: 2.2rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #testimonials h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    #testimonials .flex-container {
+      width: 100%;
+    }
+  
+    #testimonial-slider p {
+      font-size: 2rem;
+    }
+  }
+  
+  

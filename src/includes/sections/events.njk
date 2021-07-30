@@ -1,0 +1,5 @@
+    <ul>
+    {% for item in collections.event %}
+      <li><a href="{{item.url}}">{{item.data.title}}</a></li>
+    {% endfor %}
+    <ul>

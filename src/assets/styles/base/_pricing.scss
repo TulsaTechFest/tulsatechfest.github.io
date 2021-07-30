@@ -1,0 +1,236 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #202020;
+  }
+  
+  .pricing-table-title {
+    color: #000;//#fff;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  
+  .pricing-tab {
+    margin-bottom: 58px;
+  
+    .nav-link {
+      color: #000;//fff;
+      position: relative;
+      padding-left: 25px;
+  
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        position: absolute;
+        left: 1.25px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
+      }
+  
+      &.active {
+        background-color: transparent;
+        color: #000;//fff;
+  
+        &::before {
+          left: 0;
+          background-color: #fff;//00cd99;
+          border: 5px solid #fff;
+          width:16.5px;
+          height:16.5px;
+        }
+      }
+    }
+  }
+  
+  .pricing-tab-content {
+    .tab-pane.active {
+      animation: slide-down 0.6s ease-in-out;
+    }
+  }
+  
+  @keyframes slide-down {
+    0% { opacity:0; transform: translateY(5%); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .pricing-card {
+    border: none;
+    transition: all 0.4s ease-in-out;
+    border-radius: 8px;
+    width: 320px !important;
+    @media (max-width:767px) {
+      margin-bottom: 28px;
+    }
+  
+    .card-body {
+      padding: 35px 35px 16px;
+
+      .btn {
+        color: #000;
+        background-color: #fe397a;
+        border: solid 1px #dde5f5;
+        border-radius: 4px;
+        padding: 15px 20px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        display: block;
+        transition: all 0.4s;
+        margin-bottom: 10px;
+    
+        &:hover {
+          background-color: #fff;//fe397a;
+        }
+    
+        .pricing-card-highlighted &, .pricing-card:hover & {
+          border: 0;
+          background-color: #fe397a;//fff;
+        }
+      }
+
+      p {
+        color:#000;
+      }
+    }
+  
+    .card-footer {
+      background-color: transparent;
+      border-top: 0;
+      padding: 0;
+      
+    }
+  
+    &.pricing-card-highlighted , &:hover{
+      background-color: #fe397a;
+    }
+  }
+  
+  .pricing-plan {
+  
+    &-title {
+      font-size: 18px;
+      color: #000 !important;
+      margin-bottom: 7px;
+      font-weight: bold;
+      text-transform: uppercase;
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        color: #000;
+      }
+    }
+  
+    &-original-cost {
+      font-size: 20px;
+      color: #c1c1c1;
+      font-weight: bold;
+      margin-bottom: 0;
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        color: #000;//fff;
+        opacity: 0.75;
+      }
+    }
+  
+    &-cost {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 17px;
+      color: #000;
+  
+      .currency {
+        font-size: 20px;
+        position: relative;
+        left: -5px;
+      }
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        color: #000;//fff;
+      }
+    }
+  
+    &-features {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.67;
+      font-size: 15px;
+      margin-bottom: 40px;
+      text-align: left;
+      max-width: 260px;
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        color: #000;//fff;
+      }
+  
+      li {
+        padding-left: 21px;
+        position: relative;
+        font-size: 15px;
+        color: #000;
+  
+        &::before {
+          content: "\F12C";
+          font-family: "Material Design Icons";
+          color: #000;//3ccf8e;
+          position: absolute;
+          left: 0;
+  
+          .pricing-card-highlighted &, .pricing-card:hover & {
+            color: #000;//fff;
+          }
+        }
+      }
+
+      li b {
+        font-size: 15px;
+      }
+    }
+  
+    &-purchase-btn, &.btn {
+      color: #000;
+      background-color: transparent;
+      border: solid 1px #dde5f5;
+      border-radius: 4px;
+      padding: 15px 20px;
+      font-size: 16px;
+      text-align: center;
+      font-weight: bold;
+      display: block;
+      transition: all 0.4s;
+      margin-bottom: 10px;
+  
+      &:hover {
+        color: #fe397a;
+      }
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        border: 0;
+        background-color: #fff;
+      }
+    }
+  
+    &-link {
+      color: #000;//c1c1c1;
+      font-size: 14px;
+  
+      .pricing-card-highlighted &, .pricing-card:hover & {
+        color: #000;//fff;
+        opacity: 0.75;
+      }
+    }
+  }
+  
+  .offer-badge {
+    padding: 8px 15px;
+    background-color: #fe397a;
+    color: #fff;
+    font-size: 8px;
+    font-weight: bold;
+  }
+  
+  

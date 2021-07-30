@@ -1,0 +1,65 @@
+
+/* ===================================================================
+ *  13. portfolio - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #portfolio {
+    background: #FFFFFF;
+    min-height: 800px;
+    position: relative;
+    padding: 0;
+  }
+  #portfolio .intro-wrap {
+    padding: 15rem 0 21rem;
+    background: #111111;
+  }
+  #portfolio .section-intro h3 {
+    color: rgba(242, 242, 242, 0.5);
+  }
+  #portfolio .section-intro h1 {
+    color: #FFFFFF;
+  }
+  #portfolio .section-intro .lead {
+    color: rgba(242, 242, 242, 0.4);
+  }
+  #portfolio .portfolio-content {
+    margin-top: -22.2rem;
+  }
+  #portfolio .bricks-wrapper:before, 
+  #portfolio .bricks-wrapper:after {
+    content: "";
+    display: table;
+  }
+  #portfolio .bricks-wrapper:after {
+    clear: both;
+  }
+  #portfolio .bricks-wrapper .brick {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  #portfolio .bricks-wrapper .brick:nth-child(2n+1) {
+    clear: both;
+  }
+  
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * portfolio
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  #portfolio .intro-wrap {
+    padding: 12rem 0 21rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #portfolio .bricks-wrapper .brick {
+    float: none;
+    width: 100%;
+  }
+
+  .bricks-wrapper .item-wrap .item-text .folio-title {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}

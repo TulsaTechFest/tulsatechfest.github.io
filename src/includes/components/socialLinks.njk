@@ -1,0 +1,6 @@
+<ul class="{{ params.primary }}">
+{% for item in params.data %}
+  {# <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank"><i class="{{item.icon}}"></i>{{item.title}}</a></li> #}
+  <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank">{% icon item.icon}}{{item.title}}</a></li>
+{% endfor %}
+</ul>

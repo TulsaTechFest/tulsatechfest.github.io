@@ -1,0 +1,40 @@
+{%- from "system/component.njk" import component -%}
+<section id="sponsor">
+  <div class="overlay"></div>
+  <div class="gradient-overlay"></div>   	
+  <div class="row section-intro with-bottom-sep animate-this">
+    <div class="col-full">
+      <h3>Sponsor</h3>
+      <p>Check out the awesome benefits every sponsor receives:
+        <ul class="list-unstyled mt-3 mb-4">
+          {% for feature in collections.sponsorfeatureall %}
+            <li>{{feature.data.text | safe}}</li>
+          {% endfor %}
+        </ul><br/>
+      </p>
+    </div>
+    <div class="col-full">
+      {{ component('sponsorLevels', {
+        primary: 1,
+        secondary: 3,
+        collections: collections
+      }) }}
+    </div>    
+    <div class="col-full">
+      <br/>
+      <h3>Additional Sponsorship Opportunities</h3>
+      <p>Banner/sign can be displayed (if provided), but booth and attendee list are for Premier and Gold sponsors only.</p>
+      <br/>
+    </div>    
+    <div class="col-full">
+      {{ component('sponsorLevels', {
+        primary: 4,
+        secondary: 6,
+        collections: collections
+      }) }}
+    </div>
+    <div class="col-full">
+      <p>* Disclaimer: In the unlikely event the conference is cancelled (due to Covid restrictions, etc), all remaining funds will be evenly returned. *</p>
+    </div>
+  </div>
+</section>

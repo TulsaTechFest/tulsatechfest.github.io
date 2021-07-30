@@ -1,0 +1,15 @@
+<section id="sponsors">
+  <div class="row animate-this fadeInUp animated">
+      <div class="col-twelve">
+        <div class="sponsor-lists owl-carousel owl-loaded owl-drag">  							
+          <div class="owl-stage-outer">
+            <div class="owl-stage" style="transform: translate3d(-1005px, 0px, 0px); transition: all 0s ease 0s; width: 3853px;">
+            {% for item in social %}
+              <div class="owl-item cloned" style="width: 117.5px; margin-right: 50px;"><div><img src="{{item.data.img}}" alt="{{item.data.title}}"></div></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

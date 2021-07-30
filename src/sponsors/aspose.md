@@ -1,0 +1,11 @@
+---
+title: "Aspose"
+tags: ["sponsor", "sponsorbronze"]
+# url: "/sponsors/Aspose"
+url: "https://www.aspose.com/categories/product-http://www.aspose.com/total-component-suite.aspx?utm_source=TulsaTechfest&utm_medium=banner&utm_campaign=TulsaTechfest"
+img: "/assets/images/sponsors/Aspose.jpg"
+link: "https://www.aspose.com/categories/product-http://www.aspose.com/total-component-suite.aspx?utm_source=TulsaTechfest&utm_medium=banner&utm_campaign=TulsaTechfest"
+description: "Aspose are file format experts. They offer a powerful set of file management APIs with which developers can create applications which can create, open, edit and save the majority of popular business file formats.The Aspose product range includes <a href=\"http://www.aspose.com/.net/excel-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\">Microsoft Excel spreadsheet APIs</a>, <a href=\"https://www.aspose.com/.net/word-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\">Microsoft Word processing APIs</a>, <a href=\"https://www.aspose.com/.net/powerpoint-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" >Microsoft PowerPoint presentation APIs</a>, <a href=\"https://www.aspose.com/.net/pdf-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\">PDF document creation and manipulation APIs</a> and <a href=\"https://www.aspose.com/total-component-suite.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\">many others</a>.The Aspose products range of supported formats include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, OneNote, Outlook, Project, Visio files, popular image formats and various other formats. Aspose produce APIs for .NET, Java, Cloud, which can be utilized in almost any modern language available today.Aspose Pty Ltd has been operating since 2002. The headquarters are in Australia, and the company has teams in numerous countries all over the world."
+---
+
+Aspose

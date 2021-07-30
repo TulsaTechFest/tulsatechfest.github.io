@@ -1,0 +1,21 @@
+---
+layout: base
+permalink: /#features
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Features
+---
+   <section id="features">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>   	
+   	<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="col-full">   			
+        <h3>Sponsor Features</h3>
+        <ul>
+        {% for item in collections.sponsorFeatures %}
+          <li class="table-item"><a href="{{item.url}}">{{item.data.title}}</a></li>
+        {% endfor %}
+        <ul>
+      </div>
+    </div>
+  </section>

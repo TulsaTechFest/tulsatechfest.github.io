@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Conferences</h1>
+    <ul>
+    {% for item in collections.conference %}
+      <li><a href="{{item.url}}">{{item.data.title}}</a></li>
+    {% endfor %}
+    <ul>
+</div>

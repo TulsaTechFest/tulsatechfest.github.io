@@ -1,0 +1,109 @@
+
+/* ===================================================================
+ *  11. about - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #about {
+    position: relative;
+    padding: 4.2rem 0 12rem;
+    background-color: #000;//#e8e8e8;
+    min-height: 696px;
+    text-align: center;
+  }
+  #about .about-wrap {
+    max-width: 850px;
+  }
+  #about span {
+    color: #FFFFFF; /* #07617d;*/
+  }
+  #about h3 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.667;
+    color: #fff;//#000;//#FFFFFF; /* #07617d;*/
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: relative;
+  }
+  #about h3::before {
+    display: block;
+    content: "";
+    width: 3px;
+    height: 4rem; //6rem; 8rem;
+    background-color: rgba(149, 149, 149, 0.7);
+    margin: 0 auto 2.4rem;
+  }
+  #about .lead {
+    font-family: "librebaskerville-bold", serif;
+    // font-size: 2rem;
+    line-height: 1.8;
+    color: #fff;//#2e383f;
+    margin-top: 4rem;
+  }
+  
+  /* ------------------------------------------------------------------- 
+   * responsive:
+   * about 
+   * ------------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) {
+    #about {
+      min-height: 636px;
+    }
+    #about .about-wrap {
+      max-width: 900px;
+    }
+    #about .lead {
+      font-size: 3.7rem;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    #about .about-wrap {
+      max-width: 720px;
+    }
+    #about .lead {
+      font-size: 3.6rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #about h3 {
+      font-size: 1.7rem;
+    }
+    #about .about-wrap {
+      max-width: 600px;
+    }
+    #about .lead {
+      font-size: 3.1rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #about {
+      min-height: auto;
+    }
+    #about .about-wrap {
+      max-width: 500px;
+    }
+    #about .lead {
+      margin-top: 4.8rem;
+      font-size: 2.8rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #about h3 {
+      font-size: 1.5rem;
+    }
+    #about .lead {
+      font-size: 2.5rem;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    #about {
+      padding: 4.2rem 0 9.6rem;
+    }
+    #about .about-wrap {
+      max-width: 380px;
+    }
+    #about .lead {
+      font-size: 2.3rem;
+    }
+  }
+  

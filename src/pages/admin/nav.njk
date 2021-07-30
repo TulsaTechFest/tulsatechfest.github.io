@@ -1,0 +1,18 @@
+---
+layout: "base"
+title: "Nav"
+permalink: "/admin/nav/"
+url: "/admin/nav/"
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Nav"
+  order: 999
+---
+{%- from "../../includes/system/component.njk" import component -%}
+
+		{{ component('list', {
+			primary: 'item-list',
+			secondary: 'table-item',
+			data: collections.all | eleventyNavigation
+		}) }}
+

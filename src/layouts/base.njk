@@ -1,0 +1,34 @@
+{%- from "system/component.njk" import component -%}
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>{{ meta.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}"/>
+    {% include "../includes/components/meta.njk" %}
+	<script src="/assets/js/modernizr.js"></script>
+	<script src="/assets/js/pace.min.js"></script>
+</head>
+<body id="top">
+    <div hidden>{% iconsprite %}</div>
+    <a href="#main" class="sr-skip-link">skip to main content</a>
+    <div class="layout" role="document">
+        {% include "../includes/components/header.njk" %}
+        <main id="main" class="main" tabindex="-1">
+            {{ content | safe }}
+        </main>
+    </div>
+    {% include "../includes/components/footer.njk" %}
+    <div id="preloader"><div id="loader"></div></div>
+    <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceworker.js')
+        }
+    </script>
+    <script src="/assets/js/jquery-2.1.3.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/site.js"></script>
+</body>
+</html>

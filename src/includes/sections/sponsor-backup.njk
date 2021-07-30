@@ -1,0 +1,61 @@
+   <section id="sponsor">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>   	
+   	<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="col-full">
+        <h3>Sponsor</h3>
+        <p>Check out the awesome benefits every sponsor receives:
+        <ul class="list-unstyled mt-3 mb-4">
+          {% for feature in collections.sponsorfeatureall %}
+            <li>{{feature.data.text}}</li>
+          {% endfor %}
+        </ul>
+        </p>
+      <div class="tab-content pricing-tab-content" id="pricing-tab-content">
+        {% for items in collections.sponsorlevel | sortByOrder | slice(2) %}
+        {# {% if (loop.index > 3) {continue} %} #}
+          <div class="row">
+          {% for item in items %}
+            {% if (loop.index == 4) %}
+              	<div class="col-full">
+                  <h3>Additional Sponsorhip Opportunities</h3>
+                  <p>You're welcome to bring a company banner to be displayed, but no booth or any other benefits provided.</p>
+              </div>
+            {% endif %}
+            <div class="col-md-4">
+              <div class="card pricing-card">
+                <div class="card-body">
+                  {# <h3 class="pricing-plan-title d-flex align-items-center">{{item.data.title}} {# <span class="badge badge-pill offer-badge ml-auto">20% off</span>#}{#</h3>  #}
+                  <h3 class="pricing-plan-title d-flex align-items-center">{{item.data.title}}</h3> 
+                  {# <p class="h1 pricing-plan-original-cost"><del>$23.00</del></p> #}
+                  <p class="h1 pricing-plan-cost">{{item.data.price}} <span class="currency">USD</span></p>
+
+                  {% if (item.data.description != "") %}
+                  <div class="text-center">
+                    <p>{{ item.data.description | safe }}</p>
+                  </div>
+                  {% endif %}
+
+
+
+                  <ul class="pricing-plan-features">
+                    {% for feature in collections['sponsorfeature' + item.data.title | lower] %}
+                      <li class="feature-{{ 'special' if feature.data.type == 'special' else 'item'}}">{{feature.data.text | safe}}</li>
+                      {# <li{{' class=feature-special' if feature.data.type == 'special' }}>{{feature.data.text | safe}}</li> #}
+                    {% endfor %}
+                  </ul>
+                  <a href="#contact" class="btn pricing-plan-purchase-btn">Sponsor Now!</a>
+                  {# <div class="text-center">
+                    <a href="#contact" class="pricing-plan-link">Learn more</a>
+                  </div> #}
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        </div>
+      {% endfor %}
+      </div>
+</div>
+      </div>
+    </div>
+  </section>

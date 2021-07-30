@@ -1,0 +1,74 @@
+---
+layout: base
+title: TulsaTechFest 2021
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: TulsaTechFest 2021
+pagination:
+  data: collections.sponsorlevel
+  size: 3
+  alias: sponsorlevels
+---
+{%- from "./includes/system/component.njk" import component -%}
+{# {% for item in ["home","about"] %}
+  {% 'boop:' + item %}
+  {% include './sections/' + item + '.njk' %}
+{% endfor %} #}
+{# {% for item in ["home","about"] %}
+  {% include './sections/{{item}}.njk' %}
+{% endfor %} #}
+{# {% for item in collections.section %}
+  {{ item.templateContent|safe }}
+{% endfor %} #}
+{# {% include './sections/index.njk' %} #}
+{# {% include './includes/sections/alerts.njk' %} #}
+
+{% include './includes/sections/home.njk' %}
+{% include './includes/sections/about.njk' %}
+{% include './includes/sections/audience.njk' %}
+
+
+{# {% include './sections/topics.njk' %} #}
+{# {% include './sections/coming.njk' %} #}
+
+{# {% include './includes/sections/sponsors.njk' %} #}
+
+
+
+		{# {{ component('carousel', {
+			primary: 'sponsor',
+			data: collection.sponsors
+		}) }}
+ #}
+
+{% include './includes/sections/sponsor.njk' %}
+
+{% include './includes/sections/submit.njk' %}
+
+{# {% include './sections/speakers.njk' %} #}
+
+{# {% include './sections/testimonials.njk' %} #}
+{% include './includes/sections/connect.njk' %}
+{# {% include './includes/sections/socialLinks.njk' %} #}
+
+{# {% include './includes/partials/links.njk' %} #}
+
+{# {% sectionList "sponsor", "list-item", "image,link", collections.sponsors %} #}
+{# {% sectionList "sponsor", "list-item", "image,link", 'socialLinks' %} #}
+{# {% carousel "Sponsor", "list-item", collections.sponsors %} #}
+
+{# {% sectionList "socialLinks", "list-item", collections.links %} #}
+
+{# {{ component('listSection', {
+  primary: 'socialLinks',
+  data: collections.links
+}) }} #}
+
+
+{# {% include './includes/partials/sponsors.njk' %} #}
+
+{# {{ component('sectionList', {
+  primary: 'Sponsors',
+  secondary: 'list-item',
+  data: collections.sponsors
+})}} #}

@@ -1,0 +1,24 @@
+{%- from "../system/component.njk" import component -%}
+<footer class="footer" role="contentinfo">
+    <div class="footer__inner container">
+		<a href="#top">
+			<span>TulsaTechFest 2021 - Copyright &copy; {{ build.timestamp | dateToFormat('yyyy') }} TechFests</span>
+		</a>
+		<ul class="footer-social-list">
+		{% for item in collections.links %}
+          <li class="list-item"><a href="{{item.url}}"><i class="{{item.data.icon}}"></i></a></li>
+        {% endfor %}
+		</ul>
+{# 
+		{{ component('socialLinks', {
+			primary: 'footer-social-list',
+			secondary: 'list-item',
+			data: collections.links
+		}) }}  class="opaque" style="display: none;" #}
+    </div>
+    <div id="go-top">
+		<a class="smoothscroll" title="Back to Top" href="#top">
+			<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+		</a>
+	</div>
+</footer>

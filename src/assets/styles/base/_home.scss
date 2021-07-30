@@ -1,0 +1,280 @@
+
+/* ===================================================================
+ *  10. home - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #home {
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    background-image: url(../images/TulsaTechFest2018Registration.jpg);
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 804px;
+    position: relative;
+  }
+  #home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    background-color: #19191b;
+  }
+  
+  .home-content-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: relative;
+    text-align: center;
+  }
+  
+  .home-content-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 500;
+  }
+  .home-content-tablecell .row {
+    position: relative;
+    padding-top: 10rem; //16.2rem;
+    // padding-bottom: 15rem;
+  }
+  .home-content-tablecell h3 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin: 0 0 .9rem 0;
+  }
+  .home-content-tablecell h2 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin: 0 0 .9rem 0;
+  }
+  .home-content-tablecell h1 {
+    font-family: "montserrat-bold", serif;
+    font-size: 4rem;
+    line-height: 1.133;
+    color: #FFFFFF;
+  }
+  .home-content-tablecell .more {
+    margin: 4.8rem 0 0 0;
+  }
+  .home-content-tablecell .more .button {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+  }
+  
+  /* home social-list */
+  .home-social-list {
+    position: absolute;
+    left: 48px;
+    bottom: 54px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 2.4rem;
+    line-height: 1.75;
+    text-align: center;
+  }
+  .home-social-list::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+  }
+  .home-social-list li {
+    padding-left: 0;
+  }
+  .home-social-list li a, .home-social-list li a:visited {
+    color: #FFFFFF;
+  }
+  .home-social-list li a:hover, 
+  .home-social-list li a:focus, 
+  .home-social-list li a:active {
+    color: #151515;
+  }
+  
+  /* scroll down */
+  .scrolldown {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: right top 0;
+    -ms-transform-origin: right top 0;
+    transform-origin: right top 0;
+    float: right;
+  }
+  .scrolldown i {
+    padding-left: 9px;
+  }
+  .scrolldown a:hover, .scrolldown a:focus, .scrolldown a:active {
+    color: #151515 !important;
+  }
+  
+  html[data-useragent*='MSIE 10.0'] .scrolldown,
+  .oldie .scrolldown {
+    display: none;
+  }
+  
+  .scroll-icon {
+    display: inline-block;
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #FFFFFF !important;
+    background: transparent;
+    position: relative;
+    top: 36px;
+    right: 42px;
+    -webkit-animation: animate-it 3s ease infinite;
+    animation: animate-it 3s ease infinite;
+  }
+  
+  /* vertical animation */
+  @-webkit-keyframes animate-it {
+    0%, 60%, 80%, 100% {
+      -webkit-transform: translateX(0);
+    }
+    20% {
+      -webkit-transform: translateX(-5px);
+    }
+    40% {
+      -webkit-transform: translateX(20px);
+    }
+  }
+  @keyframes animate-it {
+    0%, 60%, 80%, 100% {
+      -webkit-transform: translateX(0);
+    }
+    20% {
+      -webkit-transform: translateX(-5px);
+    }
+    40% {
+      -webkit-transform: translateX(20px);
+    }
+  }
+  
+  /* ------------------------------------------------------------------- 
+   * responsive:
+   * home section 
+   * ------------------------------------------------------------------- */
+  @media only screen and (max-width: 1200px) {
+    .home-content-tablecell h3 {
+      font-size: 2.1rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 7rem;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .home-content-tablecell h3 {
+      font-size: 2rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 6rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .home-content-tablecell .row {
+      max-width: 600px;
+    }
+    .home-content-tablecell h3 {
+      font-size: 1.8rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 5.2rem;
+    }
+    .home-content-tablecell h1 br {
+      display: none;
+    }
+  
+    .home-social-list {
+      left: 36px;
+      bottom: 30px;
+      font-size: 2.1rem;
+    }
+    .home-social-list::before {
+      height: 30px;
+    }
+  
+    .scrolldown .scroll-icon {
+      font-size: 1.2rem;
+      top: 24px;
+      right: 10px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #home {
+      min-height: 702px;
+    }
+  
+    .home-content-tablecell .row {
+      max-width: 480px;
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+    .home-content-tablecell h3 {
+      font-size: 1.7rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 4.8rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .home-content-tablecell .row {
+      max-width: 420px;
+    }
+    .home-content-tablecell h3 {
+      font-size: 1.5rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 4.2rem;
+    }
+  
+    .home-social-list {
+      left: 30px;
+      bottom: 30px;
+      font-size: 1.8rem;
+    }
+    .home-social-list::before {
+      height: 24px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    #home {
+      min-height: 654px;
+    }
+  
+    .home-content-tablecell .row {
+      padding-top: 4.8rem;
+      padding-bottom: 10.8rem;
+    }
+    .home-content-tablecell h3 {
+      font-size: 1.4rem;
+    }
+    .home-content-tablecell h1 {
+      font-size: 3.6rem;
+    }
+  }
+  
+  
+  

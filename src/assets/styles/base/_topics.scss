@@ -1,0 +1,76 @@
+
+
+/* ===================================================================
+ *  13. topics - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #topics {
+    background: #e8e8e8;
+    min-height: 800px;
+    position: relative;
+    padding: 0;
+  }
+  #topics .intro-wrap {
+    padding: 15rem 0 21rem;
+    background: #111111;
+  }
+  #topics .section-intro h3 {
+    color: rgba(242, 242, 242, 0.5);
+  }
+  #topics .section-intro h1 {
+    color: #000000;
+  }
+  #topics .section-intro .lead {
+    color: rgba(242, 242, 242, 0.4);
+  }
+  #topics .portfolio-content {
+    margin-top: -22.2rem;
+  }
+  #topics .bricks-wrapper:before, 
+  #topics .bricks-wrapper:after {
+    content: "";
+    display: table;
+  }
+  #topics .bricks-wrapper:after {
+    clear: both;
+  }
+  #topics .bricks-wrapper .brick {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  #topics .bricks-wrapper .brick:nth-child(2n+1) {
+    clear: both;
+  }
+  
+  #topics .topics-content {
+    text-align: center;
+    max-width: 1040px;
+  }
+  #topics .topics-list {
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+  #topics .topics-list .topic-item {
+    margin-bottom: 3rem;
+    padding: 0 50px;
+  }
+  #topics .topics-list .topic-item p {
+    color: rgba(242, 242, 242, 0.5);
+  }
+  #topics .topics-list .icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  #topics .topics-list .icon i {
+    font-size: 5.4rem;
+    color: #f9a828;
+  }
+  #topics .topics-list .h05 {
+    font-size: 1.7rem;
+    line-height: 1.765;
+    color: #000000;
+    margin-bottom: 3rem;
+  }
+  

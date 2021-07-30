@@ -1,0 +1,14 @@
+   <section id="speakers">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>   	
+   	<div class="row section-intro with-bottom-sep animate-this">
+   		<div class="col-full">   			
+        <h3>Speakers</h3>
+        <ul>
+        {% for item in collections.speaker %}
+          <li class="table-item"><a href="{{item.url}}"><img src="{{item.data.img}}" alt="{{item.data.title}}"></a></li>
+        {% endfor %}
+        <ul>
+      </div>
+    </div>
+  </section>

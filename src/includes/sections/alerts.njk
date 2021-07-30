@@ -1,0 +1,14 @@
+   <section id="alerts">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>   	
+   	<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="col-full">   			
+        <h3>Alerts</h3>
+        <ul>
+        {% for item in collections.alert %}
+          <li class="table-item"><a href="{{item.url}}"><img src="{{item.data.img}}" alt="{{item.data.title}}"></a></li>
+        {% endfor %}
+        <ul>
+      </div>
+    </div>
+  </section>

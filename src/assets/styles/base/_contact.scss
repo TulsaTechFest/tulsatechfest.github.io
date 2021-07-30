@@ -1,0 +1,297 @@
+
+
+/* ===================================================================
+ *  16. contact - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+ #contact {
+    background-color: #111111;
+    background-image: url(../images/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 12rem 0 12rem;
+    position: relative;
+  }
+  #contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    background-color: #000000;
+  }
+  #contact .section-intro h1 {
+    color: white;
+  }
+  #contact .section-intro h3 {
+    color: rgba(242, 242, 242, 0.5);
+  }
+  #contact .section-intro p.lead {
+    color: rgba(242, 242, 242, 0.4);
+  }
+  
+  .contact-content {
+    max-width: 1024px;
+    margin-top: 3rem;
+    color: #FFFFFF;
+    z-index: 600;
+    position: relative;
+  }
+  .contact-content h5 {
+    color: #FFFFFF;
+    margin-bottom: 5.4rem;
+  }
+  .contact-content h6 {
+    color: #555555;
+    font-size: 1.4rem;
+  }
+  
+  /* contact info */
+  .contact-info .cinfo {
+    margin-bottom: 3.2rem;
+  }
+  
+  /* contact form */
+  #contact form {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  #contact form .form-field {
+    position: relative;
+  }
+  #contact form .form-field:before, #contact form .form-field:after {
+    content: "";
+    display: table;
+  }
+  #contact form .form-field:after {
+    clear: both;
+  }
+  #contact form .form-field label {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: .6rem 2rem .6rem 2rem;
+    margin: 0;
+    color: #000000;
+    background: #f9a828;
+    border-radius: 3px;
+  }
+  #contact form .form-field label::after {
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    margin-top: -6px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #f9a828;
+    content: "";
+  }
+  #contact form ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  #contact form :-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    /* Firefox 18- */
+  }
+  #contact form ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    /* Firefox 19+ */
+  }
+  #contact form :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  #contact form .placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  #contact input[type="text"],
+  #contact input[type="password"],
+  #contact input[type="email"],
+  #contact textarea {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3.6rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #contact input[type="text"]:focus,
+  #contact input[type="password"]:focus,
+  #contact input[type="email"]:focus {
+    color: #FFFFFF;
+  }
+  
+  #contact textarea {
+    min-height: 21rem;
+    padding: 1.8rem 2rem;
+  }
+  #contact textarea:focus {
+    color: #FFFFFF;
+  }
+  
+  #contact button.submitform {
+    font-size: 1.5rem;
+    display: block;
+    letter-spacing: .2rem;
+    height: 6rem;
+    line-height: 6rem;
+    padding: 0 3rem;
+    width: 100%;
+    background: #f9a828;
+    color: #000000;
+    margin-top: .6rem;
+  }
+  #contact button.submitform:hover, #contact button.submitform:focus {
+    background: #f89e0f;
+  }
+  
+  
+  
+  #message-warning, #message-success {
+    display: none;
+    background: #000000;
+    padding: 3rem;
+    margin-bottom: 3.6rem;
+    width: 100%;
+  }
+  
+  #message-warning {
+    color: #D32B2E;
+  }
+  
+  #message-success {
+    color: #f9a828;
+  }
+  
+  #message-warning i,
+  #message-success i {
+    margin-right: 10px;
+  }
+  
+  /* form loader */
+  #submit-loader {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 1.8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4.2rem;
+  }
+  #submit-loader .text-loader {
+    display: none;
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+  }
+  
+  .oldie #submit-loader .s-loader {
+    display: none;
+  }
+  .oldie #submit-loader .text-loader {
+    display: block;
+  }
+  
+  /* --------------------------------------------------------------- 
+   * loader animation - (_layout.scss)
+   * --------------------------------------------------------------- */
+  .s-loader {
+    margin: 1.2rem auto 3rem;
+    width: 70px;
+    text-align: center;
+    -webkit-transform: translateX(0.45rem);
+    -ms-transform: translateX(0.45rem);
+    transform: translateX(0.45rem);
+  }
+  
+  .s-loader > div {
+    width: 9px;
+    height: 9px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: .9rem;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .s-loader .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .s-loader .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  /* ------------------------------------------------------------------- 
+   * responsive:
+   * contact 
+   * ------------------------------------------------------------------- */
+  @media only screen and (max-width: 900px) {
+    .contact-info {
+      width: 38%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .contact-content {
+      max-width: 600px;
+      text-align: center;
+    }
+  
+    .contact-info {
+      width: 100%;
+      margin-top: 3.6rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .contact-content {
+      max-width: 480px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .contact-info {
+      width: 100% !important;
+      float: none !important;
+      clear: both !important;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+    }
+  }
+  

@@ -1,0 +1,76 @@
+/* ===================================================================
+ *  13. sponsor - (_layout.scss)
+ * * ------------------------------------------------------------------- */
+ #sponsor {
+    background: #000;//#fff;//#e8e8e8;
+    min-height: 800px;
+    position: relative;
+    padding: 0;
+    color: #fff;//#000;
+  }
+  #sponsor .intro-wrap {
+    padding: 15rem 0 21rem;
+    background: #000;//#111111;
+  }
+  #sponsor .section-intro h3 {
+    color: #fff;//#000; //rgba(242, 242, 242, 0.5);
+  }
+  #sponsor .section-intro h1 {
+    color: #fff;//#000;
+  }
+  #sponsor .section-intro .lead {
+    color: #fff;//#000;//rgba(242, 242, 242, 0.4);
+  }
+  #sponsor .portfolio-content {
+    margin-top: -22.2rem;
+  }
+  #sponsor .bricks-wrapper:before, 
+  #sponsor .bricks-wrapper:after {
+    content: "";
+    display: table;
+  }
+  #sponsor .bricks-wrapper:after {
+    clear: both;
+  }
+  #sponsor .bricks-wrapper .brick {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  #sponsor .bricks-wrapper .brick:nth-child(2n+1) {
+    clear: both;
+  }
+  
+  #sponsor .sponsor-content {
+    // text-align: center;
+    max-width: 1040px;
+  }
+  #sponsor .sponsor-list {
+    margin-top: 1.2rem;
+    // text-align: center;
+  }
+  #sponsor .sponsor-list .topic-item {
+    margin-bottom: 3rem;
+    padding: 0 50px;
+  }
+  #sponsor .sponsor-list .topic-item p {
+    color: #fff;//rgba(242, 242, 242, 0.5);
+  }
+  #sponsor .sponsor-list .icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  #sponsor .sponsor-list .icon i {
+    font-size: 5.4rem;
+    color: red;//#f9a828;
+  }
+  #sponsor .sponsor-list .h05 {
+    font-size: 1.7rem;
+    line-height: 1.765;
+    color: #fff;//#000000;
+    margin-bottom: 3rem;
+  }
+  
+  
+  

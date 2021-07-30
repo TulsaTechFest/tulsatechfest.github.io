@@ -1,0 +1,17 @@
+---
+listCollection: 'all'
+---
+{# articles-list.njk #}
+
+{% extends "base.njk" %}
+
+{% block main %}
+<main>
+    {{ content | safe }}
+    <ul class="postlist no-bullets">
+        {% for item in collections[listCollection] %}
+            {% include "partials/collection-list-item.njk" %}
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

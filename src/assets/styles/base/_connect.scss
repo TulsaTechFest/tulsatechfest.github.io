@@ -1,0 +1,167 @@
+//#11 - connect 
+#connect {
+    background-color: #111111;
+    // background-image: url(../images/connect-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 12rem 0 12rem;
+    position: relative;
+  }
+  #connect .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    background-color: #000000;
+  }
+  #connect .section-intro h1 {
+    color: white;
+  }
+  #connect .section-intro h3 {
+    color: #FFF;//rgba(242, 242, 242, 0.5);
+  }
+  #connect .section-intro p.lead {
+    color: #FFF;//rgba(242, 242, 242, 0.4);
+  }
+  
+  .connect-content {
+    max-width: 1024px;
+    margin-top: 3rem;
+    color: #FFFFFF;
+    z-index: 600;
+    position: relative;
+  }
+  .connect-content h5 {
+    color: #FFFFFF;
+    margin-bottom: 5.4rem;
+  }
+  .connect-content h6 {
+    color: #555555;
+    font-size: 1.4rem;
+  }
+  
+  /* connect info */
+  .connect-info .cinfo {
+    margin-bottom: 3.2rem;
+  }
+  
+  .connect-social-list {
+    text-align:center;
+  }
+  .connect-social-list a, a:visited {
+    margin-right: 30px;/*space to the right of the blue outline */
+    padding-right: 30px;/*between the red and blue outlines*/
+    text-align: center;
+    display: inline;
+    color: #fff;
+  }
+  .connect-social-list a:hover, a:focus {
+    color: red;
+  }
+  .connect-social-list i {
+    font-size: 4rem;
+  }
+
+  /* connect form */
+  #connect form {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  #connect form .form-field {
+    position: relative;
+  }
+  #connect form .form-field:before, #connect form .form-field:after {
+    content: "";
+    display: table;
+  }
+  #connect form .form-field:after {
+    clear: both;
+  }
+  #connect form .form-field label {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: .6rem 2rem .6rem 2rem;
+    margin: 0;
+    color: #000000;
+    background: #f9a828;
+    border-radius: 3px;
+  }
+  #connect form .form-field label::after {
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    margin-top: -6px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #f9a828;
+    content: "";
+  }
+  #connect form ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  #connect form :-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    /* Firefox 18- */
+  }
+  #connect form ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    /* Firefox 19+ */
+  }
+  #connect form :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  #connect form .placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  #connect input[type="text"],
+  #connect input[type="password"],
+  #connect input[type="email"],
+  #connect textarea {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3.6rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #connect input[type="text"]:focus,
+  #connect input[type="password"]:focus,
+  #connect input[type="email"]:focus {
+    color: #FFFFFF;
+  }
+  
+  #connect textarea {
+    min-height: 21rem;
+    padding: 1.8rem 2rem;
+  }
+  #connect textarea:focus {
+    color: #FFFFFF;
+  }
+  
+  #connect button.submitform {
+    font-size: 1.5rem;
+    display: block;
+    letter-spacing: .2rem;
+    height: 6rem;
+    line-height: 6rem;
+    padding: 0 3rem;
+    width: 100%;
+    background: #f9a828;
+    color: #000000;
+    margin-top: .6rem;
+  }
+  #connect button.submitform:hover, #connect button.submitform:focus {
+    background: #f89e0f;
+  }
+    
