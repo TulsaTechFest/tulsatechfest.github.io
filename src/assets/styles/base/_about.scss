@@ -47,7 +47,7 @@
    * ------------------------------------------------------------------- */
   @media only screen and (max-width: 1024px) {
     #about {
-      min-height: 636px;
+      min-height: 400px;//636px;
     }
     #about .about-wrap {
       max-width: 900px;
@@ -72,7 +72,7 @@
       max-width: 600px;
     }
     #about .lead {
-      font-size: 3.1rem;
+      font-size: 1.5rem;//3.1rem;
     }
   }
   @media only screen and (max-width: 600px) {
@@ -92,7 +92,7 @@
       font-size: 1.5rem;
     }
     #about .lead {
-      font-size: 2.5rem;
+      font-size: 1rem;
     }
   }
   @media only screen and (max-width: 400px) {
@@ -103,7 +103,7 @@
       max-width: 380px;
     }
     #about .lead {
-      font-size: 2.3rem;
+      font-size: 1rem;
     }
   }
   

@@ -1,0 +1,116 @@
+
+/* ===================================================================
+ *  06. buttons - (_button-essentials.scss)
+ * ------------------------------------------------------------------- */
+ .button,
+ a.button,
+ button,
+ input[type="submit"],
+ input[type="reset"],
+ input[type="button"] {
+   display: inline-block;
+   font-family: "montserrat-bold", sans-serif;
+   //font-size: 1.4rem;
+   text-transform: uppercase;
+   //letter-spacing: .3rem;
+   //height: 5.4rem;
+   //line-height: 5.4rem;
+   //padding: 0 3rem;
+   padding: .3rem;
+   //margin: 0 .3rem 1.2rem 0;
+   //margin: 1.2rem;
+   background: #A5A5A5;
+   //color: #222222;
+   text-decoration: none;
+   cursor: pointer;
+   text-align: center;
+   white-space: nowrap;
+   border: none;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ .button:hover,
+ a.button:hover,
+ button:hover,
+ input[type="submit"]:hover,
+ input[type="reset"]:hover,
+ input[type="button"]:hover,
+ .button:focus,
+ button:focus,
+ input[type="submit"]:focus,
+ input[type="reset"]:focus,
+ input[type="button"]:focus {
+   background: #989898;
+   color: #000000;
+   outline: 0;
+ }
+ 
+ .button.button-primary,
+ a.button.button-primary,
+ button.button-primary,
+ input[type="submit"].button-primary,
+ input[type="reset"].button-primary,
+ input[type="button"].button-primary {
+   background: #151515;
+   color: #FFFFFF;
+ }
+ 
+ .button.button-primary:hover,
+ a.button.button-primary:hover,
+ button.button-primary:hover,
+ input[type="submit"].button-primary:hover,
+ input[type="reset"].button-primary:hover,
+ input[type="button"].button-primary:hover,
+ .button.button-primary:focus,
+ button.button-primary:focus,
+ input[type="submit"].button-primary:focus,
+ input[type="reset"].button-primary:focus,
+ input[type="button"].button-primary:focus {
+   background: #030303;
+ }
+ 
+ button.full-width, .button.full-width {
+   width: 100%;
+   margin-right: 0;
+ }
+ 
+ button.medium, .button.medium {
+   height: 5.7rem !important;
+   line-height: 5.7rem !important;
+   padding: 0 1.8rem !important;
+ }
+ 
+ button.large, .button.large {
+   height: 6rem !important;
+   line-height: 6rem !important;
+   padding: 0rem 3rem !important;
+ }
+ 
+ button.stroke, .button.stroke {
+   background: transparent !important;
+   border: 3px solid #313131;
+   // line-height: 4.8rem;
+ }
+ 
+ button.stroke.medium, .button.stroke.medium {
+   line-height: 5.1rem !important;
+ }
+ 
+ button.stroke.large, .button.stroke.large {
+   line-height: 5.4rem !important;
+ }
+ 
+ button.stroke:hover, .button.stroke:hover {
+   border: 3px solid #f9a828;
+   color: #f9a828;
+ }
+ 
+ button::-moz-focus-inner,
+ input::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+ }
