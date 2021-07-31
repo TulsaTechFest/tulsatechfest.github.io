@@ -1,13 +1,26 @@
    <section id="sponsors">
    	<div class="overlay"></div>
    	<div class="gradient-overlay"></div>   	
-   	<div class="row section-intro with-bottom-sep animate-this">
-   		<div class="col-full">
+  <div class="row section-intro with-bottom-sep animate-this">
+    <div class="col-full">
+      <h3>Sponsors</h3>     
+    </div>
+    <div class="sideway-list font-lg animate-intro">
+				{# {{ component('socialLinks', {
+					primary: 'list-links',
+					secondary: 'table-item',
+					data: collections.links
+				}) }} #}
+				{% for item in collections.sponsors %}
+					<a href="{{item.url}}" target="_blank" rel="noopener"><img src="{{item.data.img}}" alt="{{item.data.title}}"></a>
+				{% endfor %}
+    		</div>
+   		{# <div class="col-full">
         <ul>
         {% for item in collections.sponsors %}
           <li class="col-1"><a href="{{item.url}}"><img src="{{item.data.img}}" alt="{{item.data.title}}"></a></li>
         {% endfor %}
         <ul>
-      </div>
+      </div> #}
     </div>
   </section>

@@ -1,18 +1,61 @@
 ---
 title: "Aspose"
-tags: ["sponsor", "sponsorbronze"]
+tags: ["sponsorsilver"]
+order: 1
 # url: "/sponsors/Aspose"
-url: "https://www.aspose.com/categories/product-http://www.aspose.com/total-component-suite.aspx?utm_source=TulsaTechfest&utm_medium=banner&utm_campaign=TulsaTechfest"
-img: "/assets/images/sponsors/Aspose.jpg"
-link: "https://www.aspose.com/categories/product-http://www.aspose.com/total-component-suite.aspx?utm_source=TulsaTechfest&utm_medium=banner&utm_campaign=TulsaTechfest"
-description: "Aspose are file format experts. They offer a powerful set of file management APIs with which developers can create applications which can create, open, edit and save the majority of popular business file formats.The Aspose product range includes <a href=\"http://www.aspose.com/.net/excel-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" rel=\"noopener\">Microsoft Excel spreadsheet APIs</a>, <a href=\"https://www.aspose.com/.net/word-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" rel=\"noopener\">Microsoft Word processing APIs</a>, <a href=\"https://www.aspose.com/.net/powerpoint-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" rel=\"noopener\">Microsoft PowerPoint presentation APIs</a>, <a href=\"https://www.aspose.com/.net/pdf-component.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" rel=\"noopener\">PDF document creation and manipulation APIs</a> and <a href=\"https://www.aspose.com/total-component-suite.aspx?utm_source=ignitenz2015&amp;utm_medium=web&amp;utm_campaign=ignitenz2015\" target=\"_blank\" rel=\"noopener\">many others</a>.The Aspose products range of supported formats include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, OneNote, Outlook, Project, Visio files, popular image formats and various other formats. Aspose produce APIs for .NET, Java, Cloud, which can be utilized in almost any modern language available today.Aspose Pty Ltd has been operating since 2002. The headquarters are in Australia, and the company has teams in numerous countries all over the world."
+url: "https://www.aspose.com"
+img: "/assets/images/sponsors/aspose.svg"
+link: "https://www.aspose.com"
+description: "Aspose are file format experts. They offer a powerful set of file management APIs with which developers can create applications which can create, open, edit and save the majority of popular business file formats.The Aspose product range includes <a href=\"http://www.aspose.com\" target=\"_blank\" rel=\"noopener\">Microsoft Excel spreadsheet APIs</a>, <a href=\"https://www.aspose.com\" target=\"_blank\" rel=\"noopener\">Microsoft Word processing APIs</a>, <a href=\"https://www.aspose.com\" target=\"_blank\" rel=\"noopener\">Microsoft PowerPoint presentation APIs</a>, <a href=\"https://www.aspose.com\" target=\"_blank\" rel=\"noopener\">PDF document creation and manipulation APIs</a> and <a href=\"https://www.aspose.com\" target=\"_blank\" rel=\"noopener\">many others</a>.The Aspose products range of supported formats include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, OneNote, Outlook, Project, Visio files, popular image formats and various other formats. Aspose produce APIs for .NET, Java, Cloud, which can be utilized in almost any modern language available today.Aspose Pty Ltd has been operating since 2002. The headquarters are in Australia, and the company has teams in numerous countries all over the world."
 links:
-  - key: web
-    value: https://www.aspose.com/categories/product-http://www.aspose.com/total-component-suite.aspx?utm_source=TulsaTechfest&utm_medium=banner&utm_campaign=TulsaTechfest
-  - key: twitter
-    value: https://twitter.com/aspose
-  - key: stackoverflow
-    value: https://stackoverflow.com/search?q=aspose
+  - key: "email"
+    icon: "fa fa-envelope-open"
+    value: "mailto:sales[@]aspose.com"
+    text: "Email Aspose"
+  - key: "web"
+    icon: "fa fa-globe"
+    value: "https://www.aspose.com"
+    text: "Visit Aspose website"
+  - key: "twitter"
+    icon: "fa fa-twitter"
+    value: "https://twitter.com/Aspose"
+    text: "Follow Aspose on Twitter"
+  - key: "facebook"
+    icon: "fa fa-facebook"
+    value: "https://www.facebook.com/aspose/"
+    text: "Like Aspose on Facebook"
+  - key: "youtube"
+    icon: "fa fa-youtube"
+    value: "https://www.youtube.com/user/AsposeVideo"
+    text: "Watch Aspose on YouTube"
+  - key: "linkedin"
+    icon: "fa fa-linkedin"
+    value: "https://www.linkedin.com/company/aspose/"
+    text: "Link Aspose on LinkedIN"
+  - key: "stackoverflow"
+    icon: "fa fa-stackoverflow"
+    value: "https://stackoverflow.com/questions/tagged/aspose"
+    text: "Find Aspose on Stackoverflow"
+  - key: "quora"
+    icon: "fa fa-facebook"
+    value: "https://www.facebook.com/aspose/"
+    text: "Check Aspose out on Quora"    
+  - key: "github"
+    icon: "fa fa-github"
+    value: "https://aspose.github.io/"
+    text: "Code with Aspose on Github"    
+  - key: "rss"
+    icon: "fa fa-rss"
+    value: "https://blog.aspose.com/feed/"
+    text: "Subscribe to Aspose feeds"    
+  - key: "eventadd"
+    icon: "far fa-calendar-plus"
+    value: "https://sessionize.com/add-event"
+    text: "Add Your Event at Sessionize.com"
+  - key: "createdemo"
+    icon: "far fa-calendar-check"
+    value: "https://sessionize.com/create-demo"
+    text: "Create Demo at Sessionize.com"
 ---
 
 Aspose
