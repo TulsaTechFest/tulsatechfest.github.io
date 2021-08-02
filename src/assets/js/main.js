@@ -29,7 +29,7 @@
 		$WIN.on('load', function() {	
 
 			// force page scroll position to top at page refresh
-			$('html, body').animate({ scrollTop: 0 }, 'normal');
+			//$('html, body').animate({ scrollTop: 0 }, 'normal');
 
 	      // will first fade out the loading animation 
 	    	$("#loader").fadeOut("slow", function(){
@@ -136,25 +136,25 @@
 	 * ------------------------------------------------------ */
 	  var ssMenuOnScrolldown = function() {
 		var menuTrigger = $('#header-menu-trigger');
-		var goTop = $('#go-top');
-		$WIN.on('scroll', function() {
-			if ($WIN.scrollTop() > 300) {
-				alert('top:true');
-				menuTrigger.addClass('opaque');
-				if (goTop) {
-					goTop.addClass('opaque');
-					goTop.setAttribute('style','display:block;')
-				}
-			}
-			else {
-				alert('top:false');	
-				menuTrigger.removeClass('opaque');
-				if (goTop) {
-					goTop.removeClass('opaque');
-					goTop.setAttribute('style','display:none;')
-				}
-			}
-		}); 
+		// var goTop = $('#go-top');
+		// $WIN.on('scroll', function() {
+		// 	if ($WIN.scrollTop() > 300) {
+		// 		alert('top:true');
+		// 		menuTrigger.addClass('opaque');
+		// 		if (goTop) {
+		// 			goTop.addClass('opaque');
+		// 			goTop.setAttribute('style','display:block;')
+		// 		}
+		// 	}
+		// 	else {
+		// 		alert('top:false');	
+		// 		menuTrigger.removeClass('opaque');
+		// 		if (goTop) {
+		// 			goTop.removeClass('opaque');
+		// 			goTop.setAttribute('style','display:none;')
+		// 		}
+		// 	}
+		// }); 
 	};
 
 	

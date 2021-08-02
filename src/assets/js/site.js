@@ -1,10 +1,4 @@
-/* ===================================================================
- * Infinity - Main JS
- *
- * ------------------------------------------------------------------- */ 
-
 (function($) {
-
 	"use strict";
 
 	var cfg = {		
@@ -14,24 +8,18 @@
 	},	
 
 	$WIN = $(window);
-	
 
-   // Add the User Agent to the <html>
-   // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
+    // Add UserAgent for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
 	var doc = document.documentElement;
 	doc.setAttribute('data-useragent', navigator.userAgent);
-
 	
-	/* Preloader 
-	 * -------------------------------------------------- */
 	var ssPreloader = function() {
 
 		$WIN.on('load', function() {	
-
 			// force page scroll position to top at page refresh
 			$('html, body').animate({ scrollTop: 0 }, 'normal');
 
-	      // will first fade out the loading animation 
+	      	// will first fade out the loading animation 
 	    	$("#loader").fadeOut("slow", function(){
 
 	        // will fade out the whole DIV that covers the website.
@@ -41,20 +29,12 @@
 	  	});
 	}; 
 
-
-	/* FitVids
-	------------------------------------------------------ */ 
 	var ssFitVids = function() {
 		$(".fluid-video-wrapper").fitVids();
 	}; 
 
-
-	/*	Masonry
-	------------------------------------------------------ */
 	var ssMasonryFolio = function() {
-
 		var containerBricks = $('.bricks-wrapper');
-
 		containerBricks.imagesLoaded( function() {
 			containerBricks.masonry( {	
 			  	itemSelector: '.brick',
@@ -63,11 +43,7 @@
 		});
 	};
 
-
-	/*	Light Gallery
-	------------------------------------------------------- */
 	var ssLightGallery = function() {
-
 		$('#folio-wrap').lightGallery({  
 			showThumbByDefault: false,
 			hash: false,
@@ -75,13 +51,8 @@
 		});
 	};
 
-
-	/* Flexslider
-  	* ------------------------------------------------------ */
   	var ssFlexSlider = function() {
-
   		$WIN.on('load', function() {
-
 		   $('#testimonial-slider').flexslider({
 		   	namespace: "flex-",
 		      controlsContainer: "",
@@ -94,16 +65,10 @@
 		      randomize: false,
 		      touch: true,
 		   });
-
 	   });
-
   	};
 
-
-  	/* Carousel
-	* ------------------------------------------------------ */
 	var ssOwlCarousel = function() {
-
 		$(".owl-carousel").owlCarousel({		
 	      nav: false,
 			loop: true,
@@ -127,20 +92,14 @@
 	         }
 	    	}
 		});
-
 	};
   	
-
-	
-  	/* OffCanvas Menu
-	 * ------------------------------------------------------ */
-   var ssOffCanvas = function() {
-
-	       var menuTrigger = $('#header-menu-trigger'),
-	       nav             = $('#menu-nav-wrap'),
-	       closeButton     = nav.find('.close-button'),
-	       siteBody        = $('body'),
-	       mainContents    = $('section, footer');
+	var ssOffCanvas = function() {
+		var menuTrigger = $('#header-menu-trigger'),
+		nav             = $('#menu-nav-wrap'),
+		closeButton     = nav.find('.close-button'),
+		siteBody        = $('body'),
+		mainContents    = $('section, footer');
 
 		// open-close menu by clicking on the menu icon
 		menuTrigger.on('click', function(e){
@@ -162,14 +121,9 @@
 				siteBody.removeClass('menu-is-open');
 			}
 		});
-
    };
 
-
-  /* Smooth Scrolling
-	* ------------------------------------------------------ */
 	var ssSmoothScroll = function() {
-
 		$('.smoothscroll').on('click', function (e) {
 			var target = this.hash,
 			$target    = $(target);
@@ -182,10 +136,9 @@
 	       	'scrollTop': top
 	      }, cfg.scrollDuration, 'swing').promise().done(function () {
 
-	      	// check if menu is open
 	      	if ($('body').hasClass('menu-is-open')) {
-					$('#header-menu-trigger').trigger('click');
-				}
+				$('#header-menu-trigger').trigger('click');
+			}
 
 	      	window.location.hash = target;
 	      });
@@ -193,29 +146,17 @@
 
 	};
 
-
-  /* Placeholder Plugin Settings
-	* ------------------------------------------------------ */
 	var ssPlaceholder = function() {
 		$('input, textarea, select').placeholder();  
 	};
 
-
-  	/* Alert Boxes
-  	------------------------------------------------------- */
   	var ssAlertBoxes = function() {
-
   		$('.alert-box').on('click', '.close', function() {
 		  $(this).parent().fadeOut(500);
 		}); 
-
   	};	  	
 	
-
-  /* Animations
-	* ------------------------------------------------------- */
 	var ssAnimations = function() {
-
 		if (!$("html").hasClass('no-cssanimations')) {
 			$('.animate-this').waypoint({
 				handler: function(direction) {
@@ -249,16 +190,10 @@
 				offset: '95%'
 			}); 
 		}
-
 	};
 	
-
-  /* Intro Animation
-	* ------------------------------------------------------- */
 	var ssIntroAnimation = function() {
-
 		$WIN.on('load', function() {
-		
 	     	if (!$("html").hasClass('no-cssanimations')) {
 	     		setTimeout(function(){
 	    			$('.animate-intro').each(function(ctr) {
@@ -276,21 +211,14 @@
 				}, 100);
 	     	} 
 		}); 
-
 	};
 
-
-  /* Contact Form
-   * ------------------------------------------------------ */
    var ssContactForm = function() {   	
-
    	/* local validation */   	
 		$('#contactForm').validate({
-
 			/* submit via ajax */
 			submitHandler: function(form) {				
 				var sLoader = $('#submit-loader');			
-
 				$.ajax({   	
 			      type: "POST",
 			      url: "inc/sendEmail.php",
@@ -321,15 +249,10 @@
 			      }
 		      });    		
 	  		}
-
 		});
    };	
 
-
-  /* AjaxChimp
-	* ------------------------------------------------------ */
 	var ssAjaxChimp = function() {
-
 		$('#mc-form').ajaxChimp({
 			language: 'es',
 		   url: cfg.mailChimpURL
@@ -355,15 +278,10 @@
 		  4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
 		  5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
 		} 
-
 	};
 
- 
-  /* Back to Top
-	* ------------------------------------------------------ */
 	var ssBackToTop = function() {
-
-		var pxShow  = 500,         // height on which the button will show
+		var pxShow  = 100,//500,         // height on which the button will show
 		fadeInTime  = 400,         // how slow/fast you want the button to show
 		fadeOutTime = 400,         // how slow/fast you want the button to hide
 		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
@@ -379,12 +297,7 @@
 		});
 	};	
 
-
-  
-  /* Initialize
-	* ------------------------------------------------------ */
 	(function ssInit() {
-
 		ssPreloader();
 		ssFitVids();
 		ssMasonryFolio();
@@ -401,8 +314,5 @@
 		ssContactForm();
 		ssAjaxChimp();
 		ssBackToTop();
-
 	})();
- 
-
 })(jQuery);

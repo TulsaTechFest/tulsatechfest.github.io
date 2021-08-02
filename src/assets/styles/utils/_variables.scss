@@ -57,8 +57,11 @@ $font-family-monospace: Menlo, Monaco, Consolas, 'Andale Mono', 'Courier New',
     monospace;
 $font-family-base: $font-family-sans-serif;
 
+$font-family-bold: 'montserrat-bold';//, sans-serif;
+$font-family-italic: "montserrat-italic", georgia, serif;
+
 $font-size-root: 100%;
-$font-size-base: 1rem;
+$font-size-base: 2.25rem;
 $line-height: 1.625;
 
 // Animation
@@ -530,9 +533,6 @@ $grid-breakpoints: (
 ) !default;
 // scss-docs-end grid-breakpoints
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
 
 // Grid containers
 //
@@ -547,8 +547,6 @@ $container-max-widths: (
   xxl: 1320px
 ) !default;
 // scss-docs-end container-max-widths
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
 // Grid columns

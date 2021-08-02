@@ -1,15 +1,10 @@
-/* ===================================================================
- *  01. webfonts and iconfonts - (_document-setup)
- * ------------------------------------------------------------------- */
 @import url("../css/font-awesome/css/font-awesome.min.css");
+@import 'utils/variables';
 // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 // @import url("../css/micons/micons.css");
 // @import url("../css/fonts.css");
 // @import url("utils/_variables");
 
-/* ===================================================================
- *  02. base style overrides - (_document-setup)
- * ------------------------------------------------------------------- */
 html {
   font-size: 10px;
 }
@@ -35,8 +30,9 @@ html, body {
 
 body {
   background: #000;//#111111;
-  font-family: "librebaskerville-regular", serif;
-  font-size: 1.6rem;
+  font-family: $font-family-base;
+  // font-family: $font-family-base;
+  // font-size: 1.6rem;
   line-height: 3rem;
   color: #fff !important;//#353535;
   margin: 0;
@@ -125,8 +121,8 @@ p img {
 }
 
 p.lead {
-  font-family: "montserrat-regular", sans-serif;
-  font-size: 1rem; //2rem;
+  font-family: $font-family-base;//"montserrat-regular", sans-serif;
+  font-size: $font-size-base; //1rem; //2rem;
   line-height: 1.8;
   color: #fff;//#4f4f4f;
   margin-bottom: 3.6rem;
@@ -145,11 +141,11 @@ em, i, strong, b {
 }
 
 em, i {
-  font-family: "librebaskerville-italic", serif;
+  font-family: $font-family-base;
 }
 
 strong, b {
-  font-family: "librebaskerville-bold", serif;
+  font-family: $font-family-base;
 }
 
 small {
@@ -176,7 +172,7 @@ blockquote:before {
 }
 
 blockquote p {
-  font-family: "librebaskerville-italic", georgia, serif;
+  font-family: $font-family-italic;
   font-style: italic;
   padding: 0;
   font-size: 1.9rem;
@@ -201,7 +197,7 @@ blockquote cite a:visited {
 }
 
 abbr {
-  font-family: "librebaskerville-bold", serif;
+  font-family: $font-family-bold;
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: .05rem;
@@ -383,14 +379,11 @@ img.pull-left {
   }
 }
 
-/* ------------------------------------------------------------------- 
- * tables - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
 table {
   border-width: 0;
   width: 100%;
   max-width: 100%;
-  font-family: "librebaskerville-regular", sans-serif;
+  font-family: $font-family-base;// "librebaskerville-regular", sans-serif;
 }
 
 th,
@@ -402,7 +395,7 @@ td {
 
 th {
   color: #151515;
-  font-family: "montserrat-bold", sans-serif;
+  font-family: $font-family-bold;//"montserrat-bold", sans-serif;
 }
 
 td {
@@ -424,9 +417,6 @@ td:last-child {
   -webkit-overflow-scrolling: touch;
 }
 
-/* ------------------------------------------------------------------- 
- * pace.js styles - minimal  - (_document-setup.scss)
- * ------------------------------------------------------------------- */
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -449,10 +439,6 @@ td:last-child {
   height: 6px;
 }
 
-
-/* ===================================================================
- *  04. Preloader
- * ------------------------------------------------------------------- */
 #preloader {
   position: fixed;
   top: 0;
@@ -671,13 +657,6 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #fabc5a;
   transition: background-color 5000s ease-in-out 0s;
 }
-
-
-
-
-/* ===================================================================
- *  07. other components - (_others.scss)
- * ------------------------------------------------------------------- */
 
 /**
  * alert box - (_alert-box.scss)
@@ -1870,7 +1849,7 @@ a{cursor:pointer;color:inherit;text-decoration:none}.tweak-global-animations-ani
 @media screen and (min-width:  768px ){.sqs-product-quick-view-lightbox .ProductItem-details{padding-left:2vw}.tweak-product-basic-item-gallery-placement-right .sqs-product-quick-view-lightbox .ProductItem-details{padding-left:0;padding-right:2vw}}.sqs-product-quick-view-lightbox .ProductItem-details-quickViewFullItemLink{border-bottom:1px solid #b3b3b3}.tweak-product-basic-item-gallery-design-stacked .sqs-product-quick-view-lightbox .ProductItem-gallery{float:none}.tweak-product-basic-item-gallery-design-stacked .sqs-product-quick-view-lightbox .ProductItem-gallery-slides{height:100%}.tweak-product-basic-item-gallery-design-stacked .sqs-product-quick-view-lightbox .ProductItem-gallery-slides-item{height:auto}.tweak-product-basic-item-gallery-design-stacked .sqs-product-quick-view-lightbox .ProductItem-gallery-slides-item-image{position:relative !important}.sqs-product-quick-view-lightbox .ProductItem-gallery .ProductItem-gallery-scroll{height:auto}.sqs-product-quick-view-lightbox .ProductItem-gallery .ProductItem-gallery-scroll:after{display:none}/*! WARNING: Stylesheet from template.conf missing: portfolio-new-test.less */
 
 li {
-  // font-family: "librebaskerville-regular", serif;  
+  // font-family: $font-family-base;  
   padding-left: 0;
   list-style: none;
   font-size: 14px;
@@ -1878,20 +1857,20 @@ li {
 }
 
 .list-unstyled {
-  // font-family: "librebaskerville-regular", serif;  
+  // font-family: $font-family-base;  
   padding-left: 0;
   list-style: none;
   // text-align: left;
 }
 
 .feature-item {
-  // font-family: "librebaskerville-regular", serif;
+  // font-family: $font-family-base;
   // font-weight: bolder;
   list-style: none;
 }
 
 .feature-special {
-  // font-family: "librebaskerville-regular", serif;
+  // font-family: $font-family-base;
   // font-weight: bolder;
   list-style: none;
 }
