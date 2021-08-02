@@ -23,7 +23,7 @@ input:focus {
 // EXCEPTIONS
 // =================
 
-// sections excluded from the tabindex
+// components excluded from the tabindex
 [tabindex='-1']:focus {
     outline: none !important;
 }

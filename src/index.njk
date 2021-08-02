@@ -9,29 +9,29 @@ pagination:
   size: 3
   alias: sponsorlevels
 ---
-{%- from "./includes/system/component.njk" import component -%}
+{%- from "./includes/components/component.njk" import component -%}
 {# {% for item in ["home","about"] %}
   {% 'boop:' + item %}
-  {% include './sections/' + item + '.njk' %}
+  {% include './components/' + item + '.njk' %}
 {% endfor %} #}
 {# {% for item in ["home","about"] %}
-  {% include './sections/{{item}}.njk' %}
+  {% include './components/{{item}}.njk' %}
 {% endfor %} #}
 {# {% for item in collections.section %}
   {{ item.templateContent|safe }}
 {% endfor %} #}
-{# {% include './sections/index.njk' %} #}
-{# {% include './includes/sections/alerts.njk' %} #}
+{# {% include './components/index.njk' %} #}
+{# {% include './includes/components/alerts.njk' %} #}
 
-{% include './includes/sections/home.njk' %}
-{% include './includes/sections/about.njk' %}
-{% include './includes/sections/audience.njk' %}
+{% include './includes/components/home.njk' %}
+{% include './includes/components/about.njk' %}
+{% include './includes/components/audience.njk' %}
 
 
-{# {% include './sections/topics.njk' %} #}
-{# {% include './sections/coming.njk' %} #}
+{# {% include './components/topics.njk' %} #}
+{# {% include './components/coming.njk' %} #}
 
-{# {% include './includes/sections/sponsors.njk' %} #}
+{# {% include './includes/components/sponsors.njk' %} #}
 
 
 
@@ -41,15 +41,37 @@ pagination:
 		}) }}
  #}
 
-{% include './includes/sections/sponsor.njk' %}
+{# {% include './includes/components/sponsor.njk' %} #}
+{{ component('section', {
+    title: 'Sponsor',
+    subtitle: 'This is the best way to connect with regional technologists!',
+    text: '',
+    include: 'sponsorLevels',
+    collections: collections
+}) }}
 
-{% include './includes/sections/submit.njk' %}
+{{ component('section', {
+    title: 'Additional Sponsorship Opportunities',
+    subtitle: 'Banner/sign can be displayed (if provided. Booth not included.)',
+    text: '',
+    include: 'sponsorLevels-extra',
+    collections: collections    
+}) }}
 
-{# {% include './sections/speakers.njk' %} #}
+{{ component('section', {
+    title: 'Submit',
+    text: '<p class="lead"><a href="https://sessionize.com/tulsatechfest-2021">Please submit your paper/session details using Sessionize.<br/><img src="/assets/images/banners/sessionize-call-for-papers.png" alt="Please submit your session details using Sessionize" width="400" height="64"></a></p>',
+    include: ''
+}) }}
 
-{# {% include './sections/testimonials.njk' %} #}
-{% include './includes/sections/connect.njk' %}
-{# {% include './includes/sections/socialLinks.njk' %} #}
+
+{# {% include './includes/components/submit.njk' %} #}
+
+{# {% include './components/speakers.njk' %} #}
+
+{# {% include './components/testimonials.njk' %} #}
+{% include './includes/components/connect.njk' %}
+{# {% include './includes/components/socialLinks.njk' %} #}
 
 {# {% include './includes/partials/links.njk' %} #}
 

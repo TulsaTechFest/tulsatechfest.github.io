@@ -1,7 +1,7 @@
 ---
 layout: sponsorFeature.njk
 title: "Booth - Gold"
-text: "<b>Booth - first come, first serve</b>"
+text: "Booth"
 tags: ["sponsorfeature", "sponsorfeaturegold"]
 type: "special"
 ---

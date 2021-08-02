@@ -1,6 +1,13 @@
-<ul class="{{ params.primary }}">
-{% for item in params.data %}
-  {# <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener"><i class="{{item.icon}}"></i>{{item.title}}</a></li> #}
-  <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener">{% icon item.icon}}{{item.title}}</a></li>
-{% endfor %}
-</ul>
+   <section id="socialLinks">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>   	
+   	<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="col-full">   			
+        <ul>
+        {% for item in collections.links %}
+          <li class="table-item"><a href="{{item.url}}"><img src="{{item.data.img}}" alt="{{item.data.title}}"></a></li>
+        {% endfor %}
+        <ul>
+      </div>
+    </div>
+  </section>

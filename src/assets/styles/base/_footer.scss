@@ -1,9 +1,3 @@
-
-
-/* ===================================================================
- *  17. footer - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
  footer {
     margin: 0 0 5.4rem 0;
     padding: 0;
@@ -137,7 +131,7 @@
     line-height: 63px;
     text-align: center;
     background-color: transparent;//#000000;
-    color: #888;
+    color: #fff;//#888;
     text-align: center;
     text-transform: uppercase;
     -moz-transition: all 0.3s ease-in-out;
@@ -152,11 +146,11 @@
   }
   #go-top a:visited {
     //background: #000000;
-    color: #888;
+    color: #fff;//#888;
   }
   #go-top a:hover, #go-top a:focus {
     //background: #000000;
-    color: #FFFFFF;
+    color: #fff;//#FFFFFF;
   }
   
   /* ------------------------------------------------------------------- 

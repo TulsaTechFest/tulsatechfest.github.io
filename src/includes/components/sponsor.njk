@@ -1,0 +1,24 @@
+{% for item in params.collections.sponsorlevel | sortByOrder %}
+    {% if (loop.index >= params.primary) and (loop.index <= params.secondary) %}
+    <div class="plan color-{{loop.index}} four columns">
+        <div class="plan-price">
+            <h3>{{item.data.title}}</h3> <span class="value">{{item.data.price}}</span>
+        </div>
+        
+        {% if (item.data.description != "") %}
+        <div class="text-center">
+        <p>{{ item.data.description | safe }}</p>
+        </div>
+        {% endif %}
+        
+        <div class="plan-features">
+            <ul>
+                {% for feature in params.collections['sponsorfeature' + item.data.title | lower] %}
+                <li class="feature-{{ 'special' if feature.data.type == 'special' else 'item'}}">{{feature.data.text | safe}}</li>
+                {# <li{{' class=feature-special' if feature.data.type == 'special' }}>{{feature.data.text | safe}}</li> #}
+            {% endfor %}
+            </ul> <a class="button" href="#">Sponsor Now!</a>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

@@ -81,6 +81,10 @@ module.exports = function (config) {
         return [...tags];
     });
     
+    config.addCollection('nav-about', collection => {
+        return collection.getFilteredByTag('nav-about');
+    });
+
     config.addCollection('alerts', collection => {
         return collection.getFilteredByTag('alert');
     });
@@ -97,7 +101,7 @@ module.exports = function (config) {
     config.addCollection('posts', collection => {
         return collection.getFilteredByTag('post');
     });
-    // config.addCollection('sections', collection => {
+    // config.addCollection('components', collection => {
     //     return collection.getFilteredByTag('section');
     // });
     config.addCollection('sponsors', collection => {

@@ -175,10 +175,11 @@
 			$target    = $(target);
 	 	
 		 	e.preventDefault();
-		 	e.stopPropagation();	   	
+		 	e.stopPropagation();
+			var top = $target && $target.offset() ? $target.offset().top : 0;
 
 	    	$('html, body').stop().animate({
-	       	'scrollTop': $target.offset().top
+	       	'scrollTop': top
 	      }, cfg.scrollDuration, 'swing').promise().done(function () {
 
 	      	// check if menu is open

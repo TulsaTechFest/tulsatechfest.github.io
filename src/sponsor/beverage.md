@@ -3,9 +3,9 @@ layout: sponsorlevel.njk
 title: "Beverage"
 tags: sponsorlevel
 icon: fas fa-medal
-order: 4
+order: 5
 price: "$750"
-description: "Help keep attendees hydrated!"
+description: "Help keep'em hydrated!"
 ---
 
 Beverage details, Nah?

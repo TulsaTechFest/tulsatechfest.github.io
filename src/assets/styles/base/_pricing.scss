@@ -65,6 +65,7 @@
     transition: all 0.4s ease-in-out;
     border-radius: 8px;
     width: 300px !important;
+    margin-right:5px;
     @media (max-width:767px) {
       margin-bottom: 28px;
     }
@@ -74,7 +75,7 @@
 
       .btn {
         color: #000;
-        background-color: #fe397a;
+        background-color: red;//#fe397a;
         border: solid 1px #dde5f5;
         border-radius: 4px;
         padding: 15px 20px;
@@ -86,12 +87,12 @@
         margin-bottom: 10px;
     
         &:hover {
-          background-color: #fff;//fe397a;
+          background-color: red;//fe397a;
         }
     
         .pricing-card-highlighted &, .pricing-card:hover & {
           border: 0;
-          background-color: #fe397a;//fff;
+          background-color: red;//#fe397a;//fff;
         }
       }
 
@@ -108,7 +109,7 @@
     }
   
     &.pricing-card-highlighted , &:hover{
-      background-color: #fe397a;
+      background-color: red;//#fe397a;
     }
   }
   
@@ -206,7 +207,7 @@
       margin-bottom: 10px;
   
       &:hover {
-        color: #fe397a;
+        color: red;//#fe397a;
       }
   
       .pricing-card-highlighted &, .pricing-card:hover & {
@@ -228,7 +229,7 @@
   
   .offer-badge {
     padding: 8px 15px;
-    background-color: #fe397a;
+    background-color: red;//#fe397a;
     color: #fff;
     font-size: 8px;
     font-weight: bold;

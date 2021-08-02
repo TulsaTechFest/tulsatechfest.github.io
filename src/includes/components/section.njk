@@ -1,0 +1,33 @@
+{%- from "components/component.njk" import component -%}
+<section id="{{ params.title | lowercase }}">
+  <div class="overlay"></div>
+  <div class="gradient-overlay"></div>
+  <div class="row section-intro animate-this">
+    <div class="col-twelve">
+      <h3 class="animate-this">{{ params.title }}</h3>
+      {% if (params.subtitle) %}
+      <p>{{params.subtitle}}</p>
+      {% endif %}
+
+      {% if (params.text) %}
+      {{params.text | safe}}
+      {% endif %}
+ 
+      {% if (params.title === 'Sponsor') %}
+        {{ component('sponsorLevelsCards', {
+          primary: 1,
+          secondary: 3,
+          collections: params.collections
+        }) }}
+      {% endif %}
+
+      {% if (params.title === 'Additional Sponsorship Opportunities') %}
+        {{ component('sponsorLevelsCards', {
+          primary: 4,
+          secondary: 6,
+          collections: params.collections
+        }) }}
+      {% endif %}
+    </div>   		
+  </div>
+</section>

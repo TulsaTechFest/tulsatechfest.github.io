@@ -5,7 +5,7 @@ tags: sponsorlevel
 icon: fas fa-medal
 order: 4
 price: "$1000"
-description: "Best time to reach attendees!"
+description: "Help keem'em fueled!"
 ---
 
 Lunch details, Nah?

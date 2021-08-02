@@ -3,9 +3,9 @@ layout: sponsorlevel.njk
 title: "Coffee"
 tags: sponsorlevel
 icon: fas fa-medal
-order: 4
+order: 6
 price: "$500"
-description: "Help keep attendees fueled!"
+description: "Help keep'em amped!"
 ---
 
 Coffee details, Nah?

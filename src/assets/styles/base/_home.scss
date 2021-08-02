@@ -1,8 +1,3 @@
-
-/* ===================================================================
- *  10. home - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
  #home {
     width: 100%;
     height: 100%;
@@ -42,7 +37,7 @@
   }
   .home-content-tablecell .row {
     position: relative;
-    padding-top: 10rem; //16.2rem;
+    //padding-top: 10rem; //16.2rem;
     // padding-bottom: 15rem;
   }
   .home-content-tablecell h3 {
@@ -68,7 +63,7 @@
     color: #fff;
   }
   .home-content-tablecell .more {
-    margin: 4.8rem 0 0 0;
+    margin: 1.5rem 0 0 0;
   }
   .home-content-tablecell .more .button {
     border-color: #FFFFFF;

@@ -9,7 +9,8 @@ module.exports = {
     // dateFormat: function(dateObj, format) {
     //     return new Date(dateObj).toLocaleFormat(format);
     // },
-    
+    include: require("./include.js"),
+
     replace: function(value, searchValue, replaceValue) {
         return value.replace(searchValue, replaceValue)
     },
@@ -20,6 +21,10 @@ module.exports = {
 
     withCategory: function(values, key) {                 
         return values.find(v => v.data.key === key);
+    },
+
+    withTag: function(values, tag) {                 
+        return values.find(v => v.tags === tag);
     },
 
     dateToFormat: function(date, format) {
@@ -33,6 +38,10 @@ module.exports = {
             includeOffset: false,
             suppressMilliseconds: true
         })
+    },
+
+    lowercase: function(str) {
+        return str.toLowerCase();
     },
 
     obfuscate: function(str) {
@@ -53,5 +62,9 @@ module.exports = {
     sortByOrder: function(values) {
         let vals =[...values];
         return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
+    },
+
+    uppercase: function(str) {
+        return str.toUpperCase();
     }
 }

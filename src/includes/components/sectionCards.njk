@@ -1,0 +1,23 @@
+<section id="{{ params.primary }}">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>
+    <div class="row section-intro animate-this">
+      <div class="col-twelve">
+        <h3 class="animate-this">{{ params.primary }}</h3>
+        {% if (params.secondary) %}
+        <p>{{params.secondary}}</p>
+        {% endif %}
+      </div>   		
+    </div>
+    <div class="row flex-container with-bottom-sep animate-this">
+   		<div class="col-full">
+        <h3>{{ params.primary }}</h3>
+        <div class="row flex-container">
+        {% for item in params.collections %}
+          {# <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener"><i class="{{item.icon}}"></i>{{item.title}}</a></li> #}
+          <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener">{% icon item.icon}}{{item.title}}</a></li>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+</section>

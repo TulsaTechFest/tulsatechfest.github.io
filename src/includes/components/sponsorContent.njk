@@ -1,0 +1,36 @@
+{%- from "component.njk" import component -%}
+<section id="sponsor">
+  <div class="overlay"></div>
+  <div class="gradient-overlay"></div>   	
+  <div class="row section-intro animate-this">
+    <div class="col-twelve">
+      <h3 class="animate-this">Sponsor</h3>
+    </div>   		
+  </div>
+  <div class="row flex-container">   
+    {{ component('sponsorLevelsCards', {
+      primary: 1,
+      secondary: 3,
+      collections: collections
+    }) }}
+  </div>
+
+    <div class="col-full">
+      <br/>
+      <h2>Additional Sponsorship Opportunities</h2>
+      <p>Banner/sign can be displayed (if provided. Booth and other benefits not included.)</p>
+      <br/>
+    </div>
+  <div class="row flex-container">
+      {{ component('sponsorLevelsCards', {
+        primary: 4,
+        secondary: 6,
+        collections: collections
+      }) }}
+  </div>
+  <div class="row with-bottom-sep">
+    <div class="col-full">
+      <p>* Disclaimer: In the unlikely event the conference is cancelled (due to Covid restrictions, etc), all remaining funds will be evenly returned. *</p>
+    </div>
+  </div>
+</section>

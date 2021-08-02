@@ -1,9 +1,13 @@
+section {
+  background: #000;//#fff;//#e8e8e8;
+  // min-height: 600px;
+  position: relative;
+  //padding: 0;
+  padding: 5rem 0 3rem;
+  color: #fff;//#000;
+}
 
-/* ===================================================================
- *  08. common and reusable styles 
- *
- * ------------------------------------------------------------------- */
- .section-intro {
+.section-intro {
     text-align: center;
     position: relative;
     margin-bottom: 1.5rem;

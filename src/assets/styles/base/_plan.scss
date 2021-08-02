@@ -1,0 +1,140 @@
+.row {
+    display:inline-block;
+    vertical-align: top;
+}
+.plan {
+    display: inline-block;
+    // color:#000;
+    vertical-align: top;
+}
+.plan-price h3 {
+    text-align: center;
+    font-size: 36px;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    color: #000;//606060;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .02)
+}
+
+.plan-price {
+    font-size: 24px;
+    font-weight: 300;
+    color: #000;//606060;
+    text-align: center;
+    padding: 0 0 22px;
+    position: relative
+}
+
+.plan.color-1 .plan-price, .plan.color-1 .plan-features, .plan.color-1 a.button {
+    background-color: #FF0000;//#f6f6f6
+}
+
+.plan.color-2 .plan-price, .plan.color-2 .plan-features, .plan.color-2 a.button {
+    background-color: #3acf87
+}
+
+.plan.color-3 .plan-price, .plan.color-3 .plan.color-3 a.button {
+    background-color: #f6f6f6;
+}
+
+.plan.color-4 .plan-price, .plan.color-4 .plan-features, .plan.color-4 a.button {
+    background-color: #e54b81
+}
+
+.plan.color-5 .plan-price, .plan.color-5 .plan-features, .plan.color-5 a.button {
+    background-color: #a558a6
+}
+
+.plan.color-6 .plan-price, .plan.color-6 .plan-features, .plan.color-6 a.button {
+    background-color: #514e9f
+}
+
+.plan-price .value {
+    font-weight: 600;
+    letter-spacing: -1px
+}
+
+.plan-currency {
+    font-size: 22px;
+    opacity: .7;
+    position: relative;
+    margin: 0 -5px 0 0;
+    top: -4px;
+    font-weight: 300
+}
+
+.period {
+    display: block;
+    font-size: 16px;
+    margin: 2px 0 0;
+    opacity: .7
+}
+
+.plan-features {
+    //background: #fff;
+    border-top: none;
+    line-height: 1.25px;
+    padding: 12px 0 0
+}
+
+.plan-features ul li {
+    font-size: 1rem;
+    padding: 8px 0;
+    text-align: center
+}
+
+.plan-features a.button {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin: 12px 0;
+    text-align: center;
+    color: #000;//666;
+    padding: 10px 0;
+    font-size: 14px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+// .color-2 .plan-price,
+// .color-3 .plan-price,
+// .color-4 .plan-price,
+// .color-5 .plan-price,
+// .color-2 .plan-price h3,
+// .color-3 .plan-price h3,
+// .color-4 .plan-price h3,
+// .color-5 .plan-price h3,
+// .color-2 .plan-price .plan-currency,
+// .color-3 .plan-price .plan-currency,
+// .color-4 .plan-price .plan-currency,
+// .color-5 .plan-price .plan-currency,
+// .color-2 .plan-features a.button,
+// .color-3 .plan-features a.button,
+// .color-4 .plan-features a.button,
+// .color-5 .plan-features a.button {
+//     color: #fff
+// }
+
+// .color-2 .plan-price h3,
+// .color-3 .plan-price h3,
+// .color-4 .plan-price h3,
+// .color-5 .plan-price h3 {
+//     background-color: rgba(0, 0, 0, .05)
+// }
+
+.columns {
+    margin-right: 15px
+}
+
+.plan {
+    border: 1px solid #f6f6f6
+}
+
+// .button {
+//     margin-bottom: 100px
+// }
