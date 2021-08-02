@@ -5,7 +5,7 @@ tags: sponsorlevel
 icon: fas fa-medal
 order: 5
 price: "$750"
-description: "Help keep'em hydrated!"
+description: "Help hydrate 'em!"
 ---
 
 Beverage details, Nah?

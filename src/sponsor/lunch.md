@@ -5,7 +5,7 @@ tags: sponsorlevel
 icon: fas fa-medal
 order: 4
 price: "$1000"
-description: "Help keem'em fueled!"
+description: "Help fuel 'em!"
 ---
 
 Lunch details, Nah?
