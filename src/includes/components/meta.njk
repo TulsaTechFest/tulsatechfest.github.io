@@ -1,4 +1,5 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
+{%- set image -%}{{ absolutePageUrl }}assets/images/logo.png{%- endset -%}
 {# General #}
     <meta name="description" content="{{ description or meta.description }}">
     <link rel="canonical" href="{{ absolutePageUrl }}">
