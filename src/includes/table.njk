@@ -1,0 +1,21 @@
+<table class="{{ params.primary }}">
+{% for item in params.data %}
+  {# <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener"><i class="{{item.icon}}"></i>{{item.title}}</a></li> #}
+  {# <li class="{{ params.secondary }}"><a href="{{item.url}}" target="_blank" rel="noopener">{% icon item.icon}}{{item.title}}</a></li> #}
+  <tr class="{{ params.secondary }}"><td>
+  {% if (item.url.length > 0) %}
+    <a href="{{item.url}}" target="_blank" rel="noopener">
+  {% endif %}
+  {% if (item.icon.length > 0) %}
+    <i class="{{item.icon}}"></i>
+  {% endif %}
+  {{item.title}}{{ item.key }}
+  {% if (item.value.length > 0) %}
+    {{ ":" + item.value }}
+  {% endif %}
+  {% if (item.url.length > 0) %}
+    </a>
+  {% endif %}
+  </td></tr>
+{% endfor %}
+</table>

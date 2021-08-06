@@ -9,4 +9,17 @@ eleventyNavigation:
   order: 999
 ---
 
-{% include '../../includes/components/admin.njk' %}
+{% include "../../includes/admins.njk" %}
+
+{% for item in tools %}
+  <li><a href="/admin/tools/{{ item.key | lowercase }}/">{{ item.key | title }} [{{item.value.length}}]</a></li>
+  {# {% endif %} #}
+{% endfor %}
+
+{# <a href="/admin/alerts/">Alerts [{{alerts.length}}]</a><br/>
+<a href="/admin/nav/">Nav [{{nav.length}}]</a><br/>
+<a href="/admin/features/">Features [{{features.length}}]</a><br/> #}
+
+{# {% for item in nav %}
+	<a href="{{ item.url | url }}">{{ nav.title }}</a>
+{% endfor %} #}

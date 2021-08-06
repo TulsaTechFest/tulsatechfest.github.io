@@ -1,13 +1,16 @@
-<section id="admin">
+<section id="admin-all">
   <div class="overlay"></div>
   <div class="gradient-overlay"></div>   	
   <div class="row narrow section-intro with-bottom-sep animate-this">
     <div class="col-full">   			
       <h3>Admin</h3>
       <table border=1 cellpadding=0 cellspacing=0>
-      <tr><th>Title</th><th>Layout</th><th>Url</th><th>Date</th><th>Tags</th></tr>
+      <tr><th>Title [{{collections.all.length}}] </th><th>Layout</th><th>Url</th><th>Date</th><th>Tags</th></tr>
       {% for item in collections.all | reverse %}
         <tr><td><a href={{item.url}}>{{item.data.title}}</a></td><td>{{item.data.layout}}</td><td>{{item.url}}</td><td>{{item.date | dateToFormat('yyyy/MM/dd mm:ss')}}</td><td>{{item.data.tags}}</td></tr>
+
+         {# | replace(",", ", ") #}
+
       {% endfor %}
       </table>
     </div>

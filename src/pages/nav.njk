@@ -1,0 +1,14 @@
+---
+layout: "base"
+title: "Nav"
+permalink: "/nav/"
+url: "/nav/"
+tags: ["nav"]
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Nav"
+  order: 999
+---
+{% for item in nav %}
+	<a href="{{ item.url | url }}">{{ item.title }}</a>
+{% endfor %}

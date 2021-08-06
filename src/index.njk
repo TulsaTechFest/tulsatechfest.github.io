@@ -9,7 +9,7 @@ pagination:
   size: 3
   alias: sponsorlevels
 ---
-{%- from "./includes/components/component.njk" import component -%}
+{%- from "./includes/component.njk" import component -%}
 {# {% for item in ["home","about"] %}
   {% 'boop:' + item %}
   {% include './components/' + item + '.njk' %}
@@ -21,17 +21,17 @@ pagination:
   {{ item.templateContent|safe }}
 {% endfor %} #}
 {# {% include './components/index.njk' %} #}
-{# {% include './includes/components/alerts.njk' %} #}
+{# {% include './includes/alerts.njk' %} #}
 
-{% include './includes/components/home.njk' %}
-{% include './includes/components/about.njk' %}
-{% include './includes/components/audience.njk' %}
+{% include './includes/home.njk' %}
+{% include './includes/about.njk' %}
+{% include './includes/audience.njk' %}
 
 
 {# {% include './components/topics.njk' %} #}
 {# {% include './components/coming.njk' %} #}
 
-{# {% include './includes/components/sponsors.njk' %} #}
+{# {% include './includes/sponsors.njk' %} #}
 
 
 
@@ -41,7 +41,7 @@ pagination:
 		}) }}
  #}
 
-{# {% include './includes/components/sponsor.njk' %} #}
+{# {% include './includes/sponsor.njk' %} #}
 {{ component('section', {
     title: 'Sponsor',
     subtitle: 'This is the best way to connect with regional technologists!',
@@ -65,13 +65,13 @@ pagination:
 }) }}
 
 
-{# {% include './includes/components/submit.njk' %} #}
+{# {% include './includes/submit.njk' %} #}
 
 {# {% include './components/speakers.njk' %} #}
 
 {# {% include './components/testimonials.njk' %} #}
-{% include './includes/components/connect.njk' %}
-{# {% include './includes/components/socialLinks.njk' %} #}
+{% include './includes/connect.njk' %}
+{# {% include './includes/socialLinks.njk' %} #}
 
 {# {% include './includes/partials/links.njk' %} #}
 

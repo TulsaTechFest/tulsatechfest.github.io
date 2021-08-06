@@ -1,0 +1,14 @@
+<div class="{{ params.title | lowercase }}">{# col-full #}
+    {% for item in collections[params.collection] | sortByOrder %}
+        <div class="col-md-4">
+            <div class="card pricing-card">
+                <div class="card-body">
+                {% if (params.include !== '') %}
+                  {% include "./" + params.include + ".njk" %}
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,9 +1,13 @@
+.header {
+  padding: 10px;
 
-/* ===================================================================
- *  09. header styles - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
- header {
+  &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+header {
     width: 100%;
     height: auto;
     //position: absolute;
@@ -16,10 +20,6 @@
     max-width: 1300px;
     position: relative;
   }
-  
-  /* ------------------------------------------------------------------- 
-   * header logo - (_layout.css) 
-   * ------------------------------------------------------------------- */
   header .header-logo {
     position: absolute;
     left: 32px;
@@ -64,13 +64,16 @@
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  header .header-title-link a:hover, header .header-title-link a:focus, header .header-title-link a:active {
+    color: red;//white;
+  }
   header .header-menu-text {
     display: block;
     line-height: 42px;
     font-family: "montserrat-regular", sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    //letter-spacing: .2rem;
     color: #FFF !important;//rgba(255, 255, 255, 255);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -78,14 +81,12 @@
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  /* ------------------------------------------------------------------- 
-   * menu trigger - (_layout.css) 
-   * ------------------------------------------------------------------- */
+
   #header-menu-trigger {
     display: block;
     position: fixed;
     right: 32px;
-    top: 30px;
+    top: 10px;
     height: 42px;
     width: 42px;
     line-height: 42px;
@@ -93,7 +94,7 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;//rgba(255, 255, 255, 0.5);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -101,13 +102,13 @@
     transition: all 0.3s ease-in-out;
   }
   #header-menu-trigger.opaque {
-    background-color: #000000;
+    background-color: #000;
   }
   #header-menu-trigger.opaque .header-menu-text {
-    background-color: #000000;
+    background-color: #000;
   }
-  #header-menu-trigger:hover, #header-menu-trigger:focus {
-    color: #FFFFFF;
+  #header-menu-trigger a:hover, #header-menu-trigger a:focus {
+    color: red;//#FFFFFF;
   }
   #header-menu-trigger .header-menu-text {
     display: block;
@@ -151,9 +152,7 @@
   .header__right {
     padding-right:10px;
   }
-  /* ------------------------------------------------------------------- 
-   * off-canvas menu - (_layout.scss) 
-   * ------------------------------------------------------------------- */
+
   #menu-nav-wrap {
     background: #0C0C0C;
     color: #fff;//rgba(255, 255, 255, 0.25);
@@ -282,7 +281,6 @@
     color: #fff;//rgba(255, 255, 255, 0.5);
   }
   
-  /* menu is open */
   .menu-is-open #menu-nav-wrap {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);

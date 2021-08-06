@@ -1,7 +1,36 @@
 ---
 layout: base
 ---
-<article class="container">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+<article id="sponsor">
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay">	
+		<div class="row section-intro with-bottom-sep animate-this">
+		   	<div class="row">
+		   		<div class="col-twelve">
+                    <article class="container">
+                        <h1><a href="{{ url }}" target="_blank" rel="noopener"><img src="{{ img }}" alt="{{ title }}"></a></h1>
+                        {{ description | safe }}
+                        {{ content | safe }}
+                    </article>
+                </div>
+            </div>
+            <div class="sideway-list font-lg animate-intro">
+				{# {{ component('socialLinks', {
+					primary: 'list-links',
+					secondary: 'table-item',
+					data: collections.links
+				}) }} #}
+				{% for link in links %}
+					<a href="{{link.value}}" target="_blank" rel="noopener" title="{{link.text}}"><i class="{{link.icon}}"></i></a>
+				{% endfor %}
+    		</div>
+			{# <div class="row">
+		   		<div class="col-twelve">
+                    <article class="container">
+                        {{ content | safe }}
+                    </article>
+                </div>
+            </div> #}
+        </div>
+    </div>
 </article>

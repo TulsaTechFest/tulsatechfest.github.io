@@ -1,0 +1,31 @@
+---
+layout: "base"
+title: "Features"
+permalink: "/admin/features/"
+url: "/admin/features/"
+tags: ["nav-admin"]
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Features"
+  order: 999
+---
+{%- from "../../includes/component.njk" import component -%}
+
+{{ component('section', {
+	title: 'admin-Features',
+	subtitle: '',
+	data: features
+}) }}
+
+{# {{ component('list', {
+	primary: 'item-list',
+	secondary: 'table-item',
+	data: features 
+}) }} #}
+
+{# collections.all | eleventyNavigation #}
+
+{# {% for item in features %}
+	{{ item.key + ":" + item.value }}<br/>
+	{# <a href="{{ item.url | url }}">{{ item | dump }}</a> #}
+{#{% endfor %} #}

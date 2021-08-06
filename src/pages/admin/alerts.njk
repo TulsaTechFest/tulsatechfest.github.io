@@ -1,0 +1,18 @@
+---
+layout: "base"
+title: "Alerts"
+permalink: "/admin/alerts/"
+url: "/admin/alerts/"
+tags: ["nav-admin"]
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Alerts"
+  order: 999
+---
+{%- from "../../includes/component.njk" import component -%}
+
+{{ component('section', {
+	title: 'admin-Alerts',
+	subtitle: '',
+	data: alerts
+}) }}

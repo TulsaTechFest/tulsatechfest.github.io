@@ -1,0 +1,18 @@
+---
+layout: "base"
+title: "Tags"
+permalink: "/admin/tags/"
+url: "/admin/tags/"
+tags: ["nav-admin"]
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Tags"
+  order: 999
+---
+{%- from "../../includes/component.njk" import component -%}
+
+{{ component('section', {
+	title: 'admin-Tags',
+	subtitle: '',
+	data: collections.tags
+}) }}

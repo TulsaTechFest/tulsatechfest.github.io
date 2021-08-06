@@ -6,30 +6,47 @@
     <a href="#0" class="close-button" title="close"><span>Close</span></a>	
     <h3><a href="#top">TulsaTechFest</a></h3>  
     <ul class="nav-list">
-        {%- for item in collections.all | eleventyNavigation -%}
-        {%- if item.url -%}
-            {%- set isCurrent = (item.url == page.url) -%}
-            {%- set isParent = item.url != '/' and item.url in page.url -%}
-            <li class="{% if isCurrent or isParent %}current{% endif %}">
-                <a
-                    class="smoothscroll"
-                    href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
-                    {% if isCurrent %}aria-current="page"{% endif %}
-                    title="{{ item.title }}"
-                >
-                    {{ item.title }}
-                </a>
-            </li>
-        {%- endif -%}
-    {%- endfor -%}					
-        {# <li><a href="/admin/" {% if isCurrent %}aria-current="page"{% endif %} title="Admin">Admin</a></li> #}
-    </ul>	
+        {%- for item in nav -%}
+            {%- if item.url -%}
+                {%- set isCurrent = (item.url == page.url) -%}
+                {%- set isParent = item.url != '/' and item.url in page.url -%}
+                <li class="{% if isCurrent or isParent %}current{% endif %}">
+                    <a
+                        class="smoothscroll"
+                        href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+                        {% if isCurrent %}aria-current="page"{% endif %}
+                        title="{{ item.title }}"
+                    >
+                        {{ item.title }}
+                    </a>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    {# <li>{{window.location.hostname}}</li>
+    <li>{{window.location.host}}</li>
+    <li>{{window.location}}</li>
+    <li>{{config.site.url.base}}</li> #}
+    {# <li>{{ request.url }}</li>
+    <li>{{ request.headers.referer }}</li> #}
+    {# {% if (data.features["adminMenu"] === '1' and (window.location.hostname === '' or window.location.hostname === 'localhost')) %} #}
+    {# <li>{{ getHostFromRequest() }}</li> #}
+    {# {% if (data.features["adminMenu"] === '1') %} #}
+    {% if (features.adminMenu === '1') %}
+        <li><a href="/admin/" {% if isCurrent %}aria-current="page"{% endif %} title="Admin">Admin</a>
+            <ul>
+                <li>{% include "admins.njk" %}</li>
+            </u>
+        </li>
+    {% endif %}
+    </ul>
+    {% if (alerts) %}
     <ul class="nav-list2">
-    {% for item in collections.alerts %}
+    {% for item in alerts %}
         {# <p class="alert-text"><a href="{{item.url}}">{{item.data.text}}</a></p> #}
-        <li><a href="{{item.data.url}}">{{item.data.text}}</a></li>
+        <li><a href="{{item.url}}">{{item.text}}</a></li>
     {% endfor %}
     </ul>
+    {% endif %}
     <ul class="header-social-list">
         {% for item in collections.links %}
             <li><a href="{{item.data.url}}" target="_blank" rel="noopener"><i class="{{item.data.icon}}"></i></a></li>
@@ -43,8 +60,8 @@
     {% list "header-social-list", "list-item", "icon,link", collections.links %} #}
         
 </nav>
-{# <nav class="nav js-nav" role="navigation" tabindex="-1">
-    <button
+<nav class="nav js-nav" role="navigation" tabindex="-1">
+    {#<button
         class="nav__toggle js-nav-toggle"
         aria-expanded="false"
         aria-controls="nav-menu"
@@ -56,9 +73,9 @@
             <span class="menuicon__bar"></span>
             <span class="menuicon__bar"></span>
         </span>
-    </button>
+    </button>#}
     <ul class="nav__menu js-nav-menu" id="nav-menu">
-    {%- for item in collections.all | eleventyNavigation -%}
+    {%- for item in nav -%}
         {%- if item.url -%}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
@@ -75,4 +92,4 @@
     {%- endfor -%}
     <li style="width:20px"></li>
     </ul>
-</nav> #}
+</nav>

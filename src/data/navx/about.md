@@ -1,9 +1,6 @@
 ---
-layout: "base"
 title: "About"
 permalink: "/#about"
 tags: ["nav-main"]
-eleventyNavigation:
-  key: About
-  order: 1  
+order: 1
 ---

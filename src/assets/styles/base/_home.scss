@@ -1,7 +1,7 @@
  #home {
     width: 100%;
     height: 100%;
-    background-color: #151515;
+    background-color: #000;//#151515;
     background-image: url(../images/TulsaTechFest2018Registration.jpg);
     background-repeat: no-repeat;
     background-position: center 30%;
@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     opacity: .2;
-    background-color: #19191b;
+    background-color: #000;//#19191b;
   }
   
   .home-content-table {
@@ -101,7 +101,7 @@
   .home-social-list li a:hover, 
   .home-social-list li a:focus, 
   .home-social-list li a:active {
-    color: #151515;
+    color: #fff;//#151515;
   }
   
   /* scroll down */
@@ -121,7 +121,7 @@
     padding-left: 9px;
   }
   .scrolldown a:hover, .scrolldown a:focus, .scrolldown a:active {
-    color: #151515 !important;
+    color: red !important;//#151515 !important;
   }
   
   html[data-useragent*='MSIE 10.0'] .scrolldown,
@@ -224,11 +224,14 @@
   
     .home-content-tablecell .row {
       max-width: 480px;
-      padding-top: 12rem;
+      //padding-top: 12rem;
       padding-bottom: 12rem;
     }
     .home-content-tablecell h3 {
       font-size: 1.7rem;
+    }
+    .home-content-tablecell h2 {
+      font-size: 1.5rem;//4.8rem;
     }
     .home-content-tablecell h1 {
       font-size: 2rem;//4.8rem;

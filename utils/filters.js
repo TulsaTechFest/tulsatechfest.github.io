@@ -11,6 +11,17 @@ module.exports = {
     // },
     include: require("./include.js"),
 
+    head: function(array, n) {
+        if(!Array.isArray(array) || array.length === 0) {
+          return [];
+        }
+        if( n < 0 ) {
+          return array.slice(n);
+        }
+    
+        return array.slice(0, n);
+    },
+
     replace: function(value, searchValue, replaceValue) {
         return value.replace(searchValue, replaceValue)
     },
@@ -27,6 +38,15 @@ module.exports = {
         return values.find(v => v.tags === tag);
     },
 
+    dateReadable: function(dateObj) {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+    },
+    
+    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+    dateToHtml: function(dateObj) {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    },
+
     dateToFormat: function(date, format) {
         return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
             String(format)
@@ -41,7 +61,7 @@ module.exports = {
     },
 
     lowercase: function(str) {
-        return str.toLowerCase();
+        return String(str).toLowerCase();
     },
 
     obfuscate: function(str) {
@@ -66,5 +86,13 @@ module.exports = {
 
     uppercase: function(str) {
         return str.toUpperCase();
+    },
+
+    tostring: function(obj, type) {
+        if (type == 'json'){
+        return JSON.stringify(obj,null,'\t')
+        }else{
+            return String(obj) == '[object Object]' ? Object.prototype.toString.call(obj) : String(obj);
+        }
     }
 }

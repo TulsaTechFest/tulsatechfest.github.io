@@ -1,0 +1,65 @@
+{# {% set admins = [
+    {
+        "key": "all",
+        "value": collections.all
+    },
+    {
+        "key": "alerts",
+        "value": alerts
+    },
+    {
+        "key": "config",
+        "value": config
+    },    
+    {
+        "key": "env",
+        "value": env
+    },
+    {
+        "key": "features",
+        value: features
+    },
+    {
+        "key":"nav",
+        "value": nav
+    },
+    {
+        "key":"social",
+        "value": social
+    },
+    {
+        "key":"socialLinks",
+        "value": socialLinks
+    },
+    {
+        "key":"pokemon",
+        "value": pokemon
+    }    
+]
+ %} #}
+{% for item in admins %}
+  {% if (item.value.length > 0) %}
+    {% if (item.value === 'alerts') %}
+        item.value = alerts
+    {% elseif (item.value === 'config') %}
+        item.value = config
+    {% elseif (item.value === 'env') %}
+        item.value = env
+    {% elseif (item.value === 'features') %}
+        item.value = features
+    {% elseif (item.value === 'nav') %}
+        item.value = nav
+    {% elseif (item.value === 'social') %}
+        item.value = social
+    {% elseif (item.value === 'socialLinks') %}
+        item.value = socialLinks
+    {% elseif (item.value === 'pokemon') %}
+        item.value = pokemon
+    {% elseif (item.value === 'collections.all') %}
+        item.value = collections.all
+    {% elseif (item.value === 'collections.tags') %}
+        item.value = collections.tags
+    {% endif %}
+  <li><a href="/admin/{{ item.key | lowercase }}/">{{ item.key | title }} [{{item.value.length}}]</a></li>
+  {% endif %}
+{% endfor %}

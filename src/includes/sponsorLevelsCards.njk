@@ -1,5 +1,6 @@
 {# {% if params.collections && params.collections.sponsorlevel %} #}
 <div class="col-full">
+{% if (params.collections and params.collections.sponsorlevel) %}
     {% for item in params.collections.sponsorlevel | sortByOrder %}
         {% if (loop.index >= params.primary) and (loop.index <= params.secondary) %}
         <div class="col-md-4">
@@ -38,5 +39,5 @@
         </div>
         {% endif %}
     {% endfor %}
-    </div>
-{# {% endif %} #}
+    {% endif %}
+</div>

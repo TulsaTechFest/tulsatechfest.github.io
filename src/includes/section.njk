@@ -1,10 +1,10 @@
-{%- from "components/component.njk" import component -%}
+{%- from "component.njk" import component -%}
 <section id="{{ params.title | lowercase }}">
   <div class="overlay"></div>
   <div class="gradient-overlay"></div>
   <div class="row section-intro animate-this">
     <div class="col-twelve">
-      <h3 class="animate-this">{{ params.title }}</h3>
+      <h3 class="animate-this">{{ params.title | replace("admin-", "") }}</h3>
       {% if (params.subtitle) %}
       <p>{{params.subtitle}}</p>
       {% endif %}
@@ -13,21 +13,29 @@
       {{params.text | safe}}
       {% endif %}
  
-      {% if (params.title === 'Sponsor') %}
+      {% if (params.title === 'Sponsor' and params.collections) %}
         {{ component('sponsorLevelsCards', {
           primary: 1,
           secondary: 3,
           collections: params.collections
         }) }}
-      {% endif %}
-
-      {% if (params.title === 'Additional Sponsorship Opportunities') %}
+      {% elseif (params.title === 'Additional Sponsorship Opportunities' and params.collections) %}
         {{ component('sponsorLevelsCards', {
           primary: 4,
           secondary: 6,
           collections: params.collections
         }) }}
+      {% elseif (params.title.length > 0 and params.data) %}
+        {{ component('table', {
+          primary: '{{ params.title | lowercase }}-list',
+          secondary: '{{ params.title | lowercase }}-item',
+          data: params.data
+        }) }}
       {% endif %}
-    </div>   		
+
+      {% if (params.include.length > 0) %}
+        {% include "./" + params.include + ".njk" %}
+      {% endif %}
+    </div>
   </div>
 </section>

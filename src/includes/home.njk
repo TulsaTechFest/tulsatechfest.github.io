@@ -5,20 +5,22 @@
 		<div class="home-content-tablecell">
 			<div class="row">
 				<div class="col-twelve">
-					<h3 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h3>
-					<h2 class="animate-intro">The regions largest *FREE Technical Training Conference</h2>
-					<h1>Tulsa Tech Fest 2021</h1>
+					{% if (features["homeSplashImage"] === '1') %}
+						{# <img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/> #}
+					{% endif %}
+					<h3>Tulsa Tech Fest 2021</h3>
+					<h2 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h2>
+					<h1 class="animate-intro">The regions largest *FREE Technical Training Conference</h1>
 					<div class="more animate-intro">
-						{% if (collections.alerts) %}
-							{% for item in collections.alerts %}
-								<a class="smoothscroll button stroke" href="{{item.data.url}}">{{item.data.text}}</a>
+						{% if (alerts) %}
+							{% for item in alerts %}
+								<a class="smoothscroll button stroke" href="{{item.url}}">{{item.text}}</a>
 							{% endfor %}
 							<br/>
 						{% endif %}
-						{% for item in collections.all | eleventyNavigation %}
+						{% for item in nav %}
 							<a class="smoothscroll button stroke" href="{{item.url}}">{{item.title}}</a> 
-						{% endfor %}
-{# 
+						{% endfor %}{# 
 						{% if (collections['nav-about']) %}
 							<br/>
 							{% for item in collections['nav-about'] %}

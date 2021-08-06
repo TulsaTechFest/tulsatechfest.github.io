@@ -1,0 +1,10 @@
+---
+layout: "base"
+---
+{%- from "../includes/component.njk" import component -%}
+
+{{ component('section', {
+	title: 'admin-' + key,
+	subtitle: '',
+	data: value
+}) }}

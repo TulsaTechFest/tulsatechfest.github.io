@@ -1,0 +1,31 @@
+---
+layout: "base"
+title: "Pokemon"
+permalink: "/admin/pokemon/"
+url: "/admin/pokemon/"
+tags: ["nav-admin"]
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Pokemon"
+  order: 999
+---
+{%- from "../../includes/component.njk" import component -%}
+
+{{ component('list', {
+	primary: 'item-list',
+	secondary: 'table-item',
+	data: pokemon
+}) }}
+
+<div class="container">
+    <h1>Pokemon</h1>
+    <ul id="pokedex">
+        {% for pokemon in pokemon %}
+            <li class="card">
+                <img class="card-image" src="{{ pokemon.image }}"/>
+                <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h2>
+                <p class="card-subtitle">Type: {{ pokemon.type }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
