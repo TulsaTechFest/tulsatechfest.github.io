@@ -1,7 +1,7 @@
 ---
 layout: sponsor.njk
 title: Gold
-tags: sponsorlevel
+tags: sponsorlevel-main
 icon: fas fa-trophy
 order: 2
 price: $1500

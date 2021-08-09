@@ -1,11 +1,11 @@
 ---
 layout: sponsorlevel.njk
-title: "Beverage"
-tags: sponsorlevel
+title: Beverage
+tags: sponsorlevel-extra
 icon: fas fa-medal
 order: 5
 price: "$750"
-description: "Help hydrate 'em!"
+description: "Hydrate 'em!"
 ---
 
 Beverage details, Nah?

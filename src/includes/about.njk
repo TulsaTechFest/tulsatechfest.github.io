@@ -11,15 +11,16 @@
 	<div class="row with-bottom-sep">
 		<div class="col-full">
 			<p>Even though it is a free event, we request you to *PLEASE bring TWO CANS or TWO BUCKS. We usually collect around 500 pounds of food! Let's top that this year! Help your community, the Community Food Bank and Homeless Center!</p>
-				{# {% if (collections['nav-about']) %}
-					<div class="more>
-					{% for item in collections['nav-about'] %}
-						<a class="button stroke" href="{{item.data.url}}">{{item.data.title}}</a>
-					{% endfor %}
-					</div>
-				{% endif %} #}
-
+			{% if (features.aboutDetails === '1'and collections['nav-about']) %}
+				<div class="more>
+				{% for item in collections['nav-about'] %}
+					<a class="button stroke" href="{{item.data.url}}">{{item.data.title}}</a>
+				{% endfor %}
+				</div>
+			{% endif %}
 		</div>
 	</div>
+	{% if (features.singlePageHomePage === '1') %}
 	<div class="scrolldown"><a href="#audience" class="scroll-icon smoothscroll">Scroll Down<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+	{% endif %}
 </section>

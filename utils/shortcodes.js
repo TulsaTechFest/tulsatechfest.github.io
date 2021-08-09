@@ -1,4 +1,10 @@
 module.exports = {
+    breadcrumb: function(url, title) {
+        var parts = url.split('/');
+        parts[0] = 'Home';
+        if (title) {parts[parts.length -1] = title;}
+        return parts.join(' &gt; ');
+    },
     icon: function (name) {
         return `<svg class="icon icon--${name}" role="img" aria-hidden="true" width="24" height="24">
                     <use xlink:href="#icon-${name}"></use>
@@ -57,9 +63,31 @@ module.exports = {
             }
             results += `</li>`;
         }
-        results += `</div></div></section>`
+        results += `</div></div></section>`;
         return results;
     },
+    cards: function(name, card, data) {
+        let results = `<div class="cards-${name}">`;
+
+        //for (item in data) {
+        data.forEach((item) => {
+        
+             results += `<div class="col-md-4"><div class="card card-${card}"><div class="card-body">`;
+             //results += item | tolist;
+             let itemData = Object.entries(item).map(e => ({ key: e[0], value: e[1] }));
+             itemData.forEach((itemProp) => {
+                 results += `${itemProp.key}:${itemProp.value}`;
+             }) 
+             //results += itemData.title;
+             //results += `<h1>${item}</h1>`;
+        //         if (card !== '') {
+        //             {{ component(card, { data: item }) }}
+        //         }
+             results += `</div></div></div>`;
+        });
+        results += `</div>`;
+        return results;
+    }, 
     carousel: function(name, data) {
         let results = ``;
         for (item in data) {

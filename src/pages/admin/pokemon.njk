@@ -11,21 +11,27 @@ eleventyNavigation:
 ---
 {%- from "../../includes/component.njk" import component -%}
 
-{{ component('list', {
+{# {{ component('list', {
 	primary: 'item-list',
 	secondary: 'table-item',
 	data: pokemon
-}) }}
+}) }} #}
 
-<div class="container">
-    <h1>Pokemon</h1>
-    <ul id="pokedex">
-        {% for pokemon in pokemon %}
-            <li class="card">
-                <img class="card-image" src="{{ pokemon.image }}"/>
-                <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h2>
-                <p class="card-subtitle">Type: {{ pokemon.type }}</p>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+<section id="admin-pokemon">
+  <div class="overlay"></div>
+  <div class="gradient-overlay"></div>   	
+  <div class="row section-intro with-bottom-sep animate-this">
+    <div class="col-full">   			
+        <h1>Pokemon</h1>
+        <ul id="pokedex">
+            {% for pokemon in pokemon %}
+                <li class="card">
+                    <img class="card-image" src="{{ pokemon.image }}"/>
+                    <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h2>
+                    <p class="card-subtitle">Type: {{ pokemon.type }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,7 @@
 ---
 layout: sponsor.njk
 title: Premier
-tags: sponsorlevel
+tags: sponsorlevel-main
 icon: fas fa-award
 order: 1
 price: $2500

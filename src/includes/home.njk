@@ -5,8 +5,8 @@
 		<div class="home-content-tablecell">
 			<div class="row">
 				<div class="col-twelve">
-					{% if (features["homeSplashImage"] === '1') %}
-						{# <img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/> #}
+					{% if (features.homeSplashImage === '1') %}
+						<img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/>
 					{% endif %}
 					<h3>Tulsa Tech Fest 2021</h3>
 					<h2 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h2>
@@ -14,12 +14,14 @@
 					<div class="more animate-intro">
 						{% if (alerts) %}
 							{% for item in alerts %}
-								<a class="smoothscroll button stroke" href="{{item.url}}">{{item.text}}</a>
+								<a class="button stroke{{' smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}" href="{{item.url | url | urlspa}}">{{item.text}}</a>
 							{% endfor %}
 							<br/>
 						{% endif %}
-						{% for item in nav %}
-							<a class="smoothscroll button stroke" href="{{item.url}}">{{item.title}}</a> 
+						{% for item in nav.main %}
+						 	{% if item.url and not item.title.startsWith('_') %}
+								<a class="button stroke{{' smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}" href="{{item.url | url | urlspa}}">{{item.title}}</a> 
+							{% endif %}
 						{% endfor %}{# 
 						{% if (collections['nav-about']) %}
 							<br/>
@@ -61,5 +63,7 @@
 			<li class="animate-intro fadeInUp animated"><a href="{{item.url}}" target="_blank" rel="noopener"><i class="{{item.data.icon}}"></a></li>
 		{% endfor %}
 	</ul>  #}
+	{% if (features.singlePageHomePage === '1') %}
 	<div class="scrolldown"><a href="#about" class="scroll-icon smoothscroll">Scroll Down<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>			
+	{% endif %}
 </section>

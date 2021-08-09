@@ -2,7 +2,7 @@
 <footer class="footer" role="contentinfo">
     <div class="footer__inner container">
 		<a href="#top">
-			<span>TulsaTechFest 2021 - Copyright &copy; {{ build.timestamp | dateToFormat('yyyy') }} TechFests</span>
+			<span>TulsaTechFest 2021 - Copyright &copy; {{ build.timestamp | toformat('yyyy') }} TechFests</span>
 		</a>
 		<ul class="footer-social-list">
 		{% for item in collections.links %}

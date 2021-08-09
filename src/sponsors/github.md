@@ -1,6 +1,6 @@
 ---
 title: "Github"
-tags: ["sponsorresource"]
+tags: ["sponsor-resource"]
 order: 2
 # url: /sponsors/Infragistics
 url: "https://github.com"

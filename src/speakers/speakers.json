@@ -1,4 +1,5 @@
 {
-    "tags": "speakers",
+    "parent": "/speakers",
+    "tags": ["speakers"],
     "layout": "speaker"
 }

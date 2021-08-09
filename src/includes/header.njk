@@ -2,6 +2,16 @@
     <div class="header__inner container">
         <div class="header__left">
             <a href="/" class="header-title-link">TulsaTechFest 2021</a>
+            {# {% if (url !== '/nav/' and url.substring(0,1) !== '#' and url.substring(0,2) !== '/#') %}
+                {% set navPages = collections.all | eleventyNavigationBreadcrumb('Sponsors') %}
+                {% if (navPages) %}
+                    {{ navPages | dump | safe }}
+                {% endif %}
+            {% endif %} #}
+            {# {% if(page.url) %}
+            {% breadcrumb page.url, page.data.title %}
+            {% endif %} #}
+
         </div>
         <div class="header__right">
             {% include "./navigation.njk" %}

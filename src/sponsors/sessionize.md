@@ -1,6 +1,6 @@
 ---
 title: "Sessionize"
-tags: ["sponsorresource"]
+tags: ["sponsor-resource"]
 order: 3
 url: "/sponsors/Sessionize"
 # url: "https://www.sessionize.com"

@@ -12,7 +12,7 @@ eleventyNavigation:
 {% include "../../includes/admins.njk" %}
 
 {% for item in tools %}
-  <li><a href="/admin/tools/{{ item.key | lowercase }}/">{{ item.key | title }} [{{item.value.length}}]</a></li>
+  <li><a href="/admin/tools/{{ item.key | tolower }}/">{{ item.key | title }} [{{item.value.length}}]</a></li>
   {# {% endif %} #}
 {% endfor %}
 

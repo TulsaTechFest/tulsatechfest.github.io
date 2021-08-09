@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
+const features = require('./features');
 
 const fetchPokemon = () => {
+    if (features.pokemon !== '1') return;
     const promises = [];
     for (let i = 1; i <= 150; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;

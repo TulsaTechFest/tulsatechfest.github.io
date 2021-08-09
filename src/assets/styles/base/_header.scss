@@ -67,7 +67,7 @@ header {
   header .header-title-link a:hover, header .header-title-link a:focus, header .header-title-link a:active {
     color: red;//white;
   }
-  header .header-menu-text {
+  header .header-menu-text* {
     display: block;
     line-height: 42px;
     font-family: "montserrat-regular", sans-serif;
@@ -81,7 +81,9 @@ header {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-
+  .header-menu-text-active {
+    color: red !important;
+  }
   #header-menu-trigger {
     display: block;
     position: fixed;

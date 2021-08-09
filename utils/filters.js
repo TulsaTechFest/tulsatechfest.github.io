@@ -38,31 +38,6 @@ module.exports = {
         return values.find(v => v.tags === tag);
     },
 
-    dateReadable: function(dateObj) {
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
-    },
-    
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    dateToHtml: function(dateObj) {
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-    },
-
-    dateToFormat: function(date, format) {
-        return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
-            String(format)
-        )
-    },
-
-    dateToISO: function(date) {
-        return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
-            includeOffset: false,
-            suppressMilliseconds: true
-        })
-    },
-
-    lowercase: function(str) {
-        return String(str).toLowerCase();
-    },
 
     obfuscate: function(str) {
         const chars = []
@@ -78,13 +53,48 @@ module.exports = {
         });
         return values.slice(0, 1);
     },
+    
+    replace: function(value, find, replace) {
+        return value.replace(find, replace);
+    },
+
+    urlspa: function(url, singlePageHomePage = '1') {
+        return singlePageHomePage !== '1' ? url : url.replace('#','') + '/';
+    },
 
     sortByOrder: function(values) {
         let vals =[...values];
+        // if (!vals) return;
         return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
     },
 
-    uppercase: function(str) {
+    todate: function(dateObj) {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+    },
+    
+    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+    tohtml: function(dateObj) {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    },
+
+    toformat: function(date, format) {
+        return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
+            String(format)
+        )
+    },
+
+    toiso: function(date) {
+        return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
+            includeOffset: false,
+            suppressMilliseconds: true
+        })
+    },
+
+    tolower: function(str) {
+        return String(str).toLowerCase();
+    },
+
+    toupper: function(str) {
         return str.toUpperCase();
     },
 
@@ -94,5 +104,9 @@ module.exports = {
         }else{
             return String(obj) == '[object Object]' ? Object.prototype.toString.call(obj) : String(obj);
         }
+    },
+
+    tolist: function(obj) {
+        return Object.entries(obj).map(e => ({ key: e[0], value: e[1] }));
     }
 }

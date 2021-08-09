@@ -1,11 +1,8 @@
 ---
+layout: base
 title: "Speakers"
 eleventyExcludeFromCollections: true
 ---
+{%- from "../includes/component.njk" import component -%}
 
-<h3>Speakers</h3>
-<div class="col-full">{# col-full #}
-    {% for item in collections.speakers | sortByOrder %}
-        <h1>{{item.title | safe }}</h1>
-    {% endfor %}
-</div>
+{{ component('section', {title: 'Speakers', subtitle: '', data: collections.speakers}) }}

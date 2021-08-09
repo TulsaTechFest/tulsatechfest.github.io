@@ -1,26 +1,6 @@
 ---
+layout: base
 title: "Sponsors"
 eleventyExcludeFromCollections: true
 ---
-{# {%- from "../includes/component.njk" import component -%} #}
-
-<div class="col-full">{# col-full #}
-    {% for level in collections.sponsorlevel | sortByOrder %}
-        <h1>{{item.title}}</h1>
-    {% endfor %}
-</div>
-
-        {# {% for item in collections['sponsor' + level.title] | sortByOrder %}
-            <div class="col-md-4">
-                <div class="card pricing-card">
-                    <div class="card-body">
-                    {{ item.title }}
-                     {% if (params.include !== '') %}
-                    {% include "./" + params.include + ".njk" %}
-                    {% endif %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    {% endfor %}
-</div> #}
+{% include '../includes/sponsorsPage.njk' %}

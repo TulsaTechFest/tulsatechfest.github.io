@@ -6,14 +6,14 @@
     <a href="#0" class="close-button" title="close"><span>Close</span></a>	
     <h3><a href="#top">TulsaTechFest</a></h3>  
     <ul class="nav-list">
-        {%- for item in nav -%}
-            {%- if item.url -%}
+        {%- for item in nav.main -%}
+          {%- if item.url and not item.title.startsWith('_') -%}
                 {%- set isCurrent = (item.url == page.url) -%}
                 {%- set isParent = item.url != '/' and item.url in page.url -%}
                 <li class="{% if isCurrent or isParent %}current{% endif %}">
                     <a
-                        class="smoothscroll"
-                        href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+                        class="{{ 'smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}"
+                        href="{% if isCurrent %}#main{% else %}{{ item.url | url | urlspa }}{% endif %}"
                         {% if isCurrent %}aria-current="page"{% endif %}
                         title="{{ item.title }}"
                     >
@@ -43,7 +43,7 @@
     <ul class="nav-list2">
     {% for item in alerts %}
         {# <p class="alert-text"><a href="{{item.url}}">{{item.data.text}}</a></p> #}
-        <li><a href="{{item.url}}">{{item.text}}</a></li>
+        <li><a href="{{item.url | url | urlspa }}">{{item.text}}</a></li>
     {% endfor %}
     </ul>
     {% endif %}
@@ -75,17 +75,22 @@
         </span>
     </button>#}
     <ul class="nav__menu js-nav-menu" id="nav-menu">
-    {%- for item in nav -%}
-        {%- if item.url -%}
+    {%- for item in nav.main -%}
+        {%- if item.url and not item.title.startsWith('_') -%}
+            {# {% if (features.singlePageHomePage !== '1') -%}
+               {% set item.url = item.url | replace('#','') %}
+            {% endif %} #}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
+            {# {%- set href = isCurrent ? %}#main{% else %}{{ item.url | url } #}
+            {# {%- set href = item.url | url | replace('#','') -%} #}
             <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
                 <a
-                    class="nav__link header-menu-text"
-                    href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+                    class="nav__link header-menu-text{% if isCurrent or isParent %}-active{% endif %}"
+                    href="{{ item.url | url | urlspa }}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
-                    {{ item.title }}
+                    {{ item.title | toupper }}
                 </a>
             </li>
         {%- endif -%}

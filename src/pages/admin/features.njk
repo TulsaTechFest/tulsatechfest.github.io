@@ -14,7 +14,7 @@ eleventyNavigation:
 {{ component('section', {
 	title: 'admin-Features',
 	subtitle: '',
-	data: features
+	data: features | tolist
 }) }}
 
 {# {{ component('list', {

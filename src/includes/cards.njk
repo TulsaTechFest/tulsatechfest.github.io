@@ -1,14 +1,22 @@
-<div class="{{ params.title | lowercase }}">{# col-full #}
-    {% for item in collections[params.collection] | sortByOrder %}
+<div class="cards-{{ params.title | tolower }}">
+<h1>{{params.title}}</h1>
+    {% for item in params.data %}
+        <h1>{{item.title}}</h1>
         <div class="col-md-4">
-            <div class="card pricing-card">
+            
+            <div class="card card-{{params.title | tolower}}">
                 <div class="card-body">
                 {% if (params.include !== '') %}
-                  {% include "./" + params.include + ".njk" %}
+                  {# {% include "./" + params.include + ".njk" %} #}
+                    {{ component(params.include, { data: item }) }}
                 {% endif %}
                 </div>
             </div>
         </div>
-        {% endif %}
-    {% endfor %}
+    {% endfor %} 
+    {#
+ <div class="card card-{{params.cardClass ?? params.title | tolower}}"> 
+  title: params.title | tolower,
+ #}
+
 </div>

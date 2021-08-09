@@ -37,29 +37,37 @@
     }    
 ]
  %} #}
-{% for item in admins %}
+{% for item in nav.admin %}
   {% if (item.value.length > 0) %}
     {% if (item.value === 'alerts') %}
-        item.value = alerts
+        {% set data = alerts %}
     {% elseif (item.value === 'config') %}
-        item.value = config
-    {% elseif (item.value === 'env') %}
-        item.value = env
+        {% set data = config | tolist %}
+    {% elseif (item.value === 'env' and process.env) %}
+        {% set data = process.env | tolist %}
     {% elseif (item.value === 'features') %}
-        item.value = features
+        {% set data = features | tolist %}
+    {% elseif (item.value === 'links') %}
+        {% set data = links %}
     {% elseif (item.value === 'nav') %}
-        item.value = nav
+        {% set data = nav %}
+    {% elseif (item.value === 'nav-main') %}
+        {% set data = nav.main %}
+    {% elseif (item.value === 'nav-admin') %}
+        {% set data = nav.admin %}                
     {% elseif (item.value === 'social') %}
-        item.value = social
+        {% set data = social %}
     {% elseif (item.value === 'socialLinks') %}
-        item.value = socialLinks
+        {% set data = socialLinks %}
     {% elseif (item.value === 'pokemon') %}
-        item.value = pokemon
+        {% set data = pokemon %}
     {% elseif (item.value === 'collections.all') %}
-        item.value = collections.all
+        {% set data = collections.all %}
     {% elseif (item.value === 'collections.tags') %}
-        item.value = collections.tags
+        {% set data = collections.tags %}
+    {% else %}
+        {% set data = item.value %}
     {% endif %}
-  <li><a href="/admin/{{ item.key | lowercase }}/">{{ item.key | title }} [{{item.value.length}}]</a></li>
+    <li><a href="{{ (item.value if item.value.startsWith('/') else '/admin/' + item.key) | tolower }}/">{{ item.key | title }} [{{data.length}}]</a></li>
   {% endif %}
 {% endfor %}

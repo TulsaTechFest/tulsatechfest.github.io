@@ -3,7 +3,7 @@ permalink: /serviceworker.js
 eleventyExcludeFromCollections: true
 ---
 
-const CACHE_NAME = 'cache-{{ build.timestamp|dateToISO }}'
+const CACHE_NAME = 'cache-{{ build.timestamp|toiso }}'
 const OFFLINE_PAGE_URL = '/offline/'
 const PRECACHE_RESOURCES = []
 const IGNORED_HOSTS = ['localhost']

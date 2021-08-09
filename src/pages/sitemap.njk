@@ -1,0 +1,16 @@
+---
+layout: base
+title: Sitemap
+permalink: /sitemap/
+url: /sitemap/
+tags: ["nav-main"]
+eleventyExcludeFromCollections: true
+---
+
+{%- for item in collections.all -%}
+    {%- if not item.data.excludeFromSitemap and item.url -%}
+    <ul>
+        <li><a href="{{ item.url | url | absoluteUrl(meta.url) }}">{{ item.data.title }}</a> ({{ item.date | toformat('yyyy-MM-dd') }})</li>
+    </ul>
+    {%- endif -%}
+{%- endfor -%}

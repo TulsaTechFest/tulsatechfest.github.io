@@ -1,0 +1,24 @@
+---
+layout: base
+title: Sponsor
+permalink: /sponsor/
+url: /sponsor/
+tags: ["nav-main"]
+---
+{%- from "../includes/component.njk" import component -%}
+{# {% include './includes/sponsor.njk' %} #}
+{{ component('section', {
+    title: 'Sponsor',
+    subtitle: 'This is the best way to connect with regional technologists!',
+    text: '',
+    include: 'sponsorLevels',
+    collections: collections
+}) }}
+
+{{ component('section', {
+    title: 'Additional Sponsorship Opportunities',
+    subtitle: 'Banner/sign can be displayed (if provided. Booth not included.)',
+    text: '',
+    include: 'sponsorLevels-extra',
+    collections: collections    
+}) }}

@@ -1,0 +1,62 @@
+{%- from "./component.njk" import component -%}
+
+<section id="sponsors">
+    <div class="overlay"></div>
+    <div class="gradient-overlay"></div>
+    <div class="row section-intro animate-this">
+        <div class="col-twelve">
+        <h3 class="animate-this">Sponsors</h3>
+        <p>Please help us thank our amazing sponsors!</p>
+        {# {% if (features.sponsorsCallOpen) %}
+        <p><a href="/#sponsor">Get your spot now!</a></p>
+        {% endif %} #}
+    </div>
+</section>
+
+{% if (collections.sponsorlevel) %}
+    {% for item in collections.sponsorlevel | sortByOrder %}
+        <section id="sponsors-{{ item.data.title | tolower }}">
+            <div class="overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="row section-intro animate-this">
+                <div class="col-twelve">
+                <h3 class="animate-this">{{ item.data.title }}</h3>
+                {# {% if (params.subtitle) %}
+                <p>{{params.subtitle}}</p> #}
+                {# {% endif %} #}
+            </div>
+
+            {% set collection = 'sponsor-' + item.data.title | tolower %}
+            {% set data = collections[collection] %}
+        
+            <div class="cards-sponsor">
+            {% if (data) %}
+
+                {# <p>cards:{{data.length}}</p>
+                {{ component('debug', {
+                    title: 'sponsor',
+                    include: 'sponsorCard',
+                    data: collections[collection] | sortByOrder
+                }) }} #}
+                {# {{ component('cards', {
+                    title: 'sponsor',
+                    include: 'sponsorCard',
+                    data: collections[collection]
+                }) }} #}
+                {# {% cards 'sponsor', 'sponsor', collections[collection] %} #}
+                {% for sponsor in data %}
+                        <div class="col-md-4"><div class="card card-sponsor"><div class="card-body">
+                            <h1><a href="/sponsors/{{sponsor.data.title | tolower }}/"><img src="{{sponsor.data.img}}" alt="{{sponsor.data.title}}" width="150"/></a></h1>
+                        </div></div></div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if (features.sponsorsCallOpen === '1') %}
+                    <div class="col-md-4"><div class="card card-sponsor"><div class="card-body">
+                        <h1><a href="/{{ '#sponsor' | urlspa }}">Sponsor Now!</a></h1>
+                    </div></div></div>
+            {% endif %}
+            </div>        
+        </section>
+    {% endfor %}
+{% endif %}

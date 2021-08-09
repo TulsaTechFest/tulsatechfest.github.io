@@ -1,13 +1,11 @@
 ---
 layout: base
 title: TulsaTechFest 2021
+permalink: /single/
+url: /single/
 eleventyExcludeFromCollections: true
 eleventyNavigation:
   key: TulsaTechFest 2021
-pagination:
-  data: collections.sponsorlevel
-  size: 3
-  alias: sponsorlevels
 ---
 {%- from "./includes/component.njk" import component -%}
 {# {% for item in ["home","about"] %}
@@ -25,28 +23,13 @@ pagination:
 
 {% include './includes/home.njk' %}
 
-{% if (features.singlePageHomePage === '1') %}
-  {{page.url}}
-  {{window.location}}
-  {{window.location.search}}
-  {# {{env | dump | safe }} #}
-  {{env.ELEVENTY_ENV}}
-  {# {{ process.env | tolist }} #}
-  {# {{ JSON.parse(JSON.stringify(process.env)) }} #}
-  {{ process.env }}
-    
-
-
-
 {% include './includes/about.njk' %}
 {% include './includes/audience.njk' %}
-
 
 {# {% include './components/topics.njk' %} #}
 {# {% include './components/coming.njk' %} #}
 
 {# {% include './includes/sponsors.njk' %} #}
-
 
 
 		{# {{ component('carousel', {
@@ -108,4 +91,3 @@ pagination:
   secondary: 'list-item',
   data: collections.sponsors
 })}} #}
-{% endif %}

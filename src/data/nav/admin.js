@@ -18,11 +18,19 @@ module.exports =
 },
 {
     "key": "features",
-    value: "features"
+    "value": "features"
 },
 {
-    "key":"nav",
-    "value": "nav"
+    "key": "links",
+    "value": "links"
+},
+{
+    "key":"nav-main",
+    "value": "nav-main"
+},
+{
+    "key":"nav-admin",
+    "value": "nav-admin"
 },
 {
     "key":"social",
@@ -31,6 +39,10 @@ module.exports =
 {
     "key":"socialLinks",
     "value": "socialLinks"
+},
+{
+    "key":"sitemap",
+    "value": "/sitemap"
 },
 {
     "key":"pokemon",

@@ -1,5 +1,5 @@
 {%- from "component.njk" import component -%}
-<section id="{{ params.title | lowercase }}">
+<section id="{{ params.title | tolower }}">
   <div class="overlay"></div>
   <div class="gradient-overlay"></div>
   <div class="row section-intro animate-this">
@@ -25,10 +25,24 @@
           secondary: 6,
           collections: params.collections
         }) }}
+     {% elseif (params.title === 'Speakers' and params.data) %}
+        {{ component('cards', {
+          titlr: '{{ params.title | tolower }}-list',
+          secondary: '{{ params.title | tolower }}-item',
+          data: params.data,
+          include: "speakerCard"
+        }) }}
+      {% elseif (params.title === 'Sponsors' and params.data) %}
+        {{ component('cards', {
+          title: '{{ params.title | tolower }}-list',
+          secondary: '{{ params.title | tolower }}-item',
+          data: params.data,
+          include: "sponsorCard"
+        }) }}
       {% elseif (params.title.length > 0 and params.data) %}
         {{ component('table', {
-          primary: '{{ params.title | lowercase }}-list',
-          secondary: '{{ params.title | lowercase }}-item',
+          primary: '{{ params.title | tolower }}-list',
+          secondary: '{{ params.title | tolower }}-item',
           data: params.data
         }) }}
       {% endif %}

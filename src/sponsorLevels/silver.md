@@ -1,7 +1,7 @@
 ---
 layout: sponsorlevel.njk
 title: Silver
-tags: sponsorlevel
+tags: sponsorlevel-main
 icon: fas fa-medal
 order: 3
 price: $1000

@@ -1,21 +1,18 @@
 ---
 layout: "base"
-title: "Env"
-permalink: "/admin/env/"
-url: "/admin/env/"
+title: "Config"
+permalink: "/admin/config/"
+url: "/admin/config/"
 tags: ["nav-admin"]
 eleventyExcludeFromCollections: true
 eleventyNavigation:
-  key: "Env"
+  key: "Config"
   order: 999
 ---
 {%- from "../../includes/component.njk" import component -%}
-{% set data = null; %}
-{% if (process.env) %}
-	{% set data = process.env | tolist %}
-{% endif %}
+
 {{ component('section', {
-	title: 'admin-Env',
+	title: 'admin-Config',
 	subtitle: '',
-	data: data
+	data: config | tolist
 }) }}

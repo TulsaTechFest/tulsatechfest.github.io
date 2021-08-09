@@ -1,16 +1,10 @@
-
-
-//
-// Base styles
-//
-
-.sponsor-card {
+.card-sponsor {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: $card-bg;
+    background-color: transparent;//$card-bg;
     background-clip: border-box;
     border: $card-border-width solid $card-border-color;
     @include border-radius($card-border-radius);
@@ -33,32 +27,32 @@
     }
   }
   
-  .sponsor-card-body {
-    // Enable `flex-grow: 1` for decks and groups so that sponsor-card blocks take up
+  .card-sponsor-body {
+    // Enable `flex-grow: 1` for decks and groups so that card-sponsor blocks take up
     // as much space as possible, ensuring footers are aligned to the bottom.
     flex: 1 1 auto;
     padding: $card-spacer-x;
   }
   
-  .sponsor-card-title {
+  .card-sponsor-title {
     margin-bottom: $card-spacer-y;
   }
   
-  .sponsor-card-subtitle {
+  .card-sponsor-subtitle {
     margin-top: -($card-spacer-y / 2);
     margin-bottom: 0;
   }
   
-  .sponsor-card-text:last-child {
+  .card-sponsor-text:last-child {
     margin-bottom: 0;
   }
   
-  .sponsor-card-link {
+  .card-sponsor-link {
     &:hover {
       text-decoration: none;
     }
   
-    + .sponsor-card-link {
+    + .card-sponsor-link {
       margin-left: $card-spacer-x;
     }
   }
@@ -67,7 +61,7 @@
   // Optional textual caps
   //
   
-  .sponsor-card-header {
+  .card-sponsor-header {
     padding: $card-spacer-y $card-spacer-x;
     margin-bottom: 0; // Removes the default margin-bottom of <hN>
     background-color: $card-cap-bg;
@@ -84,7 +78,7 @@
     }
   }
   
-  .sponsor-card-footer {
+  .card-sponsor-footer {
     padding: $card-spacer-y $card-spacer-x;
     background-color: $card-cap-bg;
     border-top: $card-border-width solid $card-border-color;
@@ -99,20 +93,20 @@
   // Header navs
   //
   
-  .sponsor-card-header-tabs {
+  .card-sponsor-header-tabs {
     margin-right: -($card-spacer-x / 2);
     margin-bottom: -$card-spacer-y;
     margin-left: -($card-spacer-x / 2);
     border-bottom: 0;
   }
   
-  .sponsor-card-header-pills {
+  .card-sponsor-header-pills {
     margin-right: -($card-spacer-x / 2);
     margin-left: -($card-spacer-x / 2);
   }
   
   // Card image
-  .sponsor-card-img-overlay {
+  .card-sponsor-img-overlay {
     position: absolute;
     top: 0;
     right: 0;
@@ -121,18 +115,18 @@
     padding: $card-img-overlay-padding;
   }
   
-  .sponsor-card-img {
+  .card-sponsor-img {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-radius($card-inner-border-radius);
   }
   
   // Card image caps
-  .sponsor-card-img-top {
+  .card-sponsor-img-top {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-top-radius($card-inner-border-radius);
   }
   
-  .sponsor-card-img-bottom {
+  .card-sponsor-img-bottom {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-bottom-radius($card-inner-border-radius);
   }
@@ -140,11 +134,11 @@
   
   // Card deck
   
-  .sponsor-card-deck {
+  .card-sponsor-deck {
     display: flex;
     flex-direction: column;
   
-    .sponsor-card {
+    .card-sponsor {
       margin-bottom: $card-deck-margin;
     }
   
@@ -153,7 +147,7 @@
       margin-right: -$card-deck-margin;
       margin-left: -$card-deck-margin;
   
-      .sponsor-card {
+      .card-sponsor {
         display: flex;
         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
         flex: 1 0 0%;
@@ -170,26 +164,26 @@
   // Card groups
   //
   
-  .sponsor-card-group {
+  .card-sponsor-group {
     display: flex;
     flex-direction: column;
   
-    // The child selector allows nested `.sponsor-card` within `.sponsor-card-group`
+    // The child selector allows nested `.card-sponsor` within `.card-sponsor-group`
     // to display properly.
-    > .sponsor-card {
+    > .card-sponsor {
       margin-bottom: $card-group-margin;
     }
   
     @include media-breakpoint-up(sm) {
       flex-flow: row wrap;
-      // The child selector allows nested `.sponsor-card` within `.sponsor-card-group`
+      // The child selector allows nested `.card-sponsor` within `.card-sponsor-group`
       // to display properly.
-      > .sponsor-card {
+      > .card-sponsor {
         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
         flex: 1 0 0%;
         margin-bottom: 0;
   
-        + .sponsor-card {
+        + .card-sponsor {
           margin-left: 0;
           border-left: 0;
         }
@@ -199,12 +193,12 @@
           &:first-child {
             @include border-end-radius(0);
   
-            .sponsor-card-img-top,
-            .sponsor-card-header {
+            .card-sponsor-img-top,
+            .card-sponsor-header {
               border-top-right-radius: 0;
             }
-            .sponsor-card-img-bottom,
-            .sponsor-card-footer {
+            .card-sponsor-img-bottom,
+            .card-sponsor-footer {
               border-bottom-right-radius: 0;
             }
           }
@@ -212,12 +206,12 @@
           &:last-child {
             @include border-start-radius(0);
   
-            .sponsor-card-img-top,
-            .sponsor-card-header {
+            .card-sponsor-img-top,
+            .card-sponsor-header {
               border-top-left-radius: 0;
             }
-            .sponsor-card-img-bottom,
-            .sponsor-card-footer {
+            .card-sponsor-img-bottom,
+            .card-sponsor-footer {
               border-bottom-left-radius: 0;
             }
           }
@@ -225,12 +219,12 @@
           &:only-child {
             @include border-radius($card-border-radius);
   
-            .sponsor-card-img-top,
-            .sponsor-card-header {
+            .card-sponsor-img-top,
+            .card-sponsor-header {
               @include border-top-radius($card-border-radius);
             }
-            .sponsor-card-img-bottom,
-            .sponsor-card-footer {
+            .card-sponsor-img-bottom,
+            .card-sponsor-footer {
               @include border-bottom-radius($card-border-radius);
             }
           }
@@ -238,10 +232,10 @@
           &:not(:first-child):not(:last-child):not(:only-child) {
             @include border-radius(0);
   
-            .sponsor-card-img-top,
-            .sponsor-card-img-bottom,
-            .sponsor-card-header,
-            .sponsor-card-footer {
+            .card-sponsor-img-top,
+            .card-sponsor-img-bottom,
+            .card-sponsor-header,
+            .card-sponsor-footer {
               @include border-radius(0);
             }
           }
@@ -255,8 +249,8 @@
   // Columns
   //
   
-  .sponsor-card-columns {
-    .sponsor-card {
+  .card-sponsor-columns {
+    .card-sponsor {
       margin-bottom: $card-columns-margin;
     }
   
@@ -266,7 +260,7 @@
       orphans: 1;
       widows: 1;
   
-      .sponsor-card {
+      .card-sponsor {
         display: inline-block; // Don't let them vertically span multiple columns
         width: 100%; // Don't let their width change
       }
@@ -279,24 +273,24 @@
   //
   
   .accordion {
-    .sponsor-card:not(:first-of-type):not(:last-of-type) {
+    .card-sponsor:not(:first-of-type):not(:last-of-type) {
       border-bottom: 0;
       border-radius: 0;
     }
   
-    .sponsor-card:not(:first-of-type) {
-      .sponsor-card-header:first-child {
+    .card-sponsor:not(:first-of-type) {
+      .card-sponsor-header:first-child {
         border-radius: 0;
       }
     }
   
-    .sponsor-card:first-of-type {
+    .card-sponsor:first-of-type {
       border-bottom: 0;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
   
-    .sponsor-card:last-of-type {
+    .card-sponsor:last-of-type {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }

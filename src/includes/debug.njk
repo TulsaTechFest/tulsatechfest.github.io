@@ -1,0 +1,13 @@
+<div class="container">
+    {% for item in params | tolist %}
+        {{ item.key }}:
+        {# {{item.value === '[object Object]' ? (item.value | tolist) : item.value}}#}
+        {# {% if (item.value === '[object Object]') %} #}
+        {% if (item.key === 'data') %}
+            {{item.value | tolist}}
+        {% else %}
+            {{item.value}}
+        {% endif %}
+        <br/> 
+    {% endfor %}
+</div>

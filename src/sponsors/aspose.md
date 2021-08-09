@@ -1,6 +1,6 @@
 ---
 title: "Aspose"
-tags: ["sponsorsilver"]
+tags: ["sponsor-silver"]
 order: 1
 # url: "/sponsors/Aspose"
 url: "https://www.aspose.com"

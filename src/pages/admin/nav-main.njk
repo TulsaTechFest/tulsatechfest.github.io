@@ -1,0 +1,14 @@
+---
+layout: "base"
+title: "Nav-Main"
+permalink: "/admin/nav-main/"
+url: "/admin/nav-main/"
+tags: ["nav-admin"]
+---
+{%- from "../../includes/component.njk" import component -%}
+
+{{ component('section', {
+	title: 'admin-Nav-main',
+	subtitle: '',
+	data: nav.main
+}) }}
