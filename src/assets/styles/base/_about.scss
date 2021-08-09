@@ -25,14 +25,16 @@
     letter-spacing: .3rem;
     position: relative;
   }
-  #about h3::before {
-    display: block;
-    content: "";
-    width: 3px;
-    height: 4rem; //6rem; 8rem;
-    background-color: rgba(149, 149, 149, 0.7);
-    margin: 0 auto 2.4rem;
-  }
+  
+  // #about h3::before {
+  //   display: block;
+  //   content: "";
+  //   width: 3px;
+  //   height: 4rem; //6rem; 8rem;
+  //   background-color: rgba(149, 149, 149, 0.7);
+  //   margin: 0 auto 2.4rem;
+  // }
+  
   #about .lead {
     font-family: $font-family-bold;
     // font-size: 2rem;
