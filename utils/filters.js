@@ -34,6 +34,10 @@ module.exports = {
         return array.slice(0, n);
     },
 
+    md5: function(value) {
+        return md5(strtolower(trim(value)));
+    },
+
     replace: function(value, searchValue, replaceValue) {
         return value.replace(searchValue, replaceValue)
     },
