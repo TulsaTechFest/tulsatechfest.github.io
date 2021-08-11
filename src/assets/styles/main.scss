@@ -24,6 +24,7 @@
 // BASE MODULES
 // partials with global scope
 //--------------------
+@import 'base/style';
 @import 'base/buttons';
 @import 'base/fonts';
 @import 'base/header';
@@ -53,6 +54,7 @@
 // @import 'base/services';
 // @import 'base/testimonials';
 @import 'base/socialLinks';
+@import 'base/speaker';
 @import 'base/sponsor';
 @import 'base/sponsors';
 @import 'base/topics';

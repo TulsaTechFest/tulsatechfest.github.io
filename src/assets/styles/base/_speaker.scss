@@ -1,69 +1,69 @@
- #sponsor {
+ #speaker {
     background: var(--color-bg);//#000;//#fff;//#e8e8e8;
     min-height: 600px;
     position: relative;
     //padding: 0;
-    //padding: 5rem 0 3rem;
+    padding: 5rem 0 3rem;
     color: var(--color-primary);//#fff;//#000;
   }
-  #sponsor .intro-wrap {
+  #speaker .intro-wrap {
     padding: 15rem 0 21rem;
     background: var(--color-bg);//#000;//#111111;
   }
-  #sponsor .section-intro h3 {
+  #speaker .section-intro h3 {
     color: var(--color-primary);//#fff;//#000; //rgba(242, 242, 242, 0.5);
   }
-  #sponsor .section-intro h1 {
+  #speaker .section-intro h1 {
     color: var(--color-primary);//#fff;//#000;
   }
-  #sponsor .section-intro .lead {
+  #speaker .section-intro .lead {
     color: var(--color-primary);//#fff;//#000;//rgba(242, 242, 242, 0.4);
   }
-  #sponsor .portfolio-content {
+  #speaker .portfolio-content {
     margin-top: -22.2rem;
   }
-  #sponsor .bricks-wrapper:before, 
-  #sponsor .bricks-wrapper:after {
+  #speaker .bricks-wrapper:before, 
+  #speaker .bricks-wrapper:after {
     content: "";
     display: table;
   }
-  #sponsor .bricks-wrapper:after {
+  #speaker .bricks-wrapper:after {
     clear: both;
   }
-  #sponsor .bricks-wrapper .brick {
+  #speaker .bricks-wrapper .brick {
     float: left;
     width: 50%;
     padding: 0;
     margin: 0;
   }
-  #sponsor .bricks-wrapper .brick:nth-child(2n+1) {
+  #speaker .bricks-wrapper .brick:nth-child(2n+1) {
     clear: both;
   }
   
-  #sponsor .sponsor-content {
+  #speaker .speaker-content {
     // text-align: center;
     max-width: 1040px;
   }
-  #sponsor .sponsor-list {
+  #speaker .speaker-list {
     margin-top: 1.2rem;
     // text-align: center;
   }
-  #sponsor .sponsor-list .topic-item {
+  #speaker .speaker-list .topic-item {
     margin-bottom: 3rem;
     padding: 0 50px;
   }
-  #sponsor .sponsor-list .topic-item p {
+  #speaker .speaker-list .topic-item p {
     color: var(--color-primary);//#fff;//rgba(242, 242, 242, 0.5);
   }
-  #sponsor .sponsor-list .icon {
+  #speaker .speaker-list .icon {
     display: inline-block;
     margin-bottom: 1.5rem;
   }
-  #sponsor .sponsor-list .icon i {
+  #speaker .speaker-list .icon i {
     font-size: 5.4rem;
     color: red;//#f9a828;
   }
-  #sponsor .sponsor-list .h05 {
+  #speaker .speaker-list .h05 {
     font-size: 1.7rem;
     line-height: 1.765;
     color: var(--color-primary);//#fff;//#000000;

@@ -41,6 +41,20 @@ module.exports =
             "order": 999,
             "url": "/#connect",
             "tags": ["main"]
-        },
+        },        
+        {
+            "title": "_Community",
+            "icon": "fa fa-email",
+            "order": 999,
+            "url": "/#community",
+            "tags": ["main"]
+        },        
+        {
+            "title": "_Donate",
+            "icon": "fa fa-email",
+            "order": 999,
+            "url": "/#donate",
+            "tags": ["main"]
+        }
         
     ]

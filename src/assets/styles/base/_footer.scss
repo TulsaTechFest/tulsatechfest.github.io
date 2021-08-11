@@ -2,10 +2,10 @@
     margin: 0 0 5.4rem 0;
     padding: 0;
     font-size: 1.5rem;
-    color: #fff;//rgba(255, 255, 255, 0.4);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.4);
   }
   footer a, footer a:visited {
-    color: #fff;//#FFFFFF;
+    color: var(--color-primary);//#fff;//#FFFFFF;
   }
   footer a:hover, footer a:focus {
     color: red;//#f9a828;
@@ -14,7 +14,7 @@
     max-width: 1024px;
   }
   footer h4.h05 {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
     position: relative;
     padding-bottom: 4.2rem;
     margin-bottom: 3.6rem;
@@ -24,7 +24,7 @@
     content: "";
     width: 100px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--color-bg);//rgba(0, 0, 0, 0.9);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -45,10 +45,10 @@
     padding-left: 0;
   }
   .footer-main ul a, .footer-main ul a:visited {
-    color: #fff;//rgba(255, 255, 255, 0.4);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.4);
   }
   .footer-main ul a:hover, .footer-main ul a:focus {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
   }
   .footer-main .subscribe-form {
     position: relative;
@@ -62,11 +62,11 @@
     padding: 1.5rem 8rem 1.5rem 2rem;
     margin-bottom: 1.5rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--color-bg);//rgba(0, 0, 0, 0.9);
   }
   .footer-main #mc-form button {
     background-color: #f9a828;
-    color: #000000;
+    color: var(--color-primary);//#000000;
     width: 6rem;
     height: 6rem;
     line-height: 6rem;
@@ -77,7 +77,7 @@
     top: 0;
   }
   .footer-main #mc-form button:hover {
-    background-color: #f89e0f;
+    background-color: var(--color-bg);//#f89e0f;
   }
   .footer-main #mc-form button i {
     font-size: 2.6rem;
@@ -87,7 +87,7 @@
     left: .2rem;
   }
   .footer-main #mc-form label {
-    color: #f9a828;
+    color: var(--color-bg);//#f9a828;
     font-family: "montserrat-regular", sans-serif;
   }
   
@@ -106,7 +106,7 @@
     content: "|";
     display: inline-block;
     padding: 0 1rem 0 1.2rem;
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.1);
   }
   .footer-bottom .copyright span:last-child::after {
     display: none;
@@ -131,7 +131,7 @@
     line-height: 63px;
     text-align: center;
     background-color: transparent;//#000000;
-    color: #fff;//#888;
+    color: var(--color-primary);//#fff;//#888;
     text-align: center;
     text-transform: uppercase;
     -moz-transition: all 0.3s ease-in-out;
@@ -145,12 +145,12 @@
     line-height: inherit;
   }
   #go-top a:visited {
-    //background: #000000;
-    color: #fff;//#888;
+    background: var(--color-bg);//#000000;
+    color: var(--color-primary);//#fff;//#888;
   }
   #go-top a:hover, #go-top a:focus {
-    //background: #000000;
-    color: #fff;//#FFFFFF;
+    background: var(--color-bg);//#000000;
+    color: var(--color-primary);//rgb(138, 125, 125);//#FFFFFF;
   }
   
   /* ------------------------------------------------------------------- 

@@ -1,5 +1,5 @@
  #audience {
-    background-color: #000;//19191b;
+    background-color: var(--color-bg);//#000;//19191b;
     // background-image: url(../images/audience-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -10,7 +10,7 @@
     position: relative;
     //padding: 15rem 0 15rem;
     padding: 5rem 0 3rem;
-    color: #fff;//rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.3);
   }
   #audience .overlay {
     //position: absolute;
@@ -18,7 +18,7 @@
     //left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;//rgba(5, 5, 5, 0.7);
+    background-color: var(--color-bg);//#000;//rgba(5, 5, 5, 0.7);
   }
   #audience .gradient-overlay {
     position: absolute;
@@ -27,19 +27,19 @@
     width: 100%;
     height: 100%;
     opacity: .4;
-    background: -moz-linear-gradient(top, #000 0%, transparent 100%);
-    background: -webkit-linear-gradient(top, #000 0%, transparent 100%);
-    background: linear-gradient(to bottom, #000 0%, transparent 100%);
+    background: -moz-linear-gradient(top, var(--color-bg) 0%, transparent 100%);
+    background: -webkit-linear-gradient(top, var(--color-bg) 0%, transparent 100%);
+    background: linear-gradient(to bottom, var(--color-bg) 0%, transparent 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
   }
   #audience .section-intro h3 {
-    color: #fff;//rgba(242, 242, 242, 242);
+    color: var(--color-primary);//#fff;//rgba(242, 242, 242, 242);
   }
   #audience .section-intro h1 {
-    color: #fff;//#FFFFFF;
+    color: var(--color-primary);//#fff;//#FFFFFF;
   }
   #audience .section-intro .lead {
-    color: #fff;//rgba(242, 242, 242, 242);
+    color: var(--color-primary);//#fff;//rgba(242, 242, 242, 242);
   }
   #audience .audience-content {
     text-align: center;
@@ -54,7 +54,7 @@
     padding: 0 50px;
   }
   #audience .audience-list .service-item p {
-    color: #fff;//rgba(242, 242, 242, 242);
+    color: var(--color-primary);//#fff;//rgba(242, 242, 242, 242);
   }
   #audience .audience-list .icon {
     display: inline-block;
@@ -62,12 +62,12 @@
   }
   #audience .audience-list .icon i {
     font-size: 5.4rem;
-    color: #f9a828;
+    color: var(--color-primary);//#f9a828;
   }
   #audience .audience-list .h05 {
     font-size: 1.7rem;
     line-height: 1.765;
-    color: #fff;//#FFFFFF;
+    color: var(--color-primary);//#fff;//#FFFFFF;
     margin-bottom: 3rem;
   }
   

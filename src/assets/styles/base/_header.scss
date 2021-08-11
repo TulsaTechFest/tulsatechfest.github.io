@@ -15,6 +15,9 @@ header {
     top: 0;
     z-index: 700;
   }
+  header a {
+    text-decoration: none;
+  }
   header .row {
     height: auto;
     max-width: 1300px;
@@ -38,7 +41,7 @@ header {
     border: none;
     width: 57px;
     height: 27px;
-    /* background: url("../images/logo.png") no-repeat center; */
+    background: url("../images/logo.png") no-repeat center;
     background-size: 57px 27px;
     font: 0/0 a;
     text-shadow: none;
@@ -55,9 +58,10 @@ header {
     line-height: 42px;
     font-family: "montserrat-regular", sans-serif;
     font-size: 1.4rem;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    color: #FFF !important;//rgba(255, 255, 255, 255);
+    color: var(--color-primary) !important;//#FFF !important;//rgba(255, 255, 255, 255);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -74,7 +78,7 @@ header {
     font-size: 1rem;
     text-transform: uppercase;
     //letter-spacing: .2rem;
-    color: #FFF !important;//rgba(255, 255, 255, 255);
+    color: var(--color-primary) !important;//rgba(255, 255, 255, 255);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -96,7 +100,7 @@ header {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    color: #fff;//rgba(255, 255, 255, 0.5);
+    color: var(--color-bg) !important;//#fff;//rgba(255, 255, 255, 0.5);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -104,10 +108,10 @@ header {
     transition: all 0.3s ease-in-out;
   }
   #header-menu-trigger.opaque {
-    background-color: #000;
+    background-color: var(--color-bg);
   }
   #header-menu-trigger.opaque .header-menu-text {
-    background-color: #000;
+    background-color: var(--color-bg);
   }
   #header-menu-trigger a:hover, #header-menu-trigger a:focus {
     color: red;//#FFFFFF;
@@ -130,7 +134,7 @@ header {
     display: block;
     height: 3px;
     width: 24px;
-    background-color: #FFFFFF;
+    background-color: var(--color-primary) !important;//#FFFFFF;
     position: absolute;
     top: 50%;
     right: 9px;
@@ -156,11 +160,11 @@ header {
   }
 
   #menu-nav-wrap {
-    background: #0C0C0C;
-    color: #fff;//rgba(255, 255, 255, 0.25);
-    font-size: 1.5rem;
+    background: var(--color-bg);//#0C0C0C;
+    color: var(--color-primary) !important;//#fff;//rgba(255, 255, 255, 0.25);
+    font-size: 14px;//1.5rem;
     line-height: 1.6;
-    padding: 3.6rem 3rem;
+    padding: 3.6rem 1.75rem;
     height: 100%;
     width: 240px;
     position: fixed;
@@ -181,13 +185,13 @@ header {
     transition: all 0.4s ease-in-out;
   }
   #menu-nav-wrap a, #menu-nav-wrap a:visited {
-    color: #fff;//rgba(255, 255, 255, 0.5);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.5);
   }
   #menu-nav-wrap a:hover, #menu-nav-wrap a:focus, #menu-nav-wrap a:active {
     color: red;//white;
   }
   #menu-nav-wrap h3 {
-    color: white;
+    color: var(--color-primary);//white;
     font-family: "montserrat-regular", sans-serif;
     font-size: 1rem;
     line-height: 1.6;
@@ -210,7 +214,7 @@ header {
     border-top: 1px dotted rgba(255, 255, 255, 0.03);
   }
   #menu-nav-wrap .nav-list li a {
-    color: #fff;//rgba(255, 255, 255, 0.25);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.25);
     display: block;
   }
   #menu-nav-wrap .nav-list li a:hover, 
@@ -229,7 +233,7 @@ header {
     display: inline-block;
   }
   #menu-nav-wrap .header-social-list li a, a:visited {
-    color: #fff;//rgba(255, 255, 255, 0.15);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.15);
   }
   #menu-nav-wrap .header-social-list li a:hover, 
   #menu-nav-wrap .header-social-list li a:focus {
@@ -243,10 +247,10 @@ header {
     height: 30px;
     width: 30px;
     border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;//rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 36px;
-    right: 30px;
+    top: 12px;
+    left: 12px;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
@@ -257,7 +261,7 @@ header {
     display: block;
     height: 2px;
     width: 12px;
-    background-color: #fff;
+    background-color: var(--color-bg);//#fff;
     position: absolute;
     top: 50%;
     left: 9px;
@@ -280,7 +284,7 @@ header {
     margin-bottom: 5px;
   }
   #menu-nav-wrap .sponsor-text span {
-    color: #fff;//rgba(255, 255, 255, 0.5);
+    color: var(--color-primary);//#fff;//rgba(255, 255, 255, 0.5);
   }
   
   .menu-is-open #menu-nav-wrap {

@@ -16,8 +16,9 @@ class Navigation {
         this.nav = document.querySelector(SELECTORS.nav)
         this.toggleBtn = this.nav.querySelector(SELECTORS.toggleBtn)
         this.focusTrap = createFocusTrap(this.nav)
-
-        this.toggleBtn.addEventListener('click', () => this.toggleMenu())
+        if (this.toggleBtn) {
+            this.toggleBtn.addEventListener('click', () => this.toggleMenu())
+        }
     }
 
     toggleMenu(force) {

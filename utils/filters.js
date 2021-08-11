@@ -11,9 +11,21 @@ module.exports = {
     // },
     include: require("./include.js"),
 
+    admin: function(values) {
+        return values.filter(item => item.url).filter(item => !item.title.startsWith('_'));
+        //var features = require('../src/data/features.js');
+        //console.log(`adminMenu:` + features.adminMenu);
+        //return process.env.NODE_ENV !== 'development' || features.adminMenu !== '1' ? values.filter(item => item.url && !item.title.startsWith('_')) : values.filter(item => item.url);
+        //var features = require('../src/data/features.js');
+        //return values.filter(item => item.url && (!item.title.startsWith('_') || features.adminMenu === '1'));
+        //var results = values.filter(item => item.url);
+        //if (process.env.NODE_ENV !== 'development') results = results.filter(!item.title.startsWith('_'));
+        //return results;
+    },
+
     head: function(array, n) {
         if(!Array.isArray(array) || array.length === 0) {
-          return [];
+            return !String.isString(array) ? [] : array.substring(0, n);
         }
         if( n < 0 ) {
           return array.slice(n);
@@ -30,6 +42,10 @@ module.exports = {
         return values.filter(v => v !== ex);        
     },
 
+    substring: function(value, start, end) {
+        return value.substring(start, end);
+    },
+    
     withCategory: function(values, key) {                 
         return values.find(v => v.data.key === key);
     },
@@ -66,6 +82,11 @@ module.exports = {
         let vals =[...values];
         // if (!vals) return;
         return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
+    },
+
+    title: function(str) {
+        if (str[0] === '_') str = str.substring(1,str.length);
+        return str.toUpperCase();
     },
 
     todate: function(dateObj) {

@@ -46,9 +46,8 @@
                 {# {% cards 'sponsor', 'sponsor', collections[collection] %} #}
                 {% for sponsor in data %}
                         <div class="col-md-4"><div class="card card-sponsor"><div class="card-body">
-                            <h1><a href="/sponsors/{{sponsor.data.title | tolower }}/"><img src="{{sponsor.data.img}}" alt="{{sponsor.data.title}}" width="150"/></a></h1>
+                            <h1><a href="{{ sponsor.url }}/"><img src="{{sponsor.data.img}}" alt="{{sponsor.data.title}}" width="150"/></a></h1>
                         </div></div></div>
-                    </div>
                 {% endfor %}
             {% endif %}
             {% if (features.sponsorsCallOpen === '1') %}
@@ -56,7 +55,7 @@
                         <h1><a href="/{{ '#sponsor' | urlspa }}">Sponsor Now!</a></h1>
                     </div></div></div>
             {% endif %}
-            </div>        
+            </div>
         </section>
     {% endfor %}
 {% endif %}

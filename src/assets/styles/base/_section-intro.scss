@@ -1,10 +1,10 @@
 section {
-  background: #000;//#fff;//#e8e8e8;
+  background: var(--color-bg);//#000;//#fff;//#e8e8e8;
   // min-height: 600px;
   position: relative;
   //padding: 0;
-  padding: 5rem 0 3rem;
-  color: #fff;//#000;
+  //padding: 5rem 0 3rem;
+  color: var(--color-primary);//#fff;//#000;
 }
 
 .section-intro {
@@ -16,13 +16,13 @@ section {
     font-family: $font-family-bold;
     font-size: 3.6rem; /* 4.8 */
     line-height: 1.375;
-    color:#FFFFFF;// rgba(242, 242, 242, 0.5); /*#151515;*/
+    color:var(--color-primary);//#FFFFFF;// rgba(242, 242, 242, 0.5); /*#151515;*/
   }
   .section-intro h3 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 1.8 rem;
     line-height: 1.667;
-    color: #FFFFFF; //rgba(242, 242, 242, 0.5);
+    color: var(--color-primary);//#FFFFFF; //rgba(242, 242, 242, 0.5);
     text-transform: uppercase;
     letter-spacing: .3rem;
     margin-bottom: 1.2rem;
@@ -31,7 +31,7 @@ section {
     font-family: "montserrat-regular", sans-serif;
     font-size: 1.8;
     line-height: 1.833;
-    color: #FFFFFF;// rgba(242, 242, 242, 0.1);
+    color: var(--color-primary);//#FFFFFF;// rgba(242, 242, 242, 0.1);
   }
   .section-intro.with-bottom-sep {
     padding-bottom: 4.2rem;
@@ -41,7 +41,7 @@ section {
     display: inline-block;
     height: 1px;
     width: 200px;
-    background-color: #FFFFFF;// rgba(242, 242, 242, 0.1);
+    background-color: var(--color-primary);//#FFFFFF;// rgba(242, 242, 242, 0.1);
     text-align: center;
   }
   

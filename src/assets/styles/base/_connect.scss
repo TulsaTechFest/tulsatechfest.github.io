@@ -1,6 +1,5 @@
-//#11 - connect 
 #connect {
-    background-color: #111111;
+    background-color: var(--color-bg);//#111111;
     // background-image: url(../images/connect-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -8,7 +7,7 @@
     -moz-background-size: cover;
     background-size: cover;
     //padding: 12rem 0 12rem;
-    padding: 5rem 0 5rem;
+    //padding: 5rem 0 5rem;
     position: relative;
   }
   #connect .overlay {
@@ -18,31 +17,31 @@
     width: 100%;
     height: 100%;
     opacity: .75;
-    background-color: #000000;
+    background-color: var(--color-bg);//#000000;
   }
   #connect .section-intro h1 {
-    color: white;
+    color: var(--color-primary);//white;
   }
   #connect .section-intro h3 {
-    color: #FFF;//rgba(242, 242, 242, 0.5);
+    color: var(--color-primary);//#FFF;//rgba(242, 242, 242, 0.5);
   }
   #connect .section-intro p.lead {
-    color: #FFF;//rgba(242, 242, 242, 0.4);
+    color: var(--color-primary);//#FFF;//rgba(242, 242, 242, 0.4);
   }
   
   .connect-content {
     max-width: 1024px;
     margin-top: 3rem;
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
     z-index: 600;
     position: relative;
   }
   .connect-content h5 {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
     margin-bottom: 5.4rem;
   }
   .connect-content h6 {
-    color: #555555;
+    color: var(--color-primary);//#555555;
     font-size: 1.4rem;
   }
   
@@ -59,10 +58,10 @@
     padding-right: 30px;/*between the red and blue outlines*/
     text-align: center;
     display: inline;
-    color: #fff;
+    color: var(--color-primary) !important;//#fff;
   }
-  .connect-social-list a:hover, a:focus {
-    color: red;
+  .connect-social-list a:hover, a:focus, a:active {
+    color: red !important;
   }
   .connect-social-list i {
     font-size: 2.5rem;//4rem;
@@ -94,8 +93,8 @@
     letter-spacing: .05rem;
     padding: .6rem 2rem .6rem 2rem;
     margin: 0;
-    color: #000000;
-    background: #f9a828;
+    color: var(--color-primary);//#000000;
+    background: var(--color-bg);//#f9a828;
     border-radius: 3px;
   }
   #connect form .form-field label::after {
@@ -109,21 +108,21 @@
     content: "";
   }
   #connect form ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.3);
   }
   #connect form :-moz-placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.3);
     /* Firefox 18- */
   }
   #connect form ::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.3);
     /* Firefox 19+ */
   }
   #connect form :-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.3);
   }
   #connect form .placeholder {
-    color: rgba(255, 255, 255, 0.3) !important;
+    color: var(--color-primary);//rgba(255, 255, 255, 0.3) !important;
   }
   
   #connect input[type="text"],
@@ -131,15 +130,15 @@
   #connect input[type="email"],
   #connect textarea {
     width: 100%;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-primary);//rgba(255, 255, 255, 0.6);
     margin-bottom: 3.6rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-bg);//rgba(255, 255, 255, 0.1);
   }
   
   #connect input[type="text"]:focus,
   #connect input[type="password"]:focus,
   #connect input[type="email"]:focus {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
   }
   
   #connect textarea {
@@ -147,7 +146,7 @@
     padding: 1.8rem 2rem;
   }
   #connect textarea:focus {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
   }
   
   #connect button.submitform {
@@ -158,11 +157,11 @@
     line-height: 6rem;
     padding: 0 3rem;
     width: 100%;
-    background: #f9a828;
-    color: #000000;
+    background: red;//#f9a828;
+    color: var(--color-bg);//#000000;
     margin-top: .6rem;
   }
   #connect button.submitform:hover, #connect button.submitform:focus {
-    background: #f89e0f;
+    background: red;//#f89e0f;
   }
     

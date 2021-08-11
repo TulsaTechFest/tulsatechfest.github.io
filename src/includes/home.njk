@@ -5,12 +5,12 @@
 		<div class="home-content-tablecell">
 			<div class="row">
 				<div class="col-twelve">
-					{% if (features.homeSplashImage === '1') %}
-						<img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/>
-					{% endif %}
 					<h3>Tulsa Tech Fest 2021</h3>
 					<h2 class="animate-intro">YEAH, WE'RE BACK! Friday, November 12, 2021</h2>
 					<h1 class="animate-intro">The regions largest *FREE Technical Training Conference</h1>
+					{% if (features.homeSplashImage === '1') %}
+						<img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/>
+					{% endif %}					
 					<div class="more animate-intro">
 						{% if (alerts) %}
 							{% for item in alerts %}
@@ -30,7 +30,7 @@
 							{% endfor %}
 						{% endif %} #}
 					</div>
-					<h1><a href="{{ '/#audience' | url | urlspa }}">SAVE THE DATE! YOU DON'T WANT TO MISS IT! THERE'S SOMETHING FOR EVERYONE!</a></h1>
+					<p class="lead"><a href="{{ '/#audience' | url | urlspa }}">SAVE THE DATE. YOU DON'T WANT TO MISS IT. THERE'S SOMETHING FOR EVERYONE.</a></p>
 				</div>
 			</div>
 			<div class="sideway-list font-lg animate-intro">

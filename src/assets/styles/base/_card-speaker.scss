@@ -1,4 +1,4 @@
-.card-sponsor {
+.card-speaker {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -27,36 +27,36 @@
       }
     }
   }
-  .card-sponsor .card-body h1 {
+  .card-speaker .card-body h1 {
     font-size: 20px;
   }
 
-  .card-sponsor-body {
-    // Enable `flex-grow: 1` for decks and groups so that card-sponsor blocks take up
+  .card-speaker-body {
+    // Enable `flex-grow: 1` for decks and groups so that card-speaker blocks take up
     // as much space as possible, ensuring footers are aligned to the bottom.
     flex: 1 1 auto;
     padding: $card-spacer-x;
   }
   
-  .card-sponsor-title {
+  .card-speaker-title {
     margin-bottom: $card-spacer-y;
   }
   
-  .card-sponsor-subtitle {
+  .card-speaker-subtitle {
     margin-top: -($card-spacer-y / 2);
     margin-bottom: 0;
   }
   
-  .card-sponsor-text:last-child {
+  .card-speaker-text:last-child {
     margin-bottom: 0;
   }
   
-  .card-sponsor-link {
+  .card-speaker-link {
     &:hover {
       text-decoration: none;
     }
   
-    + .card-sponsor-link {
+    + .card-speaker-link {
       margin-left: $card-spacer-x;
     }
   }
@@ -65,7 +65,7 @@
   // Optional textual caps
   //
   
-  .card-sponsor-header {
+  .card-speaker-header {
     padding: $card-spacer-y $card-spacer-x;
     margin-bottom: 0; // Removes the default margin-bottom of <hN>
     background-color: $card-cap-bg;
@@ -82,7 +82,7 @@
     }
   }
   
-  .card-sponsor-footer {
+  .card-speaker-footer {
     padding: $card-spacer-y $card-spacer-x;
     background-color: $card-cap-bg;
     border-top: $card-border-width solid $card-border-color;
@@ -97,20 +97,20 @@
   // Header navs
   //
   
-  .card-sponsor-header-tabs {
+  .card-speaker-header-tabs {
     margin-right: -($card-spacer-x / 2);
     margin-bottom: -$card-spacer-y;
     margin-left: -($card-spacer-x / 2);
     border-bottom: 0;
   }
   
-  .card-sponsor-header-pills {
+  .card-speaker-header-pills {
     margin-right: -($card-spacer-x / 2);
     margin-left: -($card-spacer-x / 2);
   }
   
   // Card image
-  .card-sponsor-img-overlay {
+  .card-speaker-img-overlay {
     position: absolute;
     top: 0;
     right: 0;
@@ -119,18 +119,18 @@
     padding: $card-img-overlay-padding;
   }
   
-  .card-sponsor-img {
+  .card-speaker-img {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-radius($card-inner-border-radius);
   }
   
   // Card image caps
-  .card-sponsor-img-top {
+  .card-speaker-img-top {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-top-radius($card-inner-border-radius);
   }
   
-  .card-sponsor-img-bottom {
+  .card-speaker-img-bottom {
     width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
     @include border-bottom-radius($card-inner-border-radius);
   }
@@ -138,11 +138,11 @@
   
   // Card deck
   
-  .card-sponsor-deck {
+  .card-speaker-deck {
     display: flex;
     flex-direction: column;
   
-    .card-sponsor {
+    .card-speaker {
       margin-bottom: $card-deck-margin;
     }
   
@@ -151,7 +151,7 @@
       margin-right: -$card-deck-margin;
       margin-left: -$card-deck-margin;
   
-      .card-sponsor {
+      .card-speaker {
         display: flex;
         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
         flex: 1 0 0%;
@@ -168,26 +168,26 @@
   // Card groups
   //
   
-  .card-sponsor-group {
+  .card-speaker-group {
     display: flex;
     flex-direction: column;
   
-    // The child selector allows nested `.card-sponsor` within `.card-sponsor-group`
+    // The child selector allows nested `.card-speaker` within `.card-speaker-group`
     // to display properly.
-    > .card-sponsor {
+    > .card-speaker {
       margin-bottom: $card-group-margin;
     }
   
     @include media-breakpoint-up(sm) {
       flex-flow: row wrap;
-      // The child selector allows nested `.card-sponsor` within `.card-sponsor-group`
+      // The child selector allows nested `.card-speaker` within `.card-speaker-group`
       // to display properly.
-      > .card-sponsor {
+      > .card-speaker {
         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
         flex: 1 0 0%;
         margin-bottom: 0;
   
-        + .card-sponsor {
+        + .card-speaker {
           margin-left: 0;
           border-left: 0;
         }
@@ -197,12 +197,12 @@
           &:first-child {
             @include border-end-radius(0);
   
-            .card-sponsor-img-top,
-            .card-sponsor-header {
+            .card-speaker-img-top,
+            .card-speaker-header {
               border-top-right-radius: 0;
             }
-            .card-sponsor-img-bottom,
-            .card-sponsor-footer {
+            .card-speaker-img-bottom,
+            .card-speaker-footer {
               border-bottom-right-radius: 0;
             }
           }
@@ -210,12 +210,12 @@
           &:last-child {
             @include border-start-radius(0);
   
-            .card-sponsor-img-top,
-            .card-sponsor-header {
+            .card-speaker-img-top,
+            .card-speaker-header {
               border-top-left-radius: 0;
             }
-            .card-sponsor-img-bottom,
-            .card-sponsor-footer {
+            .card-speaker-img-bottom,
+            .card-speaker-footer {
               border-bottom-left-radius: 0;
             }
           }
@@ -223,12 +223,12 @@
           &:only-child {
             @include border-radius($card-border-radius);
   
-            .card-sponsor-img-top,
-            .card-sponsor-header {
+            .card-speaker-img-top,
+            .card-speaker-header {
               @include border-top-radius($card-border-radius);
             }
-            .card-sponsor-img-bottom,
-            .card-sponsor-footer {
+            .card-speaker-img-bottom,
+            .card-speaker-footer {
               @include border-bottom-radius($card-border-radius);
             }
           }
@@ -236,10 +236,10 @@
           &:not(:first-child):not(:last-child):not(:only-child) {
             @include border-radius(0);
   
-            .card-sponsor-img-top,
-            .card-sponsor-img-bottom,
-            .card-sponsor-header,
-            .card-sponsor-footer {
+            .card-speaker-img-top,
+            .card-speaker-img-bottom,
+            .card-speaker-header,
+            .card-speaker-footer {
               @include border-radius(0);
             }
           }
@@ -253,8 +253,8 @@
   // Columns
   //
   
-  .card-sponsor-columns {
-    .card-sponsor {
+  .card-speaker-columns {
+    .card-speaker {
       margin-bottom: $card-columns-margin;
     }
   
@@ -264,7 +264,7 @@
       orphans: 1;
       widows: 1;
   
-      .card-sponsor {
+      .card-speaker {
         display: inline-block; // Don't let them vertically span multiple columns
         width: 100%; // Don't let their width change
       }
@@ -277,24 +277,24 @@
   //
   
   .accordion {
-    .card-sponsor:not(:first-of-type):not(:last-of-type) {
+    .card-speaker:not(:first-of-type):not(:last-of-type) {
       border-bottom: 0;
       border-radius: 0;
     }
   
-    .card-sponsor:not(:first-of-type) {
-      .card-sponsor-header:first-child {
+    .card-speaker:not(:first-of-type) {
+      .card-speaker-header:first-child {
         border-radius: 0;
       }
     }
   
-    .card-sponsor:first-of-type {
+    .card-speaker:first-of-type {
       border-bottom: 0;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
   
-    .card-sponsor:last-of-type {
+    .card-speaker:last-of-type {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }

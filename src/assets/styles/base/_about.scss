@@ -1,26 +1,21 @@
-
-/* ===================================================================
- *  11. about - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
  #about {
     position: relative;
     //padding: 4.2rem 0 12rem;
-    background-color: #000;//#e8e8e8;
-    min-height: 400px; //696px;
+    background-color: var(--color-bg);//#000;//#e8e8e8;
+    min-height: 300px; //696px;
     text-align: center;
   }
   #about .about-wrap {
     max-width: 850px;
   }
   #about span {
-    color: #FFFFFF; /* #07617d;*/
+    color: var(--color-primary);//#FFFFFF; /* #07617d;*/
   }
   #about h3 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 1.8rem;
     line-height: 1.667;
-    color: #fff;//#000;//#FFFFFF; /* #07617d;*/
+    color: var(--color-primary);//#fff;//#000;//#FFFFFF; /* #07617d;*/
     text-transform: uppercase;
     letter-spacing: .3rem;
     position: relative;
@@ -39,7 +34,7 @@
     font-family: $font-family-bold;
     // font-size: 2rem;
     line-height: 1.8;
-    color: #fff;//#2e383f;
+    color: var(--color-primary);//#fff;//#2e383f;
     margin-top: 4rem;
   }
   

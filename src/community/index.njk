@@ -1,0 +1,8 @@
+---
+layout: base
+title: "Community"
+eleventyExcludeFromCollections: true
+---
+{%- from "../includes/component.njk" import component -%}
+
+{{ component('section', {title: 'Community', subtitle: '', data: collections.community}) }}

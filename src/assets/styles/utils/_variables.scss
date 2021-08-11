@@ -40,8 +40,8 @@ $brand-red: #fc6767;
 
 // Color Mappings
 
-$bg-color: #fff;
-$text-color: $gray-darkest;
+$bg-color: #000;//var(--color-bg);//#fff;
+$text-color: #fff;//var(--color-primary);//$gray-darkest;
 $brand-color-primary: $brand-red;
 $brand-color-primary-offset: darken($brand-red, 6%);
 
@@ -61,7 +61,7 @@ $font-family-bold: 'montserrat-bold';//, sans-serif;
 $font-family-italic: "montserrat-italic", georgia, serif;
 
 $font-size-root: 100%;
-$font-size-base: 2.25rem;
+$font-size-base: 1.25rem;//2.25rem;
 $line-height: 1.625;
 
 // Animation

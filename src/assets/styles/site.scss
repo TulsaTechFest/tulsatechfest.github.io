@@ -29,12 +29,12 @@ html, body {
 }
 
 body {
-  background: #000;//#111111;
+  background: var(--color-bg);//#000;//#111111;
   font-family: $font-family-base;
   // font-family: $font-family-base;
   // font-size: 1.6rem;
   line-height: 3rem;
-  color: #fff !important;//#353535;
+  color: var(--color-primary);//#fff !important;//#353535;
   margin: 0;
   padding: 0;
 }
@@ -43,7 +43,7 @@ body {
  * links - (_document-setup) 
  * ------------------------------------------------------------------- */
 a, a:visited {
-  color: #fff; /* #07617d;*/
+  color: var(--color-primary);//#fff; /* #07617d;*/
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -52,7 +52,7 @@ a, a:visited {
 }
 
 a:hover, a:focus {
-  color: #fff; /*#000000;*/
+  color: var(--color-primary);//#fff; /*#000000;*/
 }
 
 /* ===================================================================
@@ -61,7 +61,7 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6,
 .h01, .h02, .h03, .h04, .h05, .h06 {
   font-family: "montserrat-bold", sans-serif;
-  color: #FFFFFF; /*#151515;*/
+  color: var(--color-primary);//#FFFFFF; /*#151515;*/
   font-style: normal;
   text-rendering: optimizeLegibility;
   margin-bottom: 2.1rem;
@@ -124,8 +124,11 @@ p.lead {
   font-family: $font-family-base;//"montserrat-regular", sans-serif;
   font-size: $font-size-base; //1rem; //2rem;
   line-height: 1.8;
-  color: #fff;//#4f4f4f;
+  color: var(--color-primary);//#fff;//#4f4f4f;
   margin-bottom: 3.6rem;
+}
+p.lead a {
+  text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
   p.lead {
@@ -1162,10 +1165,10 @@ select:-webkit-autofill:focus {
   padding-right: 30px;/*between the red and blue outlines*/
   text-align: center;
   display: inline;
-  color: #fff;
+  color: #fff !important;
 }
 .sideway-list a:hover, a:focus {
-  color: red;
+  color: red !important;
 }
 .sideway-list .list-item {
   float:left;
@@ -1881,3 +1884,17 @@ li {
   font-weight:bold
 } 
 .human {margin: 0 0 0 12px}
+
+.themeSelector {
+  position: absolute;
+  top: 18px;
+  left: 40px;
+  margin-bottom: 6px;
+}
+
+.themeSelectorLabel {
+  float: left;
+  font-size: 12px;
+  margin: 0 5px;
+  color:var(--color-primary);
+}

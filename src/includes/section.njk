@@ -27,8 +27,8 @@
         }) }}
      {% elseif (params.title === 'Speakers' and params.data) %}
         {{ component('cards', {
-          titlr: '{{ params.title | tolower }}-list',
-          secondary: '{{ params.title | tolower }}-item',
+          title: 'speakers-list',
+          secondary: 'speakers-item',
           data: params.data,
           include: "speakerCard"
         }) }}
@@ -39,6 +39,14 @@
           data: params.data,
           include: "sponsorCard"
         }) }}
+
+      {% elseif (params.title === 'Community' and params.data) %}
+        {{ component('cards', {
+          title: params.title+'-list',
+          secondary: '{{ params.title | tolower }}-item',
+          data: params.data
+        }) }}
+
       {% elseif (params.title.length > 0 and params.data) %}
         {{ component('table', {
           primary: '{{ params.title | tolower }}-list',

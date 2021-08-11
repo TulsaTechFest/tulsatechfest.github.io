@@ -3,11 +3,16 @@
     <span class="header-menu-icon"></span>
 </a>
 <nav id="menu-nav-wrap">
-    <a href="#0" class="close-button" title="close"><span>Close</span></a>	
-    <h3><a href="#top">TulsaTechFest</a></h3>  
+    {% if (features.themeSelector === '1') %} 
+    <div class="themeSelector"><label for="themeSwitch" class="themeSelectorLabel">Light:</label><div class="switch"><input class="switch__input" type="checkbox" id="themeSwitch"><label aria-hidden="true" class="switch__label" for="themeSwitch">On</label>
+        <div aria-hidden="true" class="switch__marker"></div></div>
+    </div>
+    {% endif %} 
+    <a href="#0" class="close-button" title="close"><span>Close</span></a>
+    <h3><a href="/">TulsaTechFest</a></h3>  
     <ul class="nav-list">
-        {%- for item in nav.main -%}
-          {%- if item.url and not item.title.startsWith('_') -%}
+        {%- for item in nav.main | admin -%}
+          {#{%- if item.url and (not item.title.startsWith('_') or features.adminMenu === '1') -%}#}
                 {%- set isCurrent = (item.url == page.url) -%}
                 {%- set isParent = item.url != '/' and item.url in page.url -%}
                 <li class="{% if isCurrent or isParent %}current{% endif %}">
@@ -15,32 +20,16 @@
                         class="{{ 'smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}"
                         href="{% if isCurrent %}#main{% else %}{{ item.url | url | urlspa }}{% endif %}"
                         {% if isCurrent %}aria-current="page"{% endif %}
-                        title="{{ item.title }}"
+                        title="{{ item.title | title }}"
                     >
-                        {{ item.title }}
+                        {{ item.title | title }}
                     </a>
                 </li>
-            {%- endif -%}
+            {#{%- endif -%}#}
         {%- endfor -%}
-    {# <li>{{window.location.hostname}}</li>
-    <li>{{window.location.host}}</li>
-    <li>{{window.location}}</li>
-    <li>{{config.site.url.base}}</li> #}
-    {# <li>{{ request.url }}</li>
-    <li>{{ request.headers.referer }}</li> #}
-    {# {% if (data.features["adminMenu"] === '1' and (window.location.hostname === '' or window.location.hostname === 'localhost')) %} #}
-    {# <li>{{ getHostFromRequest() }}</li> #}
-    {# {% if (data.features["adminMenu"] === '1') %} #}
-    {% if (features.adminMenu === '1') %}
-        <li><a href="/admin/" {% if isCurrent %}aria-current="page"{% endif %} title="Admin">Admin</a>
-            <ul>
-                <li>{% include "admins.njk" %}</li>
-            </u>
-        </li>
-    {% endif %}
     </ul>
     {% if (alerts) %}
-    <ul class="nav-list2">
+    <ul class="nav-list-alerts">
     {% for item in alerts %}
         {# <p class="alert-text"><a href="{{item.url}}">{{item.data.text}}</a></p> #}
         <li><a href="{{item.url | url | urlspa }}">{{item.text}}</a></li>
@@ -58,7 +47,16 @@
         data: collections.links
     }) }}
     {% list "header-social-list", "list-item", "icon,link", collections.links %} #}
-        
+    <br/>Copyright &copy; {{ build.timestamp | toformat('yyyy') }} TechFests
+    {% if (env.env === 'development' and features.adminMenu === '1') %}
+        <ul class="nav-list-admin">
+            <li><a href="/admin/" {% if isCurrent %}aria-current="page"{% endif %} title="Admin">Admin-{{env.env}}</a>
+                <ul>
+                    <li>{% include "admins.njk" %}</li>
+                </u>
+            </li>
+        </ul>
+    {% endif %}
 </nav>
 <nav class="nav js-nav" role="navigation" tabindex="-1">
     {#<button
@@ -75,7 +73,7 @@
         </span>
     </button>#}
     <ul class="nav__menu js-nav-menu" id="nav-menu">
-    {%- for item in nav.main -%}
+    {%- for item in nav.main | admin -%}
         {%- if item.url and not item.title.startsWith('_') -%}
             {# {% if (features.singlePageHomePage !== '1') -%}
                {% set item.url = item.url | replace('#','') %}
@@ -90,7 +88,7 @@
                     href="{{ item.url | url | urlspa }}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
-                    {{ item.title | toupper }}
+                    {{ item.title | title }}
                 </a>
             </li>
         {%- endif -%}

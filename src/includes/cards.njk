@@ -1,12 +1,14 @@
 <div class="cards-{{ params.title | tolower }}">
-<h1>{{params.title}}</h1>
+{# <h1>{{params.title}}</h1> #}
     {% for item in params.data %}
-        <h1>{{item.title}}</h1>
+{# }        <h1>{{item.data.title}}</h1> #}
         <div class="col-md-4">
             
             <div class="card card-{{params.title | tolower}}">
                 <div class="card-body">
-                {% if (params.include !== '') %}
+                {% if (params.include === '') %}
+                    {{ component(card, { data: item }) }}
+                {% else %}
                   {# {% include "./" + params.include + ".njk" %} #}
                     {{ component(params.include, { data: item }) }}
                 {% endif %}

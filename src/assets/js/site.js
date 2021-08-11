@@ -29,6 +29,13 @@
 	  	});
 	}; 
 
+	var themeSwitch = document.getElementById('themeSwitch');
+	if (themeSwitch) {
+		themeSwitch.addEventListener('change', function(event){
+			//(event.target.checked) ? document.body.setAttribute('data-theme', 'light') : document.body.removeAttribute('data-theme');
+			(event.target.checked) ? document.body.setAttribute('data-theme', 'light') : document.body.setAttribute('data-theme', 'dark');
+		});
+	}
 	var ssFitVids = function() {
 		$(".fluid-video-wrapper").fitVids();
 	}; 

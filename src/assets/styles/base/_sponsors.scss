@@ -1,6 +1,6 @@
  #sponsors {
-    background-color: #000;//e9eaea;
-    padding: 4.8rem 0 4.8rem;
+    background-color: var(--color-bg);//#000;//e9eaea;
+    //padding: 4.8rem 0 4.8rem;
   }
   #sponsors .sponsors-lists .owl-item {
     opacity: .6;
@@ -20,7 +20,7 @@
     -webkit-tap-highlight-color: transparent;
   }
   #sponsors .owl-carousel .owl-nav [class*='owl-'] {
-    color: #FFFFFF;
+    color: var(--color-primary);//#FFFFFF;
     font-family: "montserrat-regular", sans-serif;
     font-size: 1.4rem;
     height: 3rem;
@@ -33,12 +33,12 @@
     border-radius: 3px;
   }
   #sponsors .owl-carousel .owl-nav [class*='owl-']:hover {
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--color-bg);//rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
     text-decoration: none;
   }
   #sponsors .owl-carousel .owl-nav .disabled {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--color-bg);//rgba(0, 0, 0, 0.2);
     cursor: default;
   }
   #sponsors .owl-carousel .owl-nav.disabled + .owl-dots {
@@ -56,7 +56,7 @@
   #sponsors .owl-carousel .owl-dots .owl-dot span {
     width: 9px;
     height: 9px;
-    background-color: #959595;
+    background-color: var(--color-bg);//#959595;
     margin: 6px 6px;
     display: block;
     -webkit-backface-visibility: visible;
@@ -65,6 +65,6 @@
   }
   #sponsors .owl-carousel .owl-dots .owl-dot.active span,
   #sponsors .owl-carousel .owl-dots .owl-dot:hover span {
-    background-color: #000000;
+    background-color: var(--color-bg);//#000000;
   }
   

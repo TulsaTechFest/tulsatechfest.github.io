@@ -1,11 +1,11 @@
 {# <h3 class="pricing-plan-title d-flex align-items-center">{{item.data.title}} {# <span class="badge badge-pill offer-badge ml-auto">20% off</span>#}{#</h3>  #}
-<h3 class="{{ params.title | tolower }}-title d-flex align-items-center">{{params.title}}</h3> 
-{# <p class="h1 pricing-plan-original-cost"><del>$23.00</del></p> #}
-<p class="h1 {{ params.subtitle | tolower }}-subtitle">{{params.subtitle}} <span class="currency">USD</span></p>
+<h3 class="{{ params.data.title | tolower }}-title d-flex align-items-center">{{params.data.title}}</h3> 
+{# <p class="h1 pricing-plan-original-cost"><del>$23.00</del></p> <span class="currency">USD</span> #}
+<p class="h1 {{ params.data.subtitle | tolower }}-subtitle">{{params.data.subtitle}} </p>
 
-{% if (params.description != "") %}
+{% if (params.data.description != "") %}
 <div class="text-center">
-    <p>{{ params.description | safe }}</p>
+    <p>{{ params.data.description | safe }}</p>
 </div>
 {% endif %}
 

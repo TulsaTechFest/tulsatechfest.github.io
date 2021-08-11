@@ -1,11 +1,10 @@
 ---
-title: David Walker
-subtitle: Architect, Developer, Director/Chairman TulsaTechFest
+title: "Tulsa Java Users Group"
 order: 3
-url: /speakers/david-walker
-# url: https://www.sessionize.com
-img: https://s.gravatar.com/avatar/fda51d068069483b779b8c1191d0b9a9?s=80
-link: https://radicaldave.com
+url: "/community/tulsajava"
+# url: "https://www.sessionize.com"
+img: "https://s.gravatar.com/avatar/fda51d068069483b779b8c1191d0b9a9?s=80"
+link: "https://tulsajava.com"
 description: "<h1 class=\"c-hero__title\"><a href=\"https://radicaldave.com\" target=\"_blank\" rel=\"noopener\">David Walker, aka Radical Dave, Mr. TechFests</p>"
 links:
   - key: "email"
