@@ -1,21 +1,21 @@
 module.exports = 
     [
         {
-            "title": "About",
+            "title": "_About",
             "icon": "fa fa-email",
             "order": 1,
             "url": "/#about",
             "tags": ["main"]
         },
         {
-            "title": "Sponsor",
+            "title": "_Sponsor",
             "icon": "fa fa-email",
             "order": 2,
             "url": "/#sponsor",
             "tags": ["main"]
         },
         {
-            "title": "Submit",
+            "title": "_Submit",
             "icon": "fa fa-email",
             "order": 3,
             "url": "/#submit",
@@ -36,7 +36,7 @@ module.exports =
             "tags": ["main"]
         },        
         {
-            "title": "Connect",
+            "title": "_Connect",
             "icon": "fa fa-email",
             "order": 999,
             "url": "/#connect",
