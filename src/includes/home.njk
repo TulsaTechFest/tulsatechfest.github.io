@@ -6,31 +6,8 @@
 			<div class="row">
 				<div class="col-twelve">
 					<h3>Tulsa Tech Fest 2021</h3>
-					<h2 class="animate-intro">Regrettfully 2021 has been cancelled.</h2>
+					<h2 class="animate-intro">Regretfully 2021 has been cancelled.</h2>
 					<h1 class="animate-intro">Stay safe and we will see you in 2022!</h1>
-					{#
-					{% if (features.homeSplashImage === '1') %}
-						<img src="/assets/images/logo-splash.png" alt="TULSA TECHFEST 2012"/>
-					{% endif %}					
-					<div class="more animate-intro">
-						{% if (alerts) %}
-							{% for item in alerts %}
-								<a class="button stroke{{' smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}" href="{{item.url | url | urlspa}}">{{item.text}}</a>
-							{% endfor %}
-							<br/>
-						{% endif %}
-						{% for item in nav.main %}
-						 	{% if item.url and not item.title.startsWith('_') %}
-								<a class="button stroke{{' smoothscroll' if item.url.indexOf('#') > -1 and features.singlePageHomePage === '1' }}" href="{{item.url | url | urlspa}}">{{item.title}}</a> 
-							{% endif %}
-						{% endfor %}{# 
-						{% if (collections['nav-about']) %}
-							<br/>
-							{% for item in collections['nav-about'] %}
-								<a class="button stroke" href="{{item.data.url}}">{{item.data.title}}</a>
-							{% endfor %}
-						{% endif %} #}
-						#}
 					</div>
 					{#<p class="lead"><a href="{{ '/#audience' | url | urlspa }}">SAVE THE DATE. YOU DON'T WANT TO MISS IT. THERE'S SOMETHING FOR EVERYONE.</a></p>#}
 				</div>
